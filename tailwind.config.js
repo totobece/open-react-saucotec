@@ -49,7 +49,7 @@ module.exports = {
       },
       fontFamily: {
         bebas_neue: ['var(--font-bebas-neue)', 'sans-serif'],
-        'architects-daughter': ['var(--font-architects-daughter)', 'sans-serif']
+        'bebas_neue': ['var(--font-bebas_neue)', 'sans-serif']
       },
       fontSize: {
         xs: '0.75rem',

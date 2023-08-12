@@ -1,15 +1,11 @@
 import './css/style.css'
 
-import {Architects_Daughter, Bebas_Neue } from 'next/font/google'
+import { Bebas_Neue } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
 
-/*({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap'
-})*/
+
 
 const bebas_neue = Bebas_Neue({
   subsets: ['latin'],
@@ -18,12 +14,12 @@ const bebas_neue = Bebas_Neue({
   display: 'swap'
 })
 
-const architects_daughter = Architects_Daughter({
+/* const bebas_neue = bebas_neue({
   subsets: ['latin'],
-  variable: '--font-architects-daughter',
+  variable: '--bebas_neue',
   weight: '400',
   display: 'swap'
-})
+}) */
 
 export const metadata = {
   title: 'Create Next App',
@@ -36,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${bebas_neue.variable} ${architects_daughter.variable} font-bebas neue bg-gray-900 text-gray-200 tracking-tight`}>
+    <html lang="en" className={bebas_neue.className}>
+      <body className={` bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
           {children}
@@ -48,3 +44,4 @@ export default function RootLayout({
   )
 }
  
+/* (${architects_daughter.variable} ) */

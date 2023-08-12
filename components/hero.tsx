@@ -1,5 +1,10 @@
+'use client'
+
 import VideoThumb from '@/public/images/hero-image-01.jpg'
 import ModalVideo from '@/components/modal-video'
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 export default function Hero() {
   return (
@@ -24,17 +29,20 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">CAMBIÁ EL CHIP <br />
+            <h1 className="h1 mb-4" data-aos="fade-up" >CAMBIÁ EL CHIP <br />
                                                        TRAE TU EMPRESA AL PRESENTE
                                                                      </h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Tu socio de confianza en soluciones a medida para PyMEs y empresas de todos los tamaños.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0" href="https://www.youtube.com/watch?v=CRBhL7ctydE&ab_channel=GQ" target="_blank">Contactanos</a>
+                <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0" href="#" target="_blank">Contactanos</a>
               </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Mas informacion</a>
-              </div>
+            
+                <div data-aos="fade-up" data-aos-delay="600">
+                <Link  to='Blocks' href='locks' spy={true} smooth={true} offset={50} duration={500} className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
+                >Mas informacion</Link>
+                </div>
+              
             </div>
           </div>
 
