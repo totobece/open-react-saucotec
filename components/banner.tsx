@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 
+
 export default function Banner() {
   const [bannerOpen, setBannerOpen] = useState<boolean>(true)
 
@@ -13,15 +14,15 @@ export default function Banner() {
             <div className="text-slate-500 inline-flex">
               <a
                 className="font-medium hover:underline text-slate-50"
-                href="https://github.com/cruip/open-react-template"
+                href="https://api.whatsapp.com/send?phone=1170135056&text=Hola,%20tengo%20una%20consulta."
                 target="_blank"
-                rel="noreferrer"
+                rel=""
               >
                <span className="hidden sm:inline"> WhatsApp</span>
               </a>{' '}
-              <span className="italic px-1.5">or</span>{' '}
-              <a className="font-medium hover:underline text-emerald-400" href="https://cruip.com/open-pro/" target="_blank" rel="noreferrer">
-                Email
+              <span className="italic px-1.5"></span>{' '}
+              <a className="font-medium hover:underline text-emerald-400" href="https://api.whatsapp.com/send?phone=1170135056&text=Hola,%20tengo%20una%20consulta." target="_blank" rel="noreferrer">
+                
               </a>
             </div>
             <button className="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-gray-700" onClick={() => setBannerOpen(false)}>
