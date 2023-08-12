@@ -48,7 +48,7 @@ module.exports = {
         '1/1': '100%',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', 'sans-serif'],
+        bebas_neue: ['var(--font-bebas-neue)', 'sans-serif'],
         'architects-daughter': ['var(--font-architects-daughter)', 'sans-serif']
       },
       fontSize: {

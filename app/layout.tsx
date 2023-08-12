@@ -1,13 +1,20 @@
 import './css/style.css'
 
-import { Inter, Architects_Daughter } from 'next/font/google'
+import {Architects_Daughter, Bebas_Neue } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
 
-const inter = Inter({
+/*({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap'
+})*/
+
+const bebas_neue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas-neue',
   display: 'swap'
 })
 
@@ -30,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
+      <body className={`${bebas_neue.variable} ${architects_daughter.variable} font-bebas neue bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
           {children}
