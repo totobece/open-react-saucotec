@@ -26,8 +26,7 @@ export default function Footer() {
                     />
                   </div>
                 </Link>
-              </div>
-              <div className="text-gray-400">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
+              </div>  
             </div>
 
             {/* 2nd, 3rd and 4th blocks */}
@@ -142,7 +141,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; Cruip.com. All rights reserved.</div>
+            <div className="text-gray-400 text-sm mr-4">&copy; Saucotec.com. All rights reserved.</div>
 
           </div>
 
