@@ -7,6 +7,10 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 
 
 export default function Hero() {
+
+  
+
+  
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -34,14 +38,16 @@ export default function Hero() {
                                                                      </h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Tu socio de confianza en soluciones a medida para PyMEs y empresas de todos los tamaños.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0" href="#" target="_blank">Contactanos</a>
-              </div>
+              {/* Contactanos */}
+             {/*  <div data-aos="fade-up" data-aos-delay="400">
+                <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0"  >Contactanos</a>
+              </div> */}
             
-                <div data-aos="fade-up" data-aos-delay="600">
+               {/*  Mas Informacion */}
+               {/*  <div data-aos="fade-up" data-aos-delay="600">
                 <Link  to='Blocks' href='locks' spy={true} smooth={true} offset={50} duration={500} className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
                 >Mas informacion</Link>
-                </div>
+                </div> */}
               
             </div>
           </div>

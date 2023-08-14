@@ -24,24 +24,24 @@ export default function Header() {
           </div>
 
           {/* Desktop navigation */}
-          {/* <nav className="hidden md:flex md:grow"> */}
+          <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
-            {/* <ul className="flex grow justify-end flex-wrap items-center">
+            <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
                   href="/signin"
-                  className="font-medium text-blue-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="btn-sm text-white bg-blue-600 hover:bg-blue-700 ml-3"
                 >
                   Contactanos
                 </Link>
               </li>
-              <li>
+             {/*  <li>
                 <Link href="/signup" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 ml-3">
                  Mas informacion
                 </Link>
-              </li>
+              </li> */}
             </ul>
-          </nav> */}
+          </nav>
 
           <MobileMenu />
 
