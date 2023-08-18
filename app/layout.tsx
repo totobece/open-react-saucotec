@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={bebas_neue.className}>
-      <body className={` bg-gray-900	 text-gray-200 tracking-tight`}>
+      <body className={` bg-zinc-50	 text-blue-888 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
           {children}

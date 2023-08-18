@@ -33,9 +33,9 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4 tracking-[0.25em] text-7xl" data-aos="fade-up" >CAMBIÁ EL CHIP
+            <h1 className="h1 mb-4 tracking-[0.15em] text-8xl" data-aos="fade-up" >CAMBIÁ EL CHIP
                                                                      </h1>
-            <p className="text-3xl text-gray-400 mb-10" data-aos="fade-up" data-aos-delay="200">CONTROL Y GESTIÓN DESDE DÓNDE ESTÉS </p>
+            <p className="text-3xl text-gray-800 mb-10" data-aos="fade-up" data-aos-delay="200">CONTROL Y GESTIÓN DESDE DÓNDE ESTÉS </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center tracking-wider">
               {/* Contactanos */}
              {/*  <div data-aos="fade-up" data-aos-delay="400">
