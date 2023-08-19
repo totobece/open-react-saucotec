@@ -33,10 +33,11 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4 tracking-[0.15em] text-8xl" data-aos="fade-up" >CAMBIÁ EL CHIP
+            <h1 className="h1 mb-4" data-aos="fade-up" >CAMBIÁ EL CHIP <br />
+                                                       TRAE TU EMPRESA AL PRESENTE
                                                                      </h1>
-            <p className="text-3xl text-gray-800 mb-10" data-aos="fade-up" data-aos-delay="200">CONTROL Y GESTIÓN DESDE DÓNDE ESTÉS </p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center tracking-wider">
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Tu socio de confianza en soluciones a medida para PyMEs y empresas de todos los tamaños.</p>
+            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               {/* Contactanos */}
              {/*  <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0"  >Contactanos</a>
@@ -45,7 +46,7 @@ export default function Hero() {
                {/*  Mas Informacion */}
                {/*  <div data-aos="fade-up" data-aos-delay="600">
                 <Link  to='Blocks' href='locks' spy={true} smooth={true} offset={50} duration={500} className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
-                >Mas informacion</Link>
+                >Mas informacipuon</Link>
                 </div> */}
               
             </div>

@@ -7,7 +7,7 @@ export default function Features() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4 text-6xl">olvidate de los papeles</h2>
-            <p className="text-xl text-gray-400 text-3xl">toda la información en tus manos</p>
+            <p className=" text-gray-400 text-3xl">toda la información en tus manos</p>
           </div>
 
           {/* Items */}
