@@ -81,7 +81,7 @@ export default function Newsletter() {
             h-10
             px-5
             text-indigo-100
-            bg-blue-600
+            bg-blue-888
             rounded-lg
             transition-colors
             duration-150

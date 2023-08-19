@@ -33,7 +33,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up" >CAMBIÁ EL CHIP <br />
+            <h1 className="text-6xl h1 mb-4" data-aos="fade-up" >CAMBIÁ EL CHIP <br />
                                                        TRAE TU EMPRESA AL PRESENTE
                                                                      </h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Tu socio de confianza en soluciones a medida para PyMEs y empresas de todos los tamaños.</p>

@@ -30,7 +30,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/signin"
-                  className="btn-sm text-white bg-blue-600 hover:bg-blue-700 ml-3"
+                  className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3"
                 >
                   Contactanos
                 </Link>
