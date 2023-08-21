@@ -28,12 +28,12 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link
+            {/*     <Link
                   href="/signin"
                   className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3"
                 >
                   Contactanos
-                </Link>
+                </Link> */}
               </li>
              {/*  <li>
                 <Link href="/signup" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 ml-3">
