@@ -13,8 +13,8 @@ export default function Zigzag() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">sacame esto negrito porfa</div>*/}
-            <h1 className="h2 mb-4 text-6xl">olvidate de los papeles</h1>
-            <p className="text-gray-800 text-4xl tracking-[0.2em]">toda la información en tus manos</p>
+            <h1 className="h2 mb-4 text-6xl">ni más. ni menos. </h1>
+            <p className="text-gray-800 text-6xl tracking-[0.1em]">lo hacemos a tu medida</p>
           </div>
 
           {/* Items */}
@@ -24,13 +24,13 @@ export default function Zigzag() {
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={540} height={405} alt="Features 01" />
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={550} height={0} alt="Features 01" />
               </div>
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-bebas text-xl text-blue-600 mb-2">More speed. Less spend</div>
-                  <h3 className="h3 mb-3">control de caja</h3>
+                  <div className="font-bebas text-3xl text-blue-600 mb-2">olvidate de los papeles</div>
+                  <h3 className="h3 mb-3 text-4xl">toda la información en tus manos</h3>
                   <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <ul className="text-lg text-gray-800 -mb-2">
                     <li className="flex items-center mb-2">
@@ -60,13 +60,13 @@ export default function Zigzag() {
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl" data-aos="fade-up">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage02} width={540} height={405} alt="Features 02" />
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage02} width={550} height={405} alt="Features 02" />
               </div>
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className="font-architects-daughter text-xl text-blue-600 mb-2">More speed. Less spend</div>
-                  <h3 className="h3 mb-3">centralización de la información</h3>
+                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">olvidate de los papeles</div>
+                  <h3 className="h3 text-4xl mb-3">movimientos registrados</h3>
                   <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <ul className="text-lg text-gray-800 -mb-2">
                     <li className="flex items-center mb-2">
@@ -96,13 +96,13 @@ export default function Zigzag() {
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage03} width={540} height={405} alt="Features 03" />
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage03} width={550} height={405} alt="Features 03" />
               </div>
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-xl text-blue-600 mb-2">More speed. Less spend</div>
-                  <h3 className="h3 mb-3">movimientos registrados</h3>
+                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">More speed. Less spend</div>
+                  <h3 className="h3 mb-3 text-4xl">digitalización de cada documento</h3>
                   <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <ul className="text-lg text-gray-800 -mb-2">
                     <li className="flex items-center mb-2">
@@ -132,13 +132,13 @@ export default function Zigzag() {
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl" data-aos="fade-up">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage02} width={540} height={405} alt="Features 02" />
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage02} width={550} height={405} alt="Features 02" />
               </div>
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                   <div className="font-architects-daughter text-xl text-blue-600 mb-2">More speed. Less spend</div>
-                  <h3 className="h3 mb-3">digitalización de cada documento</h3>
+                  <h3 className="h3 mb-3">integración</h3>
                   <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <ul className="text-lg text-gray-800 -mb-2">
                     <li className="flex items-center mb-2">
