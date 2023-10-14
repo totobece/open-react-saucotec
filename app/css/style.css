@@ -20,3 +20,8 @@
 [x-cloak=""] {
     display: none;
 }
+
+.logo-container {
+    transform: translateX(290px); /* Adjust as needed */
+  }
+  
