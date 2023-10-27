@@ -1,66 +1,66 @@
-'use client'
-import { FormEvent, useState } from "react"
+// 'use client'
+// import { FormEvent, useState } from "react"
 
-export const Newsletter = () => {
+// export const Newsletter = () => {
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+//   const [name, setName] = useState('')
+//   const [email, setEmail] = useState('')
+//   const [message, setMessage] = useState('')
 
 
-  const onSubmit = async (e: FormEvent) => {
+//   const onSubmit = async (e: FormEvent) => {
 
-      e.preventDefault()
-      try{
-        const response = await fetch('/app/api/send/sendEmail', {
-          method: 'POST',
-          body: JSON.stringify({ name, email, message }),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+//       e.preventDefault()
+//       try{
+//         const response = await fetch('/app/api/send/sendEmail', {
+//           method: 'POST',
+//           body: JSON.stringify({ name, email, message }),
+//           headers: {
+//             'Content-Type': 'application/json',
+//           },
+//         });
         
 
-       } catch (err: any){
-        console.error(err);
+//        } catch (err: any){
+//         console.error(err);
 
-       }
+//        }
 
 
-  }
+//   }
 
-return (
+// return (
 
-<form onSubmit={onSubmit}>  
+// <form onSubmit={onSubmit}>  
   
-  <input 
-    value={name} 
-    onChange={(e) => setName(e.target.value)}
-    type="text" placeholder="Name"
-  />
+//   <input 
+//     value={name} 
+//     onChange={(e) => setName(e.target.value)}
+//     type="text" placeholder="Name"
+//   />
   
-  <input 
-    onChange={e => setEmail(e.target.value)}
-    value={email} type="email" placeholder="Email" 
-  />
+//   <input 
+//     onChange={e => setEmail(e.target.value)}
+//     value={email} type="email" placeholder="Email" 
+//   />
   
-  <textarea 
-    onChange={e => setMessage(e.target.value)}
-    value={message}
-    placeholder="Message"
-    >
+//   <textarea 
+//     onChange={e => setMessage(e.target.value)}
+//     value={message}
+//     placeholder="Message"
+//     >
 
-  </textarea>
+//   </textarea>
 
-  <button type="submit">Submit</button>
-
-
-</form>
+//   <button type="submit">Submit</button>
 
 
-
-)
+// </form>
 
 
 
-}
+// )
+
+
+
+// }
