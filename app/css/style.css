@@ -20,8 +20,10 @@
 [x-cloak=""] {
     display: none;
 }
-
 .logo-container {
-    transform: translateX(330px); /* Adjust as needed */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
+  
   

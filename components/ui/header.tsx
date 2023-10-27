@@ -2,6 +2,7 @@ import Link from 'next/link'
 import MobileMenu from './mobile-menu'
 import Image from 'next/image'
 import  SaucotecLogo from "../../public/images/SaucotecLogo.svg"
+import WPPlogo from "../../public/images/Free whatsapp white logo vector.svg.svg"
 
 /* viewBox="0 0 32 32" */
 export default function Header() {
@@ -27,26 +28,26 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-            {/*     <Link
-                  href="/signin"
-                  className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3"
-                >
-                  Contactanos
-                </Link> */}
-              </li>
-             {/*  <li>
-                <Link href="/signup" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 ml-3">
-                 Mas informacion
-                </Link>
-              </li> */}
+                  <li>
+                  <Link href="https://api.whatsapp.com/send?phone=1170135056&text=Hola,%20tengo%20una%20consulta." className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3 flex items-center">
+                    <Image
+                      src={WPPlogo}
+                      alt="WhatsApp Logo"
+                      className="w-5 h-5 mr-2"
+                      style={{ transform: 'translateY(-1px)' }} 
+                    />
+                    <span className="flex items-center">Contactanos</span>
+                  </Link>
+                </li>
+
+
             </ul>
           </nav>
 
           <MobileMenu />
-
         </div>
       </div>
     </header>
   )
 }
+

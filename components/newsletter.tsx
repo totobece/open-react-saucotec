@@ -12,16 +12,14 @@ export const Newsletter = () => {
 
       e.preventDefault()
       try{
-          const rest = await fetch('api/sendEmail', {
-            method: 'POST',
-            body: JSON.stringify({
-                name, email, message
-
-            }),
-            headers:{
-              'content-type': 'application/json',
-            },
-          })
+        const response = await fetch('/app/api/send/sendEmail', {
+          method: 'POST',
+          body: JSON.stringify({ name, email, message }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        
 
        } catch (err: any){
         console.error(err);

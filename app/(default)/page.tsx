@@ -1,6 +1,9 @@
 export const metadata = {
-  title: 'Home - Open PRO',
+  title: 'Saucotec',
   description: 'Page description',
+  icons: {
+    icon:['/favicon.ico?v=4']
+  }
 }
 
 import Hero from '@/components/hero'
