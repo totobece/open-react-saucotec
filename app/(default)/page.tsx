@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Saucotec',
+  title: 'SaucoTec',
   description: 'Page description',
   icons: {
     icon:['/favicon.ico?v=4']
