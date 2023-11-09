@@ -31,27 +31,8 @@ export default function Zigzag() {
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-bebas text-3xl text-blue-600 mb-2">lo adaptamos a vos</div>
                   <h3 className="h3 mb-3 text-4xl">tus procesos, digitalizados</h3>
-                  <p className="text-xl text-gray-800 mb-4">sin vueltas. la simpleza por sobre todo</p>
-                  <ul className="text-lg text-gray-800 -mb-2">
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
-                    </li>
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Excepteur sint occaecat</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Amet consectetur adipiscing elit</span>
-                    </li>
-                  </ul>
+                  <div className="font-bebas text-2xl mb-2" style={{ fontFamily: 'helvetica, sans-serif' }}>Simplificamos tus operaciones, llevando tus procesos al mundo digital de manera eficiente y accesible.</div>
+                  
                 </div>
               </div>
             </div>
@@ -66,28 +47,9 @@ export default function Zigzag() {
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                   <div className="font-architects-daughter text-3xl text-blue-600 mb-2">a control remoto</div>
-                  <h3 className="h3 text-4xl mb-3">toda la información en tus manos</h3>
-                  <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <ul className="text-lg text-gray-800 -mb-2">
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
-                    </li>
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Excepteur sint occaecat</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Amet consectetur adipiscing elit</span>
-                    </li>
-                  </ul>
+                  <h3 className="h3 text-4xl mb-3">control y gestión desde donde estés</h3>
+                  <div className="font-bebas text-2xl mb-2" style={{ fontFamily: 'helvetica, sans-serif' }}>Hacemos posible la supervisión desde cualquier lugar, liberándote para abordar temas determinantes en lugar de perder tiempo en la búsqueda de información.</div>
+                  
                 </div>
               </div>
             </div>
@@ -101,29 +63,10 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">olvidate de los papeles</div>
-                  <h3 className="h3 mb-3 text-4xl">documentos digitalizados</h3>
-                  <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <ul className="text-lg text-gray-800 -mb-2">
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
-                    </li>
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Excepteur sint occaecat</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Amet consectetur adipiscing elit</span>
-                    </li>
-                  </ul>
+                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">revolucionamos la accesibilidad</div>
+                  <h3 className="h3 mb-3 text-4xl">herramientas que vos entendés</h3>
+                  <div className="font-bebas text-2xl mb-2" style={{ fontFamily: 'helvetica, sans-serif' }}>Hacemos accesible lo complejo. Nuestras herramientas personalizadas son la clave para lograr sistemas extremadamente amigables, diferenciándonos de la competencia.</div>
+                  
                 </div>
               </div>
             </div>
@@ -137,29 +80,10 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">los datos no mienten</div>
-                  <h3 className="h3 mb-3 text-4xl">movimientos registrados</h3>
-                  <p className="text-xl text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <ul className="text-lg text-gray-800 -mb-2">
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
-                    </li>
-                    <li className="flex items-center mb-2">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Excepteur sint occaecat</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Amet consectetur adipiscing elit</span>
-                    </li>
-                  </ul>
+                  <div className="font-architects-daughter text-3xl text-blue-600 mb-2">la tecnología avanza</div>
+                  <h3 className="h3 mb-3 text-4xl">más personalización, menor costo</h3>
+                  <div className="font-bebas text-2xl mb-2" style={{ fontFamily: 'helvetica, sans-serif' }}>La tecnología de punta es nuestro aliado para agilizar la personalización y reducir los costos en el desarrollo de sistemas hechos a medida.</div>
+                  {/*olvidate de los papeles, documentos digitalizados los datos no mienten movimientos registrados*/}
                 </div>
               </div>
             </div>
