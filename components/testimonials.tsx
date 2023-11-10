@@ -12,7 +12,7 @@ export default function Testimonials() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">lo que piensan quienes trabajaron con nosotros</h2>
+            <h2 className="h2 font-light mb-4">lo que piensan quienes trabajaron con nosotros</h2>
             <p className="text-2xl text-gray-800">no te quedes sólo con nuestra palabra</p>
           </div>
 

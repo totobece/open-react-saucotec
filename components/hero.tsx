@@ -33,7 +33,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 ">
-          <h1 className="text-6xl md:text-8xl lg:text-8xl h1 mb-4 tracking-[0.09em] " data-aos="fade-up">
+          <h1 className="text-6xl font-light md:text-8xl lg:text-8xl h1 mb-4 tracking-[0.09em] " data-aos="fade-up">
   CAMBIÁ EL CHIP
                                                                      </h1>
             <p className="text-3xl md:text-4xl lg:text-4xl text-gray-500 mb-8 tracking-[0.15em]" data-aos="fade-up" data-aos-delay="200">toda la información en tus manos</p>
