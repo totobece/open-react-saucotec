@@ -12,6 +12,7 @@ import Features from '@/components/features'
 import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
 import ContactForm from '@/components/newsletter'
+import CookieBanner from '@/components/CookieBanner'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Zigzag />
       <Testimonials />
       <ContactForm/>
+      <CookieBanner/>
     </>
   )
 
