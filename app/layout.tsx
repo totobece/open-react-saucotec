@@ -5,7 +5,7 @@ import { Bebas_Neue } from 'next/font/google'
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
 import { Metadata } from 'next'
-
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 
 const bebas_neue = Bebas_Neue({
@@ -34,6 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={bebas_neue.className}>
+      <GoogleAnalytics GA_MEASUREMENT_ID='G-FRPLFF3P4W'/>
       <body className={` bg-zinc-50	 text-blue-888 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
@@ -42,6 +43,7 @@ export default function RootLayout({
         </div>
       </body>
     </html>
+    
   )
 }
  

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bradgarropy/next-google-analytics": "^1.0.2",
     "@formspree/react": "^2.5.1",
     "@headlessui/react": "^1.7.14",
     "@react-email/button": "0.0.10",
