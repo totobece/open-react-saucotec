@@ -16,18 +16,19 @@ function ContactForm() {
       </div>
     );
   }
+  
 
   return (
     <section id="contact" className="relative">
       <div className="relative flex flex-col justify-center  overflow-hidden ">
         <div className="w-full p-6 m-auto bg-zinc-50 rounded-md  lg:max-w-xl">
-          <h1 className="text-6xl font-semibold text-center text-blue-888 ">
+          <h1 className="text-6xl font-bebas text-center text-blue-888">
             Contactanos
           </h1>
           <form className="mt-6 p-4 lg:p-6" onSubmit={handleSubmit}>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700">Nombre</span>
+                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Nombre</span>
                 <input
                   type="text"
                   name="name"
@@ -46,12 +47,13 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
+                  style={{ fontFamily: 'helvetica, sans-serif' }}
                 />
               </label>
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700">Email</span>
+                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Email</span>
                 <input
                   name="email"
                   type="email"
@@ -70,13 +72,14 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
+                  style={{ fontFamily: 'helvetica, sans-serif' }}
                   required
                 />
               </label>
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700">Mensaje</span>
+                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Mensaje</span>
                 <textarea
                   name="message"
          
@@ -94,6 +97,7 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
+                  style={{ fontFamily: 'helvetica, sans-serif' }}
                 ></textarea>
               </label>
             </div>
