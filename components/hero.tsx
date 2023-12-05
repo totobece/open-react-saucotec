@@ -7,7 +7,13 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 
 
 export default function Hero() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
 
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
 
   
@@ -39,15 +45,20 @@ export default function Hero() {
             <p className="text-3xl md:text-4xl lg:text-4xl text-gray-500 mb-8 tracking-[0.15em]" data-aos="fade-up" data-aos-delay="200">toda la información en tus manos</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center ">
               {/* Contactanos */}
-             {/*  <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-blue-900 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0"  >Contactanos</a>
-              </div> */}
-            
+                          <div>
+                  {/* Rest of your Hero component */}
+                  <div data-aos="fade-up" data-aos-delay="600">
+                    <a onClick={scrollToContact} className="btn text-white bg-blue-888   hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0">
+                      Contactanos
+                    </a>
+                  </div>
+                </div>
+              
                {/*  Mas Informacion */}
-               {/*  <div data-aos="fade-up" data-aos-delay="600">
+               {/*<div data-aos="fade-up" data-aos-delay="600">
                 <Link  to='Blocks' href='locks' spy={true} smooth={true} offset={50} duration={500} className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
                 >Mas informacipuon</Link>
-                </div> */}
+                  </div>*/}
               
             </div>
           </div>

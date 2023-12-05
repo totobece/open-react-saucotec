@@ -18,7 +18,7 @@ function ContactForm() {
   }
 
   return (
-    <section className="relative">
+    <section id="contact" className="relative">
       <div className="relative flex flex-col justify-center  overflow-hidden ">
         <div className="w-full p-6 m-auto bg-zinc-50 rounded-md  lg:max-w-xl">
           <h1 className="text-6xl font-semibold text-center text-blue-888 ">
