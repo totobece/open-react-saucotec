@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={bebas_neue.className}>
-      <GoogleAnalytics GA_MEASUREMENT_ID='G-FRPLFF3P4W'/>
+      <GoogleAnalytics GA_MEASUREMENT_ID='AW-11432082618'/>
       <body className={` bg-zinc-50	 text-blue-888 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
