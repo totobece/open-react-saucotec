@@ -29,7 +29,7 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
                   <li>
-                  <Link href="https://api.whatsapp.com/send?phone=5491131500591&text=Hola,%20quisiera%20saber%20más%20sobre%20los%20servicios%20de%20SaucoTec." className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3 flex items-center">
+                  <Link href="https://api.whatsapp.com/send?phone=5491131500591&text=Hola,%20quisiera%20saber%20más%20sobre%20los%20servicios%20de%20SaucoTec." className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3 flex items-center" target='_blank' > 
                     <Image
                       src={WPPlogo}
                       alt="WhatsApp Logo"
