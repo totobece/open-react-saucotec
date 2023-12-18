@@ -15,17 +15,22 @@ export default function CookieBanner() {
     }, [setCookieConsent]);
 
     useEffect(() => {
+        console.log("Ejecutando useEffect para actualizar cookieConsent...");
         const newValue = cookieConsent ? 'granted' : 'denied';
+        console.log("Nuevo valor de cookieConsent:", newValue);
         window.gtag("consent", 'update', { 'analytics_storage': newValue });
         setLocalStorage("cookie_consent", cookieConsent);
     }, [cookieConsent]);
 
     const handleCookieAction = (consent: ConsentType) => {
+        console.log("Manejando acción de cookies. Nuevo valor:", consent);
         setCookieConsent((prevState) => {
             return prevState === null ? consent : prevState;
         });
     };
 
+    console.log("Renderizando componente. Valor de cookieConsent:", cookieConsent);
+    
     return (
         <div
             className={`my-10 mx-auto max-w-max md:max-w-screen-sm
@@ -37,10 +42,11 @@ export default function CookieBanner() {
             <div className='text-center'>
                 <Link href="#">
                     <p className='text-white'>
-                        We use{''}
-                        <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
-                        {''}on our site.
-                    </p>
+                            Utilizamos {''}
+                    <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
+                {''} en nuestra pagina.
+            </p>
+
                 </Link>
             </div>
 
