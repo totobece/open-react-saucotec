@@ -55,13 +55,13 @@ export default function CookieBanner() {
                     className='px-5 py-2 text-white rounded-md border-blue-888'
                     onClick={() => handleCookieAction(false)}
                 >
-                    Decline
+                    Rechazar
                 </button>
                 <button
                     className='bg-blue-600 px-5 py-2 text-white rounded-lg'
                     onClick={() => handleCookieAction(true)}
                 >
-                    Allow Cookies
+                    Permitir Cookies
                 </button>
             </div>
         </div>
