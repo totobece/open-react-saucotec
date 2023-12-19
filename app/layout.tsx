@@ -15,13 +15,6 @@ const bebas_neue = Bebas_Neue({
   display: 'swap'
 })
 
-/* const bebas_neue = bebas_neue({
-  subsets: ['latin'],
-  variable: '--bebas_neue',
-  weight: '400',
-  display: 'swap'
-}) */
-
 export const metadata : Metadata = {
   title: 'SaucoTec',
   description: 'SaucoTec - Inicio',
