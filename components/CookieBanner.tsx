@@ -34,13 +34,13 @@ export default function CookieBanner() {
     <div className="relative">
       {cookieConsent === null && (
         <>
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-50"></div>
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 transition-opacity duration-500 ease-in-out"></div>
           <div
             className={`my-10 mx-auto max-w-max md:max-w-screen-sm
                         fixed bottom-0 left-0 right-0 
                         ${cookieConsent !== null ? "hidden" : "flex"} 
                         px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-3  
-                        bg-blue-888 rounded-lg shadow py- z-50`}
+                        bg-blue-888 rounded-lg shadow py- z-50 transition-opacity duration-500 ease-in-out`}
           >
             <div className='text-center'>
               <Link href="#">

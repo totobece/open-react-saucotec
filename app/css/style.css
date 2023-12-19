@@ -31,4 +31,9 @@
     margin: 0;
 
 }
+
+.fade-out {
+
+    opacity: 0;
+}
   
