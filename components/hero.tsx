@@ -47,11 +47,21 @@ export default function Hero() {
               {/* Contactanos */}
                           <div>
                   {/* Rest of your Hero component */}
-                  <div data-aos="fade-up" data-aos-delay="600">
-                    <a onClick={scrollToContact} className="btn text-white bg-blue-888   hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0">
-                      Contactanos
-                    </a>
-                  </div>
+
+
+                                <div data-aos="fade-up" data-aos-delay="600">
+                      <Link
+                        to="contact" // Utiliza el id del componente Newsletter
+                        smooth={true}
+                        duration={750}
+                      >
+                        <a className="btn text-white bg-blue-888 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0">
+                          Contactanos
+                        </a>
+                      </Link>
+                    </div>
+
+
                 </div>
               
                {/*  Mas Informacion */}
