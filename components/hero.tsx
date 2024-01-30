@@ -14,8 +14,9 @@ export default function Hero() {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+         
   
-
+  
   
   return (
     <section>

@@ -6,7 +6,7 @@ import PhoneLogo from "../../public/images/phone-svg.svg"
 import { FaPhoneAlt } from "react-icons/fa";
 
 function HandleCall() {
-  window.location.href = 'tel:+1131500561'
+  window.location.href = 'tel:+541131500561'
 
 
 }
