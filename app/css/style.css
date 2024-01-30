@@ -19,7 +19,7 @@
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=""] {
     display: none;
-}
+} 
 .logo-container {
     display: flex;
     justify-content: center; /* Center horizontally */
