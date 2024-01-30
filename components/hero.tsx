@@ -41,7 +41,7 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 ">
           <h1 className="text-6xl font-light md:text-8xl lg:text-8xl h1 mb-4 tracking-[0.09em] " data-aos="fade-up">
-  CAMBIÁ EL CHIP
+    DIGITALIZÁ TU ORGANIZACIÓN
                                                                      </h1>
             <p className="text-3xl md:text-4xl lg:text-4xl text-gray-500 mb-8 tracking-[0.15em]" data-aos="fade-up" data-aos-delay="200">toda la información en tus manos</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center ">
@@ -56,7 +56,7 @@ export default function Hero() {
                         smooth={true}
                         duration={750}
                       >
-                        <a className="btn text-white bg-blue-888 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0">
+                        <a className="btn text-lg text-white bg-blue-888 hover:bg-blue-800 w-auto mb-4 sm:w-auto lg:text-2xl md:text-2xl sm:mb-0 rounded-lg">
                           Contactanos
                         </a>
                       </Link>
