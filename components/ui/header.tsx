@@ -32,28 +32,9 @@ const Header: React.FC<HeaderProps> = ({ pageType = 'default' }) => {
             </Link>
           </div>
 
-<<<<<<< ours
           <div className="md:hidden">
             <MobileMenu />
           </div>
-=======
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-            {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-                  <li>
-                  <Link href="https://api.whatsapp.com/send?phone=5491131500591&text=Hola,%20quisiera%20saber%20más%20sobre%20los%20servicios%20de%20SaucoTec." className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3 flex items-center" target='_blank' > 
-                    <Image
-                      src={WPPlogo}
-                      alt="WhatsApp Logo"
-                      className="w-5 h-5 mr-2"
-                      style={{ transform: 'translateY(-1px)' }} 
-                    />
-                    <span className="flex items-center">Contactanos</span>
-                  </Link>
-                </li>
-
->>>>>>> theirs
 
           <div className='hidden md:flex gap-5 justify-between items-center py-2.5 px-5 bg-white rounded-[40px] border-solid shadow-sm border-[0.81px] min-w-[562px] h-[67px] max-md:flex-wrap max-md:pl-5 max-md:max-w-full mt-[-20px]'
             data-aos="fade-up">
