@@ -2,7 +2,7 @@ import Link from 'next/link'
 import MobileMenu from './mobile-menu'
 import Image from 'next/image'
 import  SaucotecLogo from "../../public/images/SaucotecLogo.svg"
-import WPPlogo from "../../public/images/Free whatsapp white logo vector.svg.svg"
+import WPPlogo from "../../public/images/Free whatsapp blue logo vector.svg-svg.svg"
 
 /* viewBox="0 0 32 32" */
 export default function Header() {
@@ -25,25 +25,43 @@ export default function Header() {
           </div>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-            {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-                  <li>
-                  <Link href="https://api.whatsapp.com/send?phone=5491131500591&text=Hola,%20quisiera%20saber%20más%20sobre%20los%20servicios%20de%20SaucoTec." className="btn-sm text-white bg-blue-888 hover:bg-blue-888 ml-3 flex items-center">
-                    <Image
-                      src={WPPlogo}
-                      alt="WhatsApp Logo"
-                      className="w-5 h-5 mr-2"
-                      style={{ transform: 'translateY(-1px)' }} 
-                    />
-                    <span className="flex items-center">Contactanos</span>
-                  </Link>
-                </li>
+          <div className='flex gap-5 justify-between items-center py-2.5 px-5 bg-blue-888 rounded-[30px] border-solid shadow-sm border-[0.81px] min-w-[562px] h-[67px] max-md:flex-wrap max-md:pl-5 max-md:max-w-full mt-[-20px]'>
+  <nav className="hidden md:flex md:grow">
+    {/* Secciones */}
+    <ul className="flex-grow flex gap-7" style={{marginTop:'6px', marginLeft:'30px'}}>
+      <li>
+        <Link href="/nosotros" className='text-2xl text-white'>
+          Nosotros
+        </Link>
+      </li>
+      <li>
+        <Link href="/servicios" className='text-2xl text-white'>
+          Servicios
+        </Link>
+      </li>
+      <li>
+        <Link href="/clientes" className='text-2xl text-white'>
+          Clientes
+        </Link>
+      </li>
+    </ul>
 
-
-            </ul>
-          </nav>
-
+    {/* Botón "Contactanos" */}
+    <ul>
+      <li>
+        <Link href="https://api.whatsapp.com/send?phone=5491131500591&text=Hola,%20quisiera%20saber%20más%20sobre%20los%20servicios%20de%20SaucoTec." className="btn-sm text-blue-888 bg-white hover:bg-white ml-3 flex items-center rounded-[30px] text-xl" target='_blank'>
+          <Image
+            src={WPPlogo}
+            alt="WhatsApp Logo"
+            className="w-5 h-7 mr-2"
+            style={{ transform: 'translateY(-1px)' }}
+          />
+          <span className="flex items-center">Contáctanos</span>
+        </Link>
+      </li>
+    </ul>
+  </nav>
+</div>
           <MobileMenu />
         </div>
       </div>
