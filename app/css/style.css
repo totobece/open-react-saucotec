@@ -19,7 +19,19 @@
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=""] {
     display: none;
+<<<<<<< ours
+}
+
+body {
+
+    font-family: var(--font-bebas-neue), sans-serif;
+
+
+}
+
+=======
 } 
+>>>>>>> theirs
 .logo-container {
     display: flex;
     justify-content: center; /* Center horizontally */

@@ -30,6 +30,26 @@ export default function CookieBanner() {
 
   console.log("Renderizando componente. Valor de cookieConsent:", cookieConsent);
 
+<<<<<<< ours
+    return (
+        <div 
+            className={`my-10 mx-auto max-w-max md:max-w-screen-sm
+                        fixed bottom-0 left-0 right-0 
+                        ${cookieConsent !== null ? "hidden" : "flex"} 
+                        px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
+                        bg-blue-888 rounded-lg shadow py-`
+                    }
+                    
+        >
+            <div className='text-center'>   
+                <Link href="#">
+                    <p className='text-white'>
+                        We use{''}
+                        <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
+                        {''}on our site.
+                    </p>
+                </Link>
+=======
   return (
     <div className="relative">
       {cookieConsent === null && (
@@ -50,6 +70,7 @@ export default function CookieBanner() {
                   {''} en nuestra pagina.
                 </p>
               </Link>
+>>>>>>> theirs
             </div>
             <div className='flex gap-2'>
               <button

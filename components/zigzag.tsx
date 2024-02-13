@@ -1,5 +1,6 @@
 import Image from 'next/image'
-
+import ModalVideo from './modal-video'
+import VideoThumb from '@/public/images/hero-image-01.png'
 import FeatImage01 from '@/public/images/features-03-image-01.png'
 import FeatImage02 from '@/public/images/features-03-image-02.png'
 import FeatImage03 from '@/public/images/features-03-image-03.png'
@@ -8,10 +9,23 @@ export default function Zigzag() {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-gray-800">
+        <div className="py-12 md:py-20 border-t ">
+        <div >
+        <ModalVideo
+            
+            thumb={VideoThumb}
+            thumbWidth={1024}
+            thumbHeight={576}
+            thumbAlt="Modal video thumbnail"
+            video="/videos/video.mp4"
+            videoWidth={1920}
+            videoHeight={1080} />
+          </div> 
+
+
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16" style={{transform:'translateY(100px)'}}>
             {/*<div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">sacame esto negrito porfa</div>*/}
             <h1 className="h2 font-light mb-4 text-5xl md:text-6xl lg:text-6xl">ni más. ni menos. </h1>
             <p className="text-gray-800 text-4xl md:text-6xl lg:text-6xl tracking-[0.1em]">lo hacemos a tu medida</p>
