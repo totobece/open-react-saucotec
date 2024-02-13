@@ -40,42 +40,41 @@ const ClientesPage = () => {
           </h1>
           <h2 className='text-3xl text-gray-500 mt-8 mb-60 '>Texto más chico aquí pero más largo que el de arriba</h2>
         </div>
-        {/* Carrusel de imágenes */}
         <div className="flex justify-center items-center ">
           <Slider {...settings} className="w-full max-w-4xl mx-auto">
             <div>
               <motion.div
-                onClick={scrollToTestimonials} // Desplazamiento hacia el componente Testimonials al hacer clic
+                onClick={scrollToTestimonials} 
                 className="cursor-pointer"
-                whileHover={{ y: 10 }} // Desplazamiento hacia abajo de 20px al pasar el cursor por encima
+                whileHover={{ y: 10 }} 
               >
                 <img src={AppleLogo.src} alt="Apple" className="w-32 h-auto mx-auto" />
               </motion.div>
             </div>
             <div>
               <motion.div
-                onClick={scrollToTestimonials} // Desplazamiento hacia el componente Testimonials al hacer clic
+                onClick={scrollToTestimonials} 
                 className="cursor-pointer"
-                whileHover={{ y: 10 }} // Desplazamiento hacia abajo de 20px al pasar el cursor por encima
+                whileHover={{ y: 10 }} 
               >
                 <img src={MicrosoftLogo.src} alt="Microsoft" className="w-32 h-auto mx-auto" />
               </motion.div>
             </div>
             <div>
               <motion.div
-                onClick={scrollToTestimonials} // Desplazamiento hacia el componente Testimonials al hacer clic
+                onClick={scrollToTestimonials} 
                 className="cursor-pointer"
-                whileHover={{ y: 10 }} // Desplazamiento hacia abajo de 10px al pasar el cursor por encima
+                whileHover={{ y: 10 }} 
               >
                 <img src={IBMLogo.src} alt="IBM" className="w-32 h-auto mx-auto" />
               </motion.div>
             </div>
-            {/* Agrega más imágenes de clientes según sea necesario */}
+        
           </Slider>
         </div>
       </div>
       <div ref={testimonialsRef}>
-        <Testimonials /> {/* El componente Testimonials se mostrará aquí */}
+        <Testimonials /> 
       </div>
     </>
   );
