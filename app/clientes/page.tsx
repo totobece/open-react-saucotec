@@ -39,7 +39,7 @@ const ClientesPage = () => {
             CLIENTES
           </h1>
           <h2 className='text-3xl text-gray-500 mt-8 mb-60 '>Texto más chico aquí pero más largo que el de arriba</h2>
-        </div>
+        </div>  
         <div className="flex justify-center items-center ">
           <Slider {...settings} className="w-full max-w-4xl mx-auto">
             <div>

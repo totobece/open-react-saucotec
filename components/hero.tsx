@@ -26,7 +26,6 @@ export default function Hero() {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   return (
     <section className='bg-customBlue'>
       <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>

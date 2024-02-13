@@ -19,6 +19,7 @@
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=""] {
     display: none;
+<<<<<<< ours
 }
 
 body {
@@ -28,6 +29,9 @@ body {
 
 }
 
+=======
+} 
+>>>>>>> theirs
 .logo-container {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -38,5 +42,10 @@ body {
     padding:0 ;
     margin: 0;
 
+}
+
+.fade-out {
+
+    opacity: 0;
 }
   
