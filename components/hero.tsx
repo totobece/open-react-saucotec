@@ -28,7 +28,7 @@ export default function Hero() {
   };
 
   return (
-    <section>
+    <section className='bg-customBlue'>
       <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
 
         {/* Illustration behind hero content */}
@@ -45,11 +45,11 @@ export default function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className={`relative pt-32 pb-10 md:pt-40 md:pb-60 ${isMobile ? 'pb-6' : ''}`}>
+        <div className={`relative pt-32 pb-10 md:pt-40 md:pb-50 ${isMobile ? 'pb-6' : ''}`}>
 
           {/* Section header */}
-          <div className={`max-w-6xl mx-auto pb-12 md:pb-16 flex flex-col items-${isMobile ? 'center' : 'start'} ${isMobile ? 'h-64' : ''}`}>
-            <h1 className={`text-4xl font-light md:text-4xl lg:text-7xl h1 mb-4 tracking-[0.09em] ${isMobile ? 'text-center' : ''}`} data-aos="fade-up" style={{ transform: isMobile ? '' : 'translate(30px, 30px )' }}>
+          <div className={`max-w-6xl mx-auto pb-12 md:pb-14 flex flex-col items-${isMobile ? 'center' : 'start'} ${isMobile ? 'h-64' : ''}`}>
+            <h1 className={`text-white text-4xl font-light md:text-4xl lg:text-7xl h1 mb-4 tracking-[0.09em] ${isMobile ? 'text-center' : ''}`} data-aos="fade-up" style={{ transform: isMobile ? '' : 'translate(30px, 30px )' }}>
               DIGITALIZA TU ORGANIZACION
               <br className={isMobile ? 'hidden' : ''} />
               Y UN POQUITO MAS
@@ -58,7 +58,7 @@ export default function Hero() {
               {/* Contactanos */}
               <div>
                 <div data-aos="fade-up" data-aos-delay="600">
-                  <button onClick={scrollToContact} className=" text-xl btn text-white bg-blue-888 hover:bg-blue-800 w-full rounded-[20px] mb-4 sm:w-auto sm:mb-0"
+                  <button onClick={scrollToContact} className=" text-xl btn text-blue-888 bg-white hover:bg-slate-300 w-full rounded-[20px] mb-4 sm:w-auto sm:mb-0"
                     style={{ transform: isMobile ? '' : 'translate(-462px,40px)' }}>
                     Contactanos
                   </button>
@@ -67,11 +67,12 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Removed ModalVideo component */}
+        
           <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={550} height={0} alt="Features 01"
             style={{ transform: isMobile ? '' : 'translate(200px,-100px)' }} />
         </div>
 
+        
       </div>
     </section>
   );
