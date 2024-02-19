@@ -49,9 +49,7 @@ export default function Hero() {
           {/* Section header */}
           <div className={`max-w-6xl mx-auto pb-12 md:pb-14 flex flex-col items-${isMobile ? 'center' : 'start'} ${isMobile ? 'h-64' : ''}`}>
             <h1 className={`text-white text-4xl font-light md:text-4xl lg:text-7xl h1 mb-4 tracking-[0.09em] ${isMobile ? 'text-center' : ''}`} data-aos="fade-up" style={{ transform: isMobile ? '' : 'translate(30px, 30px )' }}>
-              DIGITALIZA TU ORGANIZACION
-              <br className={isMobile ? 'hidden' : ''} />
-              Y UN POQUITO MAS
+              ERGONOMÍA GLOBAL
             </h1>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               {/* Contactanos */}
