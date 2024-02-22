@@ -11,8 +11,7 @@ import {GoogleTagManager} from '@next/third-parties/google'
 
 const bebas_neue = Bebas_Neue({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-bebas-neue',
+  weight: '400',  
   display: 'swap'
 })
 

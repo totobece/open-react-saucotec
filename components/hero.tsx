@@ -47,24 +47,50 @@ export default function Hero() {
         <div className={`relative pt-32 pb-10 md:pt-40 md:pb-50 ${isMobile ? 'pb-6' : ''}`}>
 
           {/* Section header */}
-          <div className={`max-w-6xl mx-auto pb-12 md:pb-14 flex flex-col items-${isMobile ? 'center' : 'start'} ${isMobile ? 'h-64' : ''}`}>
-            <h1 className={`text-white text-4xl font-light md:text-4xl lg:text-7xl h1 mb-4 tracking-[0.09em] ${isMobile ? 'text-center' : ''}`} data-aos="fade-up" style={{ transform: isMobile ? '' : 'translate(30px, 30px )' }}>
-              DIGITALIZA TU ORGANIZACION
-              <br className={isMobile ? 'hidden' : ''} />
-              Y UN POQUITO MAS
-            </h1>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              {/* Contactanos */}
-              <div>
-                <div data-aos="fade-up" data-aos-delay="600">
-                  <button onClick={scrollToContact} className=" text-xl btn text-blue-888 bg-white hover:bg-slate-300 w-full rounded-[20px] mb-4 sm:w-auto sm:mb-0"
-                    style={{ transform: isMobile ? '' : 'translate(-462px,40px)' }}>
-                    Contactanos
-                  </button>
-                </div>
-              </div>
+        <div className='items-center md:flex-row'>
+          <div className='max-w-6xl container mx-auto flex flex-col pb-8'>
+            <div className='md:flex md:flex-col'>
+              <h1 className='text-4xl md:text-4xl lg:text-8xl text-white ' data-aos="fade-up">
+                DIGITALIZA TU ORGANICION
+                
+                <h2 className='text-3xl lg:text-6xl md:text-4xl bg-gradient-to-r from-white via-blue-600  to-blue-888  text-transparent bg-clip-text'> 
+                Y UN POCO MAS
+                </h2>
+              
+              </h1>
+            </div>
+            <div data-aos="fade up">
+              <button onClick={scrollToContact} className='text-xl btn text-blue-888 bg-white hover:bg-slate-300 w-38 mt-4 rounded-[20px] mb-4 '>
+                Contactanos
+              </button>
             </div>
           </div>
+          </div>
+  {/* <div className="max-w-6xl mx-auto pb-12 md:pb-14 flex flex-col items-center md:items-start md:flex-row md:justify-between md:items-center">
+  <div className="md:flex md:flex-col md:items-center md:justify-center">
+    <h1 className="text-white text-4xl font-light md:text-4xl lg:text-7xl h1 mb-4 tracking-[0.09em] text-center md:text-left" data-aos="fade-up" style={{ transform: 'translate(30px, 30px)' }}>
+      DIGITALIZA TU ORGANIZACION
+      <h2 className="text-4xl md:text-4xl lg:text-5xl bg-clip-text bg-gradient-to-r from-blue-888 to-white">
+        Y UN POQUITO MAS
+      </h2>
+    </h1>
+    <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-center">
+     
+      <div>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <button
+            onClick={scrollToContact}
+            className="text-xl btn text-blue-888 bg-white hover:bg-slate-300 w-full rounded-[20px] mb-4 sm:w-16 md:w-32 lg:w-48"
+          >
+            Contactanos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> */}
+
+
 
         
           <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={550} height={0} alt="Features 01"
