@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/*/.{js,ts,jsx,tsx}',
-    './pages/*/.{js,ts,jsx,tsx}',
-    './components/*/.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -22,8 +22,6 @@ module.exports = {
           889: '#31608A',
           999: '#4B7FAF', 
           998: '#7DA4D1', 
-          777: '#171D2C',
-          111: '#5373CE',
         },
 
         gray: {
@@ -67,7 +65,7 @@ module.exports = {
         '2xl': '1.5rem',
         '3xl': '2rem',
         '4xl': '2.5rem',
-        '5xl': '2.8rem',
+        '5xl': '3.25rem',
         '6xl': '4rem',
       },
       inset: {
@@ -87,27 +85,6 @@ module.exports = {
       scale: {
         '98': '.98'
       },
-      fontWeight: {
-        thin: '100',
-        hairline: '100',
-        extralight: '200',
-        light: '300',
-        normal: '400',
-        medium: '500',
-        semibold: '600',
-        bold: '700',
-        extrabold: '800',
-        'extra-bold': '800',
-        black: '900',
-      },
-      lineHeight: {
-        'extra-loose': '2.5',
-        '12': '3rem',
-      },
-      borderRadius: {
-        '12xl': '50px',
-      }
-  
     },
   },
   plugins: [

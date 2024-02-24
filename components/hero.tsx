@@ -29,8 +29,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-customBlue relative pb-96"> {/* Agregamos overflow-hidden para limitar el contenido */}
-      <div className="max-w-full mx-auto px-4 sm:px-6 pt-72"> {/* Eliminamos relative para que el contenido no extienda más allá de los límites de la sección */}
+    <section className="bg-customBlue relative pb-96"> 
+      <div className="max-w-full mx-auto px-4 sm:px-6 pt-72"> 
         <div className="items-center md:flex-row text-left lg:mx-0">
           <div className="max-w-6xl container ml-20 flex flex-col pb-8">
             <div className="md:flex md:flex-col">
@@ -56,7 +56,6 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Limitamos el tamaño del contenedor del contenido */}
       <div className="max-w-full mx-auto px-4 sm:px-6 relative z-10">
         
       </div>
