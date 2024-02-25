@@ -1,8 +1,21 @@
-// components/ContactForm.tsx
+
 'use client'
 
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import Link from 'next/link'
+import Image from 'next/image'
+import  SaucotecLogo from "../../public/images/SaucotecLogo.svg"
+import PhoneLogo from "../../public/images/phone-svg.svg"
+import { FaPhoneAlt } from "react-icons/fa";
+import WPPlogo from "../public/images/Free whatsapp white logo vector.svg.svg"
+import { TypewriterEffect } from './typewriter-effect';
+
+function HandleCall() {
+  window.location.href = 'tel:+5491131500591'
+
+
+}
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("myyqlkdn");
@@ -16,19 +29,23 @@ function ContactForm() {
       </div>
     );
   }
-  
+  const words = [
+    {
+      text: "Contactanos.",
+      className: "text-blue-888 dark:text-blue-888 text-4xl lg:text-6xl",
+    },
+   
+  ];
 
   return (
-    <section id="contact" className="relative">
-      <div className="relative flex flex-col justify-center  overflow-hidden ">
+    <section id="contact" className="relative ">
+      <div className="relative flex flex-col justify-center  overflow-hidden mb-8 ">
         <div className="w-full p-6 m-auto bg-zinc-50 rounded-md  lg:max-w-xl">
-          <h1 className="text-6xl font-bebas text-center text-blue-888">
-            Contactanos
-          </h1>
+          <TypewriterEffect words={words}/>
           <form className="mt-6 p-4 lg:p-6" onSubmit={handleSubmit}>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Nombre</span>
+                <span className="text-gray-700 font-semibold">Nombre</span>
                 <input
                   type="text"
                   name="name"
@@ -47,13 +64,13 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
-                  style={{ fontFamily: 'helvetica, sans-serif' }}
+                  
                 />
               </label>
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Email</span>
+                <span className="text-gray-700 font-semibold" >Email</span>
                 <input
                   name="email"
                   type="email"
@@ -72,14 +89,14 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
-                  style={{ fontFamily: 'helvetica, sans-serif' }}
+                
                   required
                 />
               </label>
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold" style={{ fontFamily: 'helvetica, sans-serif' }}>Mensaje</span>
+                <span className="text-gray-700 font-semibold" >Mensaje</span>
                 <textarea
                   name="message"
          
@@ -97,7 +114,7 @@ function ContactForm() {
                     focus:ring-indigo-200
                     focus:ring-opacity-50
                   "
-                  style={{ fontFamily: 'helvetica, sans-serif' }}
+                 
                 ></textarea>
               </label>
             </div>
@@ -109,13 +126,14 @@ function ContactForm() {
                 className="
                   h-10
                   px-5
-                  text-indigo-100
+                  text-white
                   bg-blue-888
-                  rounded-lg
+                  rounded-[52px]
                   transition-colors
                   duration-150
                   focus:shadow-outline
-                  hover:bg-blue-600
+                  hover:bg-[#334FFE]
+                  mt-4
                 "
               >
                 Enviar
@@ -129,6 +147,18 @@ function ContactForm() {
             />
           </form>
         </div>
+
+        {/* Social links */}
+        <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0 justify-center">
+
+              <a className="text-3xl font-bebas text-center text-blue-600">
+                  Llame ya!
+                </a>
+
+
+
+</ul>
+
       </div>
     </section>
   );

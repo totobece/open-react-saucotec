@@ -20,14 +20,6 @@
 [x-cloak=""] {
     display: none;
 }
-
-body {
-
-    font-family: var(--font-bebas-neue), sans-serif;
-
-
-}
-
 .logo-container {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -39,4 +31,36 @@ body {
     margin: 0;
 
 }
+
+.fade-out {
+
+    opacity: 0;
+}
   
+.scroll-section-outer {
+    overflow: hidden;
+  }
+  
+  .scroll-section-inner {
+    height: 100vh;
+    width: 400vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .scroll-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll-section h3 {
+    color: var(--primaryTextColor);
+    letter-spacing: var(--headlineMedium);
+    font-size: var(--headlineMedium);
+    text-transform: uppercase;
+  }
+

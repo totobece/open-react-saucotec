@@ -1,19 +1,19 @@
 'use client'
 
 import { useEffect } from 'react';
-import { pageview } from '@/lib/gtagHelper';
+import {pageview} from 'lib/gtagHelper';
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
- //  const pathname = usePathname();
-   // const searchParams = useSearchParams();
+          const pathname = usePathname();
+         const searchParams = useSearchParams();
 
-    //useEffect(() => {
-      //  const url = pathname + searchParams.toString();
-        // Usa la función pageview importada
-        //pageview(GA_MEASUREMENT_ID, url);
-   // }, [pathname, searchParams, GA_MEASUREMENT_ID]);
+        useEffect(() => {
+        const url = pathname + searchParams.toString();
+         //Usa la función pageview importada
+        pageview(GA_MEASUREMENT_ID, url);
+        }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
     return (
         <>

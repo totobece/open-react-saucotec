@@ -23,7 +23,9 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/lib/gtagHelper": ["/home/toto/vscode projects/open-react-saucotec/lib/gtagHelper.ts"]
+      "@/lib/gtagHelper": ["/home/toto/vscode projects/open-react-saucotec/lib/gtagHelper.ts"],
+      "@next/third-parties/google": [ "./node_modules/@next/third-parties/dist/google" ],
+      "@components/*": ["./components/ui/*"]
     } 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
