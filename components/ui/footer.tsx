@@ -10,6 +10,14 @@ import FondoFooter from '@/public/images/Group 62 (1).svg';
 function HandleCall() {
   window.location.href = 'tel:+5491131500591';
 }
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact');
+
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 
 export default function Footer() {
   return (
@@ -34,7 +42,7 @@ export default function Footer() {
             <div className="md:col-span-12 lg:col-span-12 flex justify-center items-center">
               <div className="mb-2">
                 {/* Logo */}
-                <Link href="/" className="inline-block" aria-label="Cruip">
+                <Link href="/" onClick={scrollToContact} className="inline-block" aria-label="Cruip">
                   <div className="w-full md:w-auto lg:w-auto">
                     <Image
                       src={SaucotecLogo}

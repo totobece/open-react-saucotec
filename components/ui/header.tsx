@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import SaucotecLogo from '../../public/images/SaucotecLogo-white-svg.svg';
 import SaucotecLogoDark from '../../public/images/SaucotecLogo.svg';
 import MobileMenu from './mobile-menu';
+import { Button } from './moving-border';
 
 interface HeaderProps {
   pageType?: 'default' | 'dark';
@@ -37,6 +38,8 @@ const Header: React.FC<HeaderProps> = ({ pageType = 'default' }) => {
             <MobileMenu />
           </div>
 
+          
+
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-14 justify-between px-6 bg-white rounded-[40px] border-solid shadow-sm border-[0.81px] max-w-2xl h-20 ">
             <ul className="flex gap-7 text-2xl">
@@ -56,7 +59,10 @@ const Header: React.FC<HeaderProps> = ({ pageType = 'default' }) => {
                 </Link>
               </motion.li>
             </ul>
-            <button onClick={scrollToContact} className="text-xl btn text-white bg-blue-888 hover:bg-sky-400 rounded-[40px] px-4 py-4 mt-4 mb-4">Contactanos</button>
+            <Button borderRadius='1.75rem' className=' dark:bg-blue-888 dark:text-white border-neutral-200 dark:border-white text-xl'>
+              Contactanos
+               </Button>
+            {/*<button onClick={scrollToContact} className="text-xl btn text-white bg-blue-888 hover:bg-sky-400 rounded-[40px] px-4 py-4 mt-4 mb-4">Contactanos</button> */}
           </nav>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Nort from '@/public/images/NORT cliente.png';
 import DuoRings from '@/public/images/DUO RINGS cliente.png';
 import Politap from '@/public/images/POLITAP cliente.png';
-import Ergonomia from '@/public/images/ERGONOMíA cliente.png';
+import Ergonomia from '@/public/images/ERGONOMÍA cliente.png';
 import Metalux from '@/public/images/METALUX cliente.png';
 import EG from '@/public/images/EG cliente.png';
 import { motion } from 'framer-motion';
