@@ -1,102 +1,68 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+'use client';
+import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import MobileMenu from './mobile-menu';
 import Image from 'next/image';
-import SaucotecLogo from "../../public/images/SaucotecLogo-white-svg.svg";
-import WPPlogo from "../../public/images/Free whatsapp white logo vector.svg.svg";
-import { motion } from "framer-motion";
-import SaucotecLogoDark from "../../public/images/SaucotecLogo.svg";
+import { motion } from 'framer-motion';
+import SaucotecLogo from '../../public/images/SaucotecLogo-white-svg.svg';
+import SaucotecLogoDark from '../../public/images/SaucotecLogo.svg';
+import MobileMenu from './mobile-menu';
 
 interface HeaderProps {
   pageType?: 'default' | 'dark';
 }
+
 const scrollToContact = () => {
   const contactSection = document.getElementById('contact');
 
   if (contactSection) {
     contactSection.scrollIntoView({ behavior: 'smooth' });
   }
-
 };
-
-
 
 const Header: React.FC<HeaderProps> = ({ pageType = 'default' }) => {
   const logo = pageType === 'dark' ? SaucotecLogoDark : SaucotecLogo;
 
   return (
     <header className="absolute w-full z-30">
-    <div className="max-w-8xl mx-auto sm:px-6 relative">
-      <div className="flex items-center justify-between h-40"> 
-        <div className='w-40 xl:w-64 sm:w-48 flex items-center shrink-0 ml-16'> 
-          <Link href="/" className="block" aria-label="Cruip">
-            <Image
-              priority
-              src={logo}
-              alt='saucotec-logo'
-            />
-          </Link>
-        </div>
+      <div className="max-w-8xl mx-auto sm:px-6 relative">
+        <div className="flex items-center justify-between h-40 sm:h-24 md:h-32">
+          {/* Logo and Mobile Menu */}
+          <div className="w-40 xl:w-64 sm:w-48 flex items-center shrink-0 ml-16 md:ml-8 lg:ml-16">
+            <Link href="/" className="block" aria-label="Cruip">
+              <Image priority src={logo} alt="saucotec-logo" />
+            </Link>
+          </div>
+          {/* Mobile menu trigger */}
+          <div className="md:hidden ml-4 flex items-center">
+            <MobileMenu />
+          </div>
 
-        <div className="md:hidden ml-4 flex items-center"> 
-          <MobileMenu />
-        </div>
-        
-        <div className='mr-20 hidden md:flex gap-5 justify-between items-center py-2.5 px-5 bg-white rounded-[40px] border-solid shadow-sm border-[0.81px] max-md:flex-wrap max-md:pl-5 max-w-2xl'
-          data-aos="fade-up">
-          <nav className="md:flex gap-7 flex:hidden justify-center">
-            <ul className="flex gap-7" style={{ marginTop: '6px', marginLeft: '30px' }}>
-              <motion.li
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <Link href="/nosotros" className='text-2xl text-blue-888'>
-                  <motion.div whileHover={{ opacity: 0.7 }}>
-                    Nosotros
-                  </motion.div>
+          {/* Desktop navigation */}
+          <nav className="hidden md:flex items-center gap-14 justify-between px-6 bg-white rounded-[40px] border-solid shadow-sm border-[0.81px] max-w-2xl h-20 ">
+            <ul className="flex gap-7 text-2xl">
+              <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+                <Link href="/nosotros" className="text-blue-888">
+                  <motion.div whileHover={{ opacity: 0.7 }}>Nosotros</motion.div>
                 </Link>
               </motion.li>
-              <motion.li
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <Link href="/servicios" className='text-2xl text-blue-888'>
-                  <motion.div whileHover={{ opacity: 0.7 }}>
-                    Servicios
-                  </motion.div>
+              <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+                <Link href="/servicios" className="text-blue-888">
+                  <motion.div whileHover={{ opacity: 0.7 }}>Servicios</motion.div>
                 </Link>
               </motion.li>
-              <motion.li
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <Link href="/clientes" className='text-2xl text-blue-888'>
-                  <motion.div whileHover={{ opacity: 0.7 }}>
-                    Clientes
-                  </motion.div>
+              <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+                <Link href="/clientes" className="text-blue-888">
+                  <motion.div whileHover={{ opacity: 0.7 }}>Clientes</motion.div>
                 </Link>
               </motion.li>
             </ul>
+            <button onClick={scrollToContact} className="text-xl btn text-white bg-blue-888 hover:bg-sky-400 rounded-[40px] px-4 py-4 mt-4 mb-4">Contactanos</button>
           </nav>
-          <ul>
-            <li>
-              <div data-aos="fade up">
-                <button onClick={scrollToContact} className='text-xl btn text-white bg-blue-888 hover:bg-sky-400 rounded-[40px]'>
-                  Contactanos
-                </button>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
   );
 };
 
 export default Header;
+

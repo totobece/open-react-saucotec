@@ -57,7 +57,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "pl-96 flex items-center justify-center",
+          " flex items-center justify-center",
           containerClassName
         )}
         style={{
@@ -84,12 +84,10 @@ export const CardContainer = ({
   );
 };
 
-export const CardBody = ({
-  children,
-  className,
-}: {
+export const CardBody = ({ children, className, style }: {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties; // Add the style prop here
 }) => {
   return (
     <div
@@ -97,6 +95,7 @@ export const CardBody = ({
         "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
+      style={style} // Apply the passed style to the div
     >
       {children}
     </div>

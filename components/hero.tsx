@@ -1,10 +1,12 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Desktop from '@/public/images/DESKTOP.png';
-import Botones from '@/public/images/BOTONES.png';
-import Mobile from '@/public/images/MOBILE.png';
+import Desktop from '@/public/images/DESKTOP.svg';
+import Botones from '@/public/images/BOTONES.svg';
+import Mobile from '@/public/images/MOBILE.svg';
+import FotosMobile from '@/public/images/Group 51 (1).png';
 import { CardBody, CardContainer, CardItem } from './ui/3d-card';
+import Fondo from '@/public/images/Rectangle 22 (1).svg';
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState(false);
@@ -29,36 +31,85 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-customBlue relative pb-96"> 
-      <div className="max-w-full mx-auto px-4 sm:px-6 pt-72"> 
-        <div className="items-center md:flex-row text-left lg:mx-0">
-          <div className="max-w-6xl container ml-20 flex flex-col pb-8">
-            <div className="md:flex md:flex-col">
-              <h1 className="text-4xl md:text-4xl lg:text-6xl text-white" data-aos="fade-up">
-                Tu transformacion digital
-                <h2 className="text-3xl lg:text-6xl md:text-4xl bg-gradient-to-r from-white via-blue-600 to-blue-888 text-transparent bg-clip-text ">
-                  junto a nosotros
-                </h2>
-              </h1>
-            </div>
+    <section className="relative">
+      
+      <div className="max-w-full mx-auto px-4 pt-64 flex z-10 relative">
+        <div className="max-w-6xl container ml-20 flex flex-col pb-8">
+          <div className="md:flex md:flex-col ">
+            <h1 className={` text-3xl md:text-4xl lg:text-7xl  text-white text-left `} data-aos="fade-up">
+              Tu <span className='text-extrabold'>transformacion</span> digital
+              <h2 className={`text-3xl lg:text-7xl md:text-3xl  `}>
+                con nosotros
+              </h2>
+            </h1>
+            <button onClick={scrollToContact}  className='lg:w-80 w-60 text-xl btn text-white bg-[#000F39]  h-16 rounded-[52px] mt-16 border-solid border-2 border-white px-4 hover:bg-[#334FFE] lg:ml-2 ml-6 '>
+              Digitalizacion de procesos
+            </button>  
+            <button onClick={scrollToContact}  className='lg:w-80 w-60 text-xl btn text-white bg-[#000F39]  h-16 rounded-[52px] mt-8 border-solid border-2 border-white px-4 hover:bg-[#334FFE] lg:ml-2 ml-6 '>
+              Desarrollar mi proyecto
+            </button>  
           </div>
         </div>
-      </div>
 
-      <div className="absolute left-0 bottom-0 hidden lg:block pointer-events-none" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
-        <svg className="max-w-full" style={{ transform: 'translate(-200px,-400px)' }} width="564" height="552" viewBox="0 0 564 552" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="illustration-02" x1="-3.766" y1="300.204" x2="284.352" y2="577.921" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#5D5DFF" stopOpacity=".01" />
-              <stop offset="1" stopColor="#5D5DFF" stopOpacity=".32" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+        {!isMobile && (
+          <div className="max-w-full mx-auto px-4 sm:px-6 relative mr-44 z-0">
+            <CardContainer className='inter-var'>
+              <CardBody className='w-auto sm:w-[30rem] h-auto rounded-xl p-6'>
+                <CardItem translateZ="160">
+                  <Image
+                    src={Desktop}
+                    height="1000"
+                    width="1000"
+                    alt='thumbnail'
+                    className='h-auto w-full rounded-xl'
+                  />
+                  <CardBody style={{transform:'translateY(-200px)'}}>
+                    <CardItem translateZ="120">
+                      <Image
+                        src={Mobile}
+                        height="500"
+                        width="500"
+                        alt='Mobile'
+                        className='h-30 w-30 rounded-xl'
+                      />
+                    </CardItem>
+                    <CardBody style={{transform:'translateY(-200px)'}}>
+                      <CardItem translateZ="220">
+                        <Image
+                          src={Botones}
+                          height={1000}
+                          width={1000}
+                          alt='Mobile'
+                          className='h-30 w-30 rounded-xl'
+                        />
+                      </CardItem>
+                    </CardBody>
+                  </CardBody>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+          </div>
+        )}
 
-      <div className="max-w-full mx-auto px-4 sm:px-6 relative z-10">
-        
       </div>
+      <Image
+        src={Fondo}
+        alt="Fondo"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className="absolute z-[-1]"
+      />
+      {isMobile && (
+        <div className='flex justify-center items-center z-0 pb-44 mt-10'>
+          <Image
+            src={FotosMobile}
+            alt="thumbnail"
+            height={300}
+            width={300}
+          />
+        </div>
+      )}
     </section>
   );
 }

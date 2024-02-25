@@ -20,7 +20,8 @@ export default function ServicePresentation() {
   }, []);
   
     return (
-        <section className='bg-customBlue'>
+        <section className='bg-customBlue relative'>
+          
             <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
 
                 
@@ -55,6 +56,7 @@ export default function ServicePresentation() {
                                                     <br />UX/UI. 
                                                     <br />Data Science.</blockquote>
                         </div>
+                        
                        
                 </div>
                 </div>
