@@ -14,15 +14,20 @@ import Testimonials from '@/components/testimonials'
 import ContactForm from '@/components/newsletter'
 import CookieBanner from '@/components/CookieBanner'
 import ServicePresentation from '@/components/ServicePresentation'
+import QuotePresentation from '@/components/QuotePresentation'
+import TestimonialsV2 from '@/components/TestimonialsV2'
+import SeccionClientes from '@/components/SeccionClientes'
 // import CookieBanner from '@/components/CookieBanner'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Zigzag />
       <ServicePresentation/>
-      <Testimonials />
+      <QuotePresentation />
+      <TestimonialsV2/>
+      <QuotePresentation />
+      <SeccionClientes />
       <ContactForm/>
       <CookieBanner/>
     </>
