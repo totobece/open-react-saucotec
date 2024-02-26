@@ -20,7 +20,7 @@ export default function ServicePresentation() {
   }, []);
   
     return (
-        <section className='bg-customBlue relative'>
+        <section id="service-presentation" className='bg-none relative'>
           
             <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
 
@@ -28,7 +28,7 @@ export default function ServicePresentation() {
         <div>
                 {/* Titulo */}
                 <div>
-                    <h1 className='w-full text-white pt-8 md:text-4xl lg:text-4xl text-[1.5rem] leading-[1] font-[200] relative flex flex-col  text-center mx-auto mb-12'>Desarrollo y transformación digital para<br />compañías con visiones ambiciosos</h1>
+                    <h1 className='w-full text-white pt-8 md:text-4xl lg:text-4xl text-[1.5rem] leading-[1] font-[200] relative flex flex-col  text-center mx-auto mb-12'>Desarrollo y transformación digital para<br />compañías con objetivos ambiciosos</h1>
                 </div >
                 
                 {/* Div para las dos cards */}
@@ -61,6 +61,14 @@ export default function ServicePresentation() {
                 </div>
                 </div>
             </div>
+            <Image
+                src={Fondo}
+                alt="Fondo"
+                quality={100}
+                layout="fill"
+                objectFit="cover"
+                className="absolute z-[-1] h-full w-full"
+              />  
         </section>
     )
 }

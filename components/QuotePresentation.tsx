@@ -26,7 +26,7 @@ export default function ServicePresentation() {
                 {/* Titulo */}
                 <div className='bg-customBlue py-20 lg:py-40'>
                     <p className='w-full text-white md:text-3xl lg:text-4xl text-[1.5rem] font-[300] relative flex flex-col  text-center mx-auto '>
-                      SaucoTec es una compañía de servicio digital<span className='text-blue-600 font-bold ml-2 mr-2'>completo.</span>Trabajamos para hacerte alcanzar otro nivel.</p>
+                      SaucoTec es una compañía de servicio digital<span className='text-[#FF248D] font-bold ml-2 mr-2'>completo</span>. <br />Trabajamos para hacerte alcanzar <span className='text-white font-bold ml-2 mr-2'>otro nivel</span>.</p>
                       
                 </div >
             </div>

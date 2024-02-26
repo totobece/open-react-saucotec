@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById('service-presentation');
 
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -32,27 +32,37 @@ export default function Hero() {
 
   return (
     <section className="relative">
+      <div className={`max-w-full mx-4 sm:px-6 relative ${isMobile ? 'text-center place-content-center' : 'text-left'}`}>
       
-      <div className="max-w-full mx-auto px-4 pt-64 flex z-10 relative">
-        <div className="max-w-6xl container ml-20 flex flex-col pb-8">
+      <div className="max-w-full mx-auto px-4 pt-[140px] md:pt-32 lg:pt-64 flex z-10 relative">
+        <div className="max-w-6xl container md:ml-10 flex flex-col lg:pb-8">
           <div className="md:flex md:flex-col ">
-            <h1 className={` text-3xl md:text-4xl lg:text-7xl  text-white text-left `} data-aos="fade-up">
-              Tu <span className='text-extrabold'>transformacion</span> digital
-              <h2 className={`text-3xl lg:text-7xl md:text-3xl  `}>
-                con nosotros
-              </h2>
+            <h1 className={` text-3xl md:text-4xl lg:text-6xl  text-white  `} data-aos="fade-up">
+              Tu <span className='text-extrabold'>transformación</span> digital,
+                <br />
+                junto a nosotros
             </h1>
-            <button onClick={scrollToContact}  className='lg:w-80 w-60 text-xl btn text-white bg-[#000F39]  h-16 rounded-[52px] mt-16 border-solid border-2 border-white px-4 hover:bg-[#334FFE] lg:ml-2 ml-6 '>
-              Digitalizacion de procesos
-            </button>  
-            <button onClick={scrollToContact}  className='lg:w-80 w-60 text-xl btn text-white bg-[#000F39]  h-16 rounded-[52px] mt-8 border-solid border-2 border-white px-4 hover:bg-[#334FFE] lg:ml-2 ml-6 '>
-              Desarrollar mi proyecto
-            </button>  
+            <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] md:mt-8 text-white duration-50 relative hover:-translate-x-[-12px] transition'>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
+              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 lg:ml-2 ml-6 ">
+                Digitalización de procesos</div>
+            </button>
+            <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#334FFE] to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
+              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition font-[300] duration-200 h-12 mt-8 lg:ml-2 ml-6 text-white hover:bg-transparent">
+                Desarollar mi proyecto</div>
+            </button>
+
+            <button onClick={scrollToContact}  className='hidden w-60 lg:w-80 btn p-[2px]  text-white hover:text-[#000F39] hover:font-bold duration-50 relative hover:-translate-x-[-12px] transition'>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
+              <div className="lg:w-80 w-60 text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 lg:ml-2 ml-6  hover:bg-transparent">
+                Digitalización de procesos</div>
+            </button>
           </div>
         </div>
 
         {!isMobile && (
-          <div className="max-w-full mx-auto px-4 sm:px-6 relative mr-44 z-0">
+          <div className="max-w-full mx-20 px-4 sm:px-6 relative z-0">
             <CardContainer className='inter-var'>
               <CardBody className='w-auto sm:w-[30rem] h-auto rounded-xl p-6'>
                 <CardItem translateZ="160">
@@ -92,16 +102,10 @@ export default function Hero() {
         )}
 
       </div>
-      <Image
-        src={Fondo}
-        alt="Fondo"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="absolute z-[-1]"
-      />
+      </div>
+      
       {isMobile && (
-        <div className='flex justify-center items-center z-0 pb-44 mt-10'>
+        <div className='flex justify-center items-center z-0 pb-16 mt-10'>
           <Image
             src={FotosMobile}
             alt="thumbnail"
@@ -109,7 +113,16 @@ export default function Hero() {
             width={300}
           />
         </div>
+        
       )}
+      <Image
+        src={Fondo}
+        alt="Fondo"
+        layout="fill"
+        objectFit="none"
+        quality={100}
+        className="absolute z-[-1]"
+      />
     </section>
   );
 }

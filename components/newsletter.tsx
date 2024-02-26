@@ -23,7 +23,7 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-4xl font-semibold text-blue-888">
+        <p className="text-4xl font-semibold text-white">
           ¡Gracias por contactarnos!
         </p>
       </div>
@@ -31,21 +31,21 @@ function ContactForm() {
   }
   const words = [
     {
-      text: "Contactanos.",
-      className: "text-blue-888 dark:text-blue-888 text-4xl lg:text-6xl",
+      text: "Contactanos",
+      className: "text-white text-4xl lg:text-6xl",
     },
    
   ];
 
   return (
-    <section id="contact" className="relative ">
+    <section id="contact" className="relative bg-[#07112B]">
       <div className="relative flex flex-col justify-center  overflow-hidden mb-8 ">
-        <div className="w-full p-6 m-auto bg-zinc-50 rounded-md  lg:max-w-xl">
+        <div className="w-full bg-[#07112B] p-6 m-auto rounded-md  lg:max-w-xl">
           <TypewriterEffect words={words}/>
           <form className="mt-6 p-4 lg:p-6" onSubmit={handleSubmit}>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold">Nombre</span>
+                <span className="text-slate-300 ">Nombre</span>
                 <input
                   type="text"
                   name="name"
@@ -55,8 +55,10 @@ function ContactForm() {
                     block
                     px-16
                     py-2
+                    text-white
                     mt-2
                     border-gray-300
+                    bg-[#07112B]
                     rounded-md
                     shadow-sm
                     focus:border-indigo-300
@@ -70,7 +72,7 @@ function ContactForm() {
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold" >Email</span>
+                <span className="text-slate-300 " >Email</span>
                 <input
                   name="email"
                   type="email"
@@ -81,9 +83,11 @@ function ContactForm() {
                     mt-2
                     px-16
                     py-2
+                    bg-[#07112B]
                     border-gray-300
                     rounded-md
                     shadow-sm
+                    text-white
                     focus:border-indigo-300
                     focus:ring
                     focus:ring-indigo-200
@@ -96,7 +100,7 @@ function ContactForm() {
             </div>
             <div className="mb-2">
               <label>
-                <span className="text-gray-700 font-semibold" >Mensaje</span>
+                <span className="text-slate-300 " >Mensaje</span>
                 <textarea
                   name="message"
          
@@ -104,6 +108,8 @@ function ContactForm() {
                     block
                     w-full
                     mt-2
+                    text-white
+                    bg-[#07112B]
                     px-16
                     py-8
                     border-gray-300
@@ -150,10 +156,6 @@ function ContactForm() {
 
         {/* Social links */}
         <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0 justify-center">
-
-              <a className="text-3xl font-bebas text-center text-blue-600">
-                  Llame ya!
-                </a>
 
 
 

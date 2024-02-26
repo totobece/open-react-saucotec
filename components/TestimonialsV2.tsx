@@ -14,6 +14,7 @@ import AppleLogo from '@/public/images/640px-Apple-logo.png';
 import MicrosoftLogo from '@/public/images/Microsoft_logo_(2012).svg.png';
 import IBMLogo from '@/public/images/IBM_logo.svg.png';
 import Quotes from '@/public/images/quotes.png';
+//import Fondo from '@/public/images/Rectangle 22 (1).svg';
 
 export default function ServicePresentation() {
 
@@ -58,7 +59,8 @@ if (isMobile) {
   };
   
     return (
-        <section className='bg-customBlue'>
+        <section className='relative bg-none'>
+          
             <div className={`max-w-full mx-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
 
             <div className="w-full mr-20 flex justify-center items-center  ">
@@ -77,7 +79,7 @@ if (isMobile) {
 
                         <blockquote className="tracking-normal leading-[1]  text-[1.8rem] lg:text-[2.4rem]  font-[200] text-white text-left mx-auto mb-8 grow " >Centralizar y digitalizar la información transforma las operaciones de la empresa. El sistema a nuestra medida por SaucoTec hace esto posible.</blockquote>
                         <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow " >Cesar Cabrera</blockquote>
-                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Gerente - Nort Revesimientos</blockquote>
+                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Socio - Nort Revesimientos</blockquote>
                         </div>
               </motion.div>
             </div>
@@ -93,9 +95,9 @@ if (isMobile) {
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                     </div>
 
-                        <blockquote className="tracking-normal leading-[1]  text-[1.8rem] lg:text-[2.4rem]  font-[200] text-white text-left mx-auto mb-8 grow " >Centralizar y digitalizar la información transforma las operaciones de la empresa. El sistema a nuestra medida por SaucoTec hace esto posible.</blockquote>
-                        <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow " >Cesar Cabrera</blockquote>
-                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Gerente - Nort Revesimientos</blockquote>
+                        <blockquote className="tracking-normal leading-[1]  text-[1.8rem] lg:text-[2.4rem]  font-[200] text-white text-left mx-auto mb-8 grow " >En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. SaucoTec desarrolló una solución perfectamente integrada logrando agilizar nuestras operaciones.</blockquote>
+                        <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow " >Pedro A. Rossi</blockquote>
+                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Dueño - Politap S.R.L.</blockquote>
                         </div>
               </motion.div>
             </div>
@@ -111,16 +113,25 @@ if (isMobile) {
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                     </div>
 
-                        <blockquote className="tracking-normal leading-[1]  text-[1.8rem] lg:text-[2.4rem]  font-[200] text-white text-left mx-auto mb-8 grow " >Centralizar y digitalizar la información transforma las operaciones de la empresa. El sistema a nuestra medida por SaucoTec hace esto posible.</blockquote>
-                        <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow " >Cesar Cabrera</blockquote>
-                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Gerente - Nort Revesimientos</blockquote>
+                        <blockquote className="tracking-normal leading-[1]  text-[1.8rem] lg:text-[2.4rem]  font-[200] text-white text-left mx-auto mb-8 grow " >Trabajar con SaucoTec ha resultado en excelentes logros para nosotros. La personalización de soluciones y su cercanía los diferencia.</blockquote>
+                        <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow " >Nicolás Albertoni</blockquote>
+                        <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 mb-4 grow " >Gerente Comercial - Energía Global</blockquote>
                         </div>
               </motion.div>
             </div>
-        
+            
           </Slider>
-        </div>
+          
+        </div>     
             </div>
+            <Image
+                src={Fondo}
+                alt="Fondo"
+                layout="fill"
+                objectFit="none"
+                quality={100}
+                className="absolute z-[-1]"
+              />  
         </section>
     )
 }

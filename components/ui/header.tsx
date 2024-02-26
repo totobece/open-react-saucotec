@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React , { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ import SaucotecLogo from '../../public/images/SaucotecLogo-white-svg.svg';
 import SaucotecLogoDark from '../../public/images/SaucotecLogo.svg';
 import MobileMenu from './mobile-menu';
 import { Button } from './moving-border';
+import Navbar from './nav-bar';
 
 interface HeaderProps {
   pageType?: 'default' | 'dark';
@@ -38,6 +39,8 @@ const Header: React.FC<HeaderProps> = ({ pageType = 'default' }) => {
             <MobileMenu />
           </div>
 
+          
+          <Navbar className="top-2" />
           
 
           {/* Desktop navigation */}
