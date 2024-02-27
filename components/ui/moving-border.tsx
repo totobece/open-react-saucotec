@@ -79,8 +79,8 @@ export function Button({
 export const MovingBorder = ({
   children,
   duration = 2000,
-  rx,
-  ry,
+  rx = "0", // Valor por defecto para rx
+  ry = "0", // Valor por defecto para ry
   ...otherProps
 }: {
   children: React.ReactNode;
@@ -121,14 +121,14 @@ export const MovingBorder = ({
         height="100%"
         {...otherProps}
       >
-        <rect
+        {/*<rect
           fill="none"
           width="100%"
           height="100%"
           rx={rx}
           ry={ry}
           ref={pathRef}
-        />
+  />*/}
       </svg>
       <motion.div
         style={{

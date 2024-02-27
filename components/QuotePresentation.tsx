@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
-import Fondo from '@/public/images/fondo service presentation.svg'
+import Fondo from '@/public/images/Rectangle 30 (1).svg'
 
 export default function ServicePresentation() {
 
@@ -20,14 +20,30 @@ export default function ServicePresentation() {
   }, []);
   
     return (
-        <section className='bg-customBlue'>
+        <section className='maw-x-6xl' id='nosotros'>
             <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
+                <Image
+              src={Fondo}
+              alt="FondoFooter"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className='z-[-4]'
+          
+            />
 
-                {/* Titulo */}
-                <div className='bg-customBlue py-20 lg:py-40'>
-                    <p className='w-full text-white md:text-3xl lg:text-4xl text-[1.5rem] font-[300] relative flex flex-col  text-center mx-auto '>
-                      SaucoTec es una compañía de servicio digital<span className='text-[#FF248D] font-bold ml-2 mr-2'>completo</span>. <br />Trabajamos para hacerte alcanzar <span className='text-white font-bold ml-2 mr-2'>otro nivel</span>.</p>
+               
+                <div className=' py-64 lg:py-96 md:flex md:flex-col items-center '>
+                          <h1 className="text-4xl lg:text-6xl  text-white text-center" data-aos="fade-up">
+                        Saucotec es una compañia de servicio digital <span className='text-[#FF248D] font-bold ml-2 mr-2'>completo.</span>
+                        <br/>
+                        <br/>
                       
+                        Trabajamos para hacerte  <span className='text-white font-bold ml-2 mr-2'>alcanzar otro nivel.</span>
+
+                          
+                      </h1>
+
                 </div >
             </div>
         </section>

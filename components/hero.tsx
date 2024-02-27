@@ -37,8 +37,8 @@ export default function Hero() {
       <div className="max-w-full mx-auto px-4 pt-[140px] md:pt-32 lg:pt-64 flex z-10 relative">
         <div className="max-w-6xl container md:ml-10 flex flex-col lg:pb-8">
           <div className="md:flex md:flex-col ">
-            <h1 className={` text-3xl md:text-4xl lg:text-6xl  text-white  `} data-aos="fade-up">
-              Tu <span className='text-extrabold'>transformación</span> digital,
+            <h1 className={` text-3xl md:text-4xl lg:text-6xl  text-white ml-4 `} data-aos="fade-up">
+              Tu <span className='text-white font-bold ml-2 mr-2'>transformación</span> digital,
                 <br />
                 junto a nosotros
             </h1>
@@ -48,16 +48,12 @@ export default function Hero() {
                 Digitalización de procesos</div>
             </button>
             <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#334FFE] to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
-              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition font-[300] duration-200 h-12 mt-8 lg:ml-2 ml-6 text-white hover:bg-transparent">
-                Desarollar mi proyecto</div>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
+              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition font-[300]  h-12 mt-8 lg:ml-2 ml-6 text-white ">
+                Desarrollar mi proyecto</div>
             </button>
 
-            <button onClick={scrollToContact}  className='hidden w-60 lg:w-80 btn p-[2px]  text-white hover:text-[#000F39] hover:font-bold duration-50 relative hover:-translate-x-[-12px] transition'>
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8  lg:ml-2 ml-6" />
-              <div className="lg:w-80 w-60 text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 lg:ml-2 ml-6  hover:bg-transparent">
-                Digitalización de procesos</div>
-            </button>
+       
           </div>
         </div>
 
@@ -119,9 +115,9 @@ export default function Hero() {
         src={Fondo}
         alt="Fondo"
         layout="fill"
-        objectFit="none"
+        objectFit="cover"
         quality={100}
-        className="absolute z-[-1]"
+        className=" z-[-1] fixed"
       />
     </section>
   );

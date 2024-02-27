@@ -36,7 +36,7 @@ export default function CookieBanner() {
         <>
           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 transition-opacity duration-500 ease-in-out"></div>
           <div
-            className={` my-10 w-5/6 mx-auto max-w-max md:max-w-screen-sm
+            className={` my-10 w-5/6 mx-auto max-w-6xl md:max-w-screen-sm
                         fixed bottom-0 left-0 right-0 
                         ${cookieConsent !== null ? "hidden" : "flex"} 
                         px-3 md:px-6 py-3 justify-between items-center flex-col sm:flex-row gap-3  

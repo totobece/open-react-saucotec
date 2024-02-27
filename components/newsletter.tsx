@@ -39,7 +39,7 @@ function ContactForm() {
 
   return (
     <section id="contact" className="relative bg-[#07112B]">
-      <div className="relative flex flex-col justify-center  overflow-hidden mb-8 ">
+      <div className="relative flex flex-col justify-center  overflow-hidden pb-12 ">
         <div className="w-full bg-[#07112B] p-6 m-auto rounded-md  lg:max-w-xl">
           <TypewriterEffect words={words}/>
           <form className="mt-6 p-4 lg:p-6" onSubmit={handleSubmit}>
