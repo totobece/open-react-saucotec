@@ -11,9 +11,7 @@ import Navbar from './nav-bar';
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/utils/cn";
 
-interface HeaderProps {
-  pageType?: 'default' | 'dark';
-}
+
 
 const scrollToContact = () => {
   const contactSection = document.getElementById('contact');
@@ -37,9 +35,9 @@ const scrollToClientes = () => {
   }
 };
 
-const Header: React.FC<HeaderProps> = ({ pageType = 'default', }) => {
+const Header = () => {
   const [active, setActive] = useState<string | null>(null);
-  const logo = pageType === 'dark' ? SaucotecLogoDark : SaucotecLogo;
+
 
   return (
     <header className="absolute w-full z-30">
@@ -48,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ pageType = 'default', }) => {
    
           <div className="w-40 xl:w-64 sm:w-48 flex items-center shrink-0 ml-16 md:ml-8 lg:ml-16">
             <Link href="/" className="block" aria-label="Cruip">
-              <Image priority src={logo} alt="saucotec-logo" />
+              <Image priority src={SaucotecLogo} alt="saucotec-logo" />
             </Link>
           </div>
    
