@@ -58,7 +58,7 @@ export default function MobileMenu() {
         className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className="bg-gray-800 bg-opacity-90 backdrop-filter backdrop-blur-md px-4 py-2 h-[700px] rounded-[20px] text-xl bg-gradient-to-b from-[#07112B] via-blue-900 to-black">
+        <ul className=" backdrop-filter backdrop-blur-md px-4 py-2 h-[700px] rounded-[20px] text-xl bg-opacity-50 bg-[#07112B] ">
          
           <li>
             <Link href="/" className="block font-medium text-white hover:text-gray-200 pt-12 justify-center" onClick={() => setMobileNavOpen(false)}>
@@ -87,10 +87,10 @@ export default function MobileMenu() {
               </svg>
             </button>
             {dropdownOpen && (
-              <ul ref={dropdownMenu} className={`bg-opacity-50 bg[#07112B] backdrop-filter backdrop-blur-md px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
+              <ul ref={dropdownMenu} className={`bg-none backdrop-filter px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
                 <li>
                   <Link href="/digital-transformation" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Transformacion Digital
+                    Transformación Digital
                   </Link>
                 </li>
                 <li>
@@ -112,25 +112,15 @@ export default function MobileMenu() {
               Clientes
             </Link>
           </li>
+
+          <button onClick={scrollToContact}  className=' w-full btn p-[2px] relative '>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
+              <div className="h-[50px] w-full leading-[1] text-xl btn  px-5 py-2  bg-[#000F39] rounded-full relative group transition font-[300] mt-8  text-white ">
+                Contactanos</div>
+            </button>
           
           
-          <button
-            onClick={scrollToContact}
-            className="
-              h-[50px]
-              px-5
-              text-white
-              bg-gradient-to-tr from-blue-900 via-indigo-500 to-pink-600
-              rounded-[40px]
-              transition-colors
-              duration-150
-              focus:shadow-outline
-              w-full
-              mt-8
-            "
-          >
-            Contactanos
-          </button>
+      
         </ul>
       </nav>
     </div>
