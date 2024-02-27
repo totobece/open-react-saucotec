@@ -55,7 +55,7 @@ export default function Zigzag() {
   }, [isMobile]); // Asegúrate de que se actualice cuando cambie la variable isMobile
 
   return (
-    <section className="scroll-section-outer bg-[#07112B] md:pb-20">  
+    <section id='clientes' className="scroll-section-outer bg-[#07112B] md:pb-20">  
       <div className={`max-w-full mx-auto px-2 relative ${isMobile ? 'text-center' : ''}`}></div>
       <div ref={triggerRef} className='max-w-full'>
         <div ref={sectionRef} className="scroll-section-inner ml-4">

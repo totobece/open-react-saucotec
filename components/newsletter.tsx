@@ -26,7 +26,7 @@ function ContactForm() {
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-4xl font-semibold text-white">
-          ¡Gracias por contactarnos!
+          ¡Gracias por contactarnos! <br />Un asesor se pondrá en contacto contigo a la brevedad.
         </p>
       </div>
     );
@@ -50,29 +50,30 @@ function ContactForm() {
       />
       </div>
           <TypewriterEffect words={words}/>
-          <form className="mt-6 p-4 lg:p-6" onSubmit={handleSubmit}>
+          <form className="mt-6 text-left p-4 lg:p-6" onSubmit={handleSubmit}>
             <div className="mb-2">
                     <label>
-                      <span className="text-slate-300 ">Nombre <span className='text-sm text-gray-600'>(requerido)</span></span>
+                      <span className="text-white text-xl font-[500]">NOMBRE <span className=' text-gray-600'>(requerido)</span></span>
                       <input
                         type="text"
                         name="name"
                       
                         className="
-                          w-full
-                          block
-                          px-16
-                          py-2
-                          text-white
-                          mt-2
-                          border-gray-300
-                          bg-[#07112B]
-                          rounded-md
-                          shadow-sm
-                          focus:border-indigo-300
-                          focus:ring
-                          focus:ring-indigo-200
-                          focus:ring-opacity-50
+                        block
+                        w-full
+                        my-4
+                        px-16
+                        py-3
+                        bg-[#07112B]
+                        border-white
+                        rounded-2xl
+                        text-xl
+                        shadow-sm
+                        text-white
+                        focus:border-white
+                        focus:ring
+                        focus:ring-white
+                        focus:bg-[#2E4BFF]
                         "
                         
                       />
@@ -80,26 +81,27 @@ function ContactForm() {
                   </div>
                   <div className="mb-2">
                     <label>
-                      <span className="text-slate-300 " >Email <span className='text-sm text-gray-600'>(requerido)</span></span>
+                      <span className="text-white text-xl font-[500]" >Email <span className=' text-gray-600'>(requerido)</span></span>
                       <input
                         name="email"
                         type="email"
                         
                         className="
-                          block
-                          w-full
-                          mt-2
-                          px-16
-                          py-2
-                          bg-[#07112B]
-                          border-gray-300
-                          rounded-md
-                          shadow-sm
-                          text-white
-                          focus:border-indigo-300
-                          focus:ring
-                          focus:ring-indigo-200
-                          focus:ring-opacity-50
+                        block
+                        w-full
+                        my-4
+                        px-16
+                        py-3
+                        bg-[#07112B]
+                        border-white
+                        text-xl
+                        rounded-2xl
+                        shadow-sm
+                        text-white
+                        focus:border-white
+                        focus:ring
+                        focus:ring-white
+                        focus:bg-[#2E4BFF]
                         "
                       
                         required
@@ -108,7 +110,7 @@ function ContactForm() {
                   </div>
                   <div className="mb-2">
                     <label>
-                      <span className="text-slate-300 " >Numero <span className='text-sm text-gray-600'>(requerido)</span></span>
+                      <span className="text-white text-xl font-[500]" >Número <span className=' text-gray-600'>(requerido)</span></span>
                       <input
                         name="Numero"
                         type="text"
@@ -116,18 +118,19 @@ function ContactForm() {
                         className="
                           block
                           w-full
-                          mt-2
+                          text-xl
+                          my-4
                           px-16
-                          py-2
+                          py-3
                           bg-[#07112B]
-                          border-gray-300
-                          rounded-md
+                          border-white
+                          rounded-2xl
                           shadow-sm
                           text-white
-                          focus:border-indigo-300
+                          focus:border-white
                           focus:ring
-                          focus:ring-indigo-200
-                          focus:ring-opacity-50
+                          focus:ring-white
+                          focus:bg-[#2E4BFF]
                         "
                       
                         required
@@ -136,42 +139,44 @@ function ContactForm() {
                   </div>
                     <div className="mb-2 ">
                       <label>
-                        <span className="text-slate-300 " >Mensaje</span>
+                        <span className="text-white text-xl font-[500] " >Mensaje</span>
                         <textarea
                           name="message"
                 
                           className="
-                            block
-                            w-full
-                            mt-2
-                            text-white
-                            bg-[#07112B]
-                            px-16
-                            py-8
-                            border-gray-300
-                            rounded-md
-                            shadow-sm
-                            focus:border-indigo-300
-                            focus:ring
-                            focus:ring-indigo-200
-                            focus:ring-opacity-50
+                          block
+                          text-xl
+                          w-full
+                          my-4
+                          px-16
+                          py-3
+                          bg-[#07112B]
+                          border-white
+                          rounded-2xl
+                          shadow-sm
+                          text-white
+                          focus:border-white
+                          focus:ring
+                          focus:ring-white
+                          focus:bg-[#1C32BB]
                           "
                         
                         ></textarea>
                       </label>
                     </div>
 
-            <div className="mb-6">
+            <div className="mt-6">
             
 
  
                 <button 
-                className="mt-4 text-xl inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                className="relative hover:-translate-x-[-12px] transition px-6 text-xl inline-flex h-12  animate-shimmer items-center justify-center rounded-[40px]  bg-[linear-gradient(110deg,#1C32BB,45%,#A0ABEA,55%,#1C32BB)] bg-[length:200%_100%] font-medium text-white  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                 type='submit'
                 disabled={state.submitting}
                 >
                   Enviar
                 </button>
+                
               
             </div>
 

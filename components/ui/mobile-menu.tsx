@@ -87,7 +87,7 @@ export default function MobileMenu() {
               </svg>
             </button>
             {dropdownOpen && (
-              <ul ref={dropdownMenu} className={`bg-opacity-75 backdrop-filter backdrop-blur-md px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
+              <ul ref={dropdownMenu} className={`bg-opacity-50 bg[#07112B] backdrop-filter backdrop-blur-md px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
                 <li>
                   <Link href="/digital-transformation" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
                     Transformacion Digital
