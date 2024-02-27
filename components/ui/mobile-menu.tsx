@@ -89,13 +89,13 @@ export default function MobileMenu() {
             {dropdownOpen && (
               <ul ref={dropdownMenu} className={`bg-opacity-75 backdrop-filter backdrop-blur-md px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
                 <li>
-                  <Link href="/software" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Digitalización de procesos
+                  <Link href="/digital-transformation" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
+                    Transformacion Digital
                   </Link>
                 </li>
                 <li>
-                  <Link href="/aplicaciones" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Desarrollar mi proyecto
+                  <Link href="/digital-products" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                    Productos Digitales
                   </Link>
                 </li>
               </ul>
