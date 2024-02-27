@@ -15,7 +15,7 @@ export default function ServicePresentation() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000);
+      setIsMobile(window.innerWidth <= 789);
     };
 
     handleResize();
@@ -33,7 +33,7 @@ export default function ServicePresentation() {
     marginBottom: '2rem',
     marginTop: '2rem',
     borderRadius: '50px',
-    height: '800px', 
+    height: '700px', 
     overflow: 'hidden', 
   };
 
@@ -64,10 +64,10 @@ export default function ServicePresentation() {
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div>
-                      <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2.4rem] font-[200] text-white text-left mx-auto  grow">Centralizar y digitalizar la información transforma las operaciones de la empresa. El sistema a nuestra medida por SaucoTec hace esto posible.</blockquote>
+                      <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto  grow">Centralizar y digitalizar la información transforma las operaciones de la empresa. El sistema a nuestra medida por SaucoTec hace esto posible.</blockquote>
                 
                   
-                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-44">Cesar Cabrera</blockquote>
+                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-8">Cesar Cabrera</blockquote>
                   <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2  grow">Socio - Nort Revesimientos</blockquote>
                   
                 
@@ -75,14 +75,14 @@ export default function ServicePresentation() {
               </motion.div>
             </div>
             
-            <div>1
+            <div>
               <motion.div onClick={scrollToTestimonials} className="cursor-pointer" whileHover={{ y: -10 }}>
                 <div style={cardStyle}>
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div >
-                   <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2.4rem] font-[200] text-white text-left mx-auto grow">En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. SaucoTec desarrolló una solución perfectamente integrada logrando agilizar nuestras operaciones.</blockquote>
-                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-40">Pedro A. Rossi</blockquote>
+                   <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. SaucoTec desarrolló una solución integrada logrando agilizar nuestras operaciones.</blockquote>
+                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-8">Pedro A. Rossi</blockquote>
                   <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2  grow">Dueño - Politap S.R.L.</blockquote>
                   
                 </div>
@@ -96,10 +96,10 @@ export default function ServicePresentation() {
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div>
-                    <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2.4rem] font-[200] text-white text-left mx-auto grow">Trabajar con SaucoTec ha resultado en excelentes logros para nosotros. La personalización de soluciones y su cercanía los diferencia.</blockquote>
+                    <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">Trabajar con SaucoTec ha resultado en excelentes logros para nosotros. La personalización de soluciones y su cercanía los diferencia.</blockquote>
                  
                  <div className=''>
-                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow pt-52">Nicolás Albertoni</blockquote>
+                  <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow pt-8">Nicolás Albertoni</blockquote>
                   <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2 grow">Gerente Comercial - Energía Global</blockquote>
                   </div>
                
