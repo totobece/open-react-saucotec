@@ -24,12 +24,39 @@ const ClientesPage = () => {
 
   // Configuración del carrusel de imágenes
   const settings = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
-
   return (
     <>
       <Header pageType='dark' />
@@ -42,33 +69,25 @@ const ClientesPage = () => {
         </div>  
         <div className="flex justify-center items-center ">
           <Slider {...settings} className="w-full max-w-4xl mx-auto">
-            <div>
-              <motion.div
-                onClick={scrollToTestimonials} 
-                className="cursor-pointer"
-                whileHover={{ y: 10 }} 
-              >
-                <img src={AppleLogo.src} alt="Apple" className="w-32 h-auto mx-auto" />
-              </motion.div>
-            </div>
-            <div>
-              <motion.div
-                onClick={scrollToTestimonials} 
-                className="cursor-pointer"
-                whileHover={{ y: 10 }} 
-              >
-                <img src={MicrosoftLogo.src} alt="Microsoft" className="w-32 h-auto mx-auto" />
-              </motion.div>
-            </div>
-            <div>
-              <motion.div
-                onClick={scrollToTestimonials} 
-                className="cursor-pointer"
-                whileHover={{ y: 10 }} 
-              >
-                <img src={IBMLogo.src} alt="IBM" className="w-32 h-auto mx-auto" />
-              </motion.div>
-            </div>
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+              <div>
+                <h3>6</h3>
+              </div>
+              
         
           </Slider>
         </div>

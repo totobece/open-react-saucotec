@@ -35,7 +35,7 @@ export default function ServicePresentation() {
                
                 <div className=' py-64 lg:py-96 md:flex md:flex-col items-center '>
                           <h1 className="text-4xl lg:text-6xl  text-white text-center" data-aos="fade-up">
-                        Saucotec es una compañia de servicio digital <span className='text-[#FF248D] font-bold ml-2 mr-2'>completo.</span>
+                        SaucoTec es una compañia de servicio digital <span className='text-[#FF248D] font-bold ml-2 mr-2'>completo.</span>
                         <br/>
                         <br/>
                       
