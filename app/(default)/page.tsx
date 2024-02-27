@@ -26,7 +26,6 @@ export default function Home() {
       <ServicePresentation/>
       <QuotePresentation />
       <TestimonialsV2/>
-      <QuotePresentation />
       <SeccionClientes />
       <ContactForm/>
       <CookieBanner/>

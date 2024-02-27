@@ -37,13 +37,13 @@ export default function Zigzag() {
         translateX: 0,
       },
       {
-        translateX: "-300vw",
+        translateX: "-200vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "4000 top",
+          end: "1200 top",
           scrub: 0.6,
           pin: true,
         },
@@ -56,9 +56,9 @@ export default function Zigzag() {
 
   return (
             
-    <section className="scroll-section-outer bg-customBlue">  
+    <section className="scroll-section-outer bg-[#07112B] pb-20">  
         <div className={`max-w-full mx-auto px-2 relative ${isMobile ? 'text-center' : ''}`}></div>
-      <div ref={triggerRef}>
+      <div ref={triggerRef} className='max-w-full'>
         <div ref={sectionRef} className="scroll-section-inner ml-4">
 
             {/* Primer duo */}
@@ -137,3 +137,7 @@ export default function Zigzag() {
     </section>
   );
 }
+
+
+
+

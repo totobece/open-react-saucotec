@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
-import Fondo from '@/public/images/fondo service presentation.svg'
+
 
 export default function ServicePresentation() {
 
@@ -20,19 +20,19 @@ export default function ServicePresentation() {
   }, []);
   
     return (
-        <section id="service-presentation" className='bg-none relative'>
+        <section id="service-presentation" className='bg-[#07112B] relative pb-72'> 
           
-            <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
+            <div className={` max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
 
                 
         <div>
-                {/* Titulo */}
+                
                 <div>
-                    <h1 className='w-full text-white pt-8 md:text-4xl lg:text-4xl text-[1.5rem] leading-[1] font-[200] relative flex flex-col  text-center mx-auto mb-12'>Desarrollo y transformación digital para<br />compañías con objetivos ambiciosos</h1>
+                    <h1 className='w-full text-white  md:text-4xl lg:text-4xl text-[1.5rem] leading-[1] font-[200] relative flex flex-col  text-center mx-auto mb-12 pt-20'>Desarrollo y transformación digital para<br />compañías con objetivos ambiciosos</h1>
                 </div >
                 
-                {/* Div para las dos cards */}
-                <div className='max-w-sm mx-auto grid gap-8 lg:grid-cols-2 md:gap-6 items-start md:max-w-none'>
+               
+                <div className='max-w-sm mx-auto grid gap-8 lg:grid-cols-2 md:gap-6 items-start md:max-w-none pt-20'>
 
 
                         <div style={{ border: '2px solid #334FFE' }} className="w-full flex flex-col p-6 bg-[#171D2C] hover:bg-[#334FFE] rounded-[50px] mb-4 mt-4" data-aos="fade-up" data-aos-delay="400">
@@ -61,14 +61,7 @@ export default function ServicePresentation() {
                 </div>
                 </div>
             </div>
-            <Image
-                src={Fondo}
-                alt="Fondo"
-                quality={100}
-                layout="fill"
-                objectFit="cover"
-                className="absolute z-[-1] h-full w-full"
-              />  
+           
         </section>
     )
 }
