@@ -3,15 +3,7 @@
 
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import Link from 'next/link'
-import Image from 'next/image'
-import  SaucotecLogo from "../../public/images/SaucotecLogo.svg"
-import PhoneLogo from "../../public/images/phone-svg.svg"
-import { FaPhoneAlt } from "react-icons/fa";
-import WPPlogo from "../public/images/Free whatsapp white logo vector.svg.svg"
 import { TypewriterEffect } from './typewriter-effect';
-import { cn } from "@/utils/cn";
-import { Spotlight } from "@/components/ui/Spotlight";
 
 function HandleCall() {
   window.location.href = 'tel:+5491131500591'
@@ -44,10 +36,7 @@ function ContactForm() {
       <div className="relative flex flex-col justify-center  overflow-hidden pb-12 pt-12 ">
         <div className="w-full bg-[#07112B] p-6 m-auto rounded-md  lg:max-w-xl">
           <div>
-        <Spotlight
-        className="-top-40 left-20 md:left-[20px] md:-top-[-150px]"
-        fill="white"
-      />
+        
       </div>
           <TypewriterEffect words={words}/>
           <form className="mt-6 text-left p-4 lg:p-6" onSubmit={handleSubmit}>

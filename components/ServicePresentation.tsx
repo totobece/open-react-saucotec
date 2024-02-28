@@ -2,6 +2,8 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 
 export default function ServicePresentation() {
@@ -34,7 +36,7 @@ export default function ServicePresentation() {
                
                 <div className='max-w-sm mx-auto grid gap-8 lg:grid-cols-2 md:gap-6 items-start md:max-w-none pt-20'>
 
-
+                        <Link href="/digital-products">
                         <div style={{ border: '2px solid #334FFE' }} className="w-full flex flex-col p-6 bg-[#171D2C] hover:bg-[#334FFE] rounded-[50px] mb-4 mt-4" data-aos="fade-up" data-aos-delay="400">
                         
                             <blockquote className="text-base lg:text-xl font-[200] text-white tracking-[0.05em] text-center mx-auto mt-6 mb-6 grow " >DIGITALIZACIÓN DE PROCESOS</blockquote>
@@ -44,8 +46,9 @@ export default function ServicePresentation() {
                                                         <br />Información centralizada. 
                                                         <br />A control remoto.</blockquote>
                             </div>
+                        </Link>
 
-
+                            <Link href="/digital-products">
                         <div style={{ border: '2px solid #334FFE' }} className="w-full flex flex-col  p-6 bg-[#171D2C] hover:bg-[#334FFE] rounded-[50px] mb-4 mt-4" data-aos="fade-up" data-aos-delay="400">
                         
                           <blockquote className="text-base lg:text-xl font-[200] text-white tracking-[0.05em] text-center mx-auto mt-6 mb-6 grow " >DESARROLLO DE PRODUCTOS DIGITALES</blockquote>
@@ -56,7 +59,7 @@ export default function ServicePresentation() {
                                                     <br />UX/UI. 
                                                     <br />Data Science.</blockquote>
                         </div>
-                        
+                        </Link>
                        
                 </div>
                 </div>

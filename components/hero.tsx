@@ -8,6 +8,7 @@ import FotosMobile from '@/public/images/Group 51 (1).png';
 import { CardBody, CardContainer, CardItem } from './ui/3d-card';
 import Fondo from '@/public/images/Rectangle 22 (1).svg';
 import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
 
 
 export default function Hero() {
@@ -46,17 +47,20 @@ export default function Hero() {
                 <br />
                 junto a nosotros
             </h1>
-            <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] md:mt-8 text-white duration-50 relative hover:-translate-x-[-12px] transition'>
+            <Link href="/digital-transformation">
+            <button  className='w-60 lg:w-80 btn p-[2px] md:mt-8 text-white duration-50 relative hover:-translate-x-[-12px] transition'>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
               <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 ">
                 Digitalización de procesos</div>
             </button>
-            <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
+            </Link>
+            <Link href="/digital-products">
+            <button  className='w-60 lg:w-80 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
               <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition font-[300]  h-12 mt-8  text-white ">
                 Desarrollar mi proyecto</div>
             </button>
-
+            </Link>
        
           </div>
         </div>
