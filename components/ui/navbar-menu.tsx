@@ -38,14 +38,15 @@ export const MenuItem = ({
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
-          style={{ position: "absolute", top: "170%"}} 
+          style={{ position: "absolute", top: "300%"}} 
         >
           {active === item && (
-            <div className="bg-white  hover:text-[#5373CE] text-[#07112B] mt-8 backdrop-blur-lg rounded-2xl overflow-hidden border border-black/[0.2]  shadow-xl">
+            <div className="bg-white  hover:text-[#5373CE] text-[#07112B] mt-14 mr-8 backdrop-blur-lg rounded-2xl overflow-hidden border border-black/[0.2]  shadow-xl">
               <motion.div
                 layout // layout ensures smooth animation
                 className="w-max h-full p-4"
               >
+              
                 {children}
               </motion.div>
             </div>
@@ -66,7 +67,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative h-[2px] mb-2 align-middle rounded-full border border-transparent dark:bg-white dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8  w-auto"
+      className="relative h-[2px] align-middle rounded-full border border-transparent dark:bg-white dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 mb-2  w-auto"
       
     >
       {children}
