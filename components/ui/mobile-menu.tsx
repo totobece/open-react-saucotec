@@ -9,6 +9,22 @@ export default function MobileMenu() {
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
   const dropdownMenu = useRef<HTMLUListElement>(null);
+  
+  const scrollToNosotros = () => {
+    const nosotrosSection = document.getElementById('nosotros');
+  
+    if (nosotrosSection) {
+      nosotrosSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToClientes = () => {
+    const clientesSection = document.getElementById('clientes');
+  
+    if (clientesSection) {
+      clientesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -31,7 +47,6 @@ export default function MobileMenu() {
 
   return (
     <div className="md:hidden">
-    
       <button
         ref={trigger}
         className={`hamburger ${mobileNavOpen && 'active'}`}
@@ -58,18 +73,15 @@ export default function MobileMenu() {
         className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className=" backdrop-filter backdrop-blur-md px-4 py-2 h-[700px] rounded-[20px] text-xl bg-opacity-50 bg-[#07112B] ">
-         
+        <ul className="backdrop-filter backdrop-blur-md px-4 py-2 h-[700px] rounded-[20px] text-xl bg-opacity-50 bg-[#07112B] ">
           <li>
-            <Link href="/" className="block font-medium text-white hover:text-gray-200 pt-12 justify-center" onClick={() => setMobileNavOpen(false)}>
+            <Link href="/" className="block font-medium text-white hover:text-gray-200 pt-12 justify-center" onClick={() => { setMobileNavOpen(false); scrollToContact(); }}>
               Home
             </Link>
           </li>
 
-        
           <li className="border-t border-white my-4"></li>
 
-        
           <li>
             <button
               className="flex items-center justify-between font-medium w-full text-white hover:text-gray-200 py-2"
@@ -103,24 +115,23 @@ export default function MobileMenu() {
           </li>
 
           <li className='py-4'>
-            <Link href="/nosotros" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+            <Link href="/" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToNosotros(); }}>
               Nosotros
             </Link>
           </li>
+
           <li>
-            <Link href="/clientes" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+            <button  className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToClientes(); }}>
               Clientes
-            </Link>
+            </button>
           </li>
 
-          <button onClick={scrollToContact}  className=' w-full btn p-[2px] relative '>
+          <button onClick={scrollToContact} className='w-full btn p-[2px] relative '>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
-              <div className="h-[50px] w-full leading-[1] text-xl btn  px-5 py-2  bg-[#000F39] rounded-full relative group transition font-[300] mt-8  text-white ">
-                Contactanos</div>
-            </button>
-          
-          
-      
+            <div className="h-[50px] w-full leading-[1] text-xl btn  px-5 py-2  bg-[#000F39] rounded-full relative group transition font-[300] mt-8  text-white ">
+              Contactanos
+            </div>
+          </button>
         </ul>
       </nav>
     </div>

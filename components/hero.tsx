@@ -7,9 +7,13 @@ import Mobile from '@/public/images/MOBILE.svg';
 import FotosMobile from '@/public/images/Group 51 (1).png';
 import { CardBody, CardContainer, CardItem } from './ui/3d-card';
 import Fondo from '@/public/images/Rectangle 22 (1).svg';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState(false);
+ 
+   const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,7 +42,7 @@ export default function Hero() {
         <div className="max-w-6xl container  flex flex-col lg:pb-8">
           <div className="md:flex md:flex-col ">
             <h1 className={` text-3xl md:text-4xl lg:text-6xl  text-white `} data-aos="fade-up">
-              Tu transformación digital,
+            Tu transformación digital,
                 <br />
                 junto a nosotros
             </h1>

@@ -59,7 +59,7 @@ const ClientesPage = () => {
   };
   return (
     <>
-      <Header pageType='dark' />
+     
       <div className="flex flex-col items-center justify-center h-screen">
         <div className='mb-8 text-left mr-80'>
           <h1 className='text-blue-888 text-4xl lg:text-8xl mb-2 mr-60' data-aos="fade-up">

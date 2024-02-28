@@ -6,7 +6,7 @@ const ServiciosPage = () => {
   return (
   
     <>
-      <Header pageType='dark'/>
+   
     <motion.div
       className="flex justify-center items-center h-screen"
       initial={{ opacity: 0 }}

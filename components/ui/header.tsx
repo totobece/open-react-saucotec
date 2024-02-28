@@ -7,7 +7,7 @@ import SaucotecLogo from '../../public/images/SaucotecLogo-white-svg.svg';
 import SaucotecLogoDark from '../../public/images/SaucotecLogo.svg';
 import MobileMenu from './mobile-menu';
 import { Button } from './moving-border';
-import Navbar from './nav-bar';
+
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/utils/cn";
 
@@ -79,7 +79,7 @@ const Header = () => {
             </ul>
                   <button 
                     className=" text-xl inline-flex h-12  animate-shimmer items-center justify-center rounded-[40px]  bg-[linear-gradient(110deg,#1C32BB,45%,#A0ABEA,55%,#1C32BB)] bg-[length:200%_100%] px-2 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
-                    onClick={scrollToClientes}
+                    onClick={scrollToContact}
                     >
                       Contactanos
                 </button>

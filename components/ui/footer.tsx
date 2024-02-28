@@ -77,7 +77,7 @@ export default function Footer() {
                 style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
                 <FaPhoneAlt size={22} />
               </a>
-              <a className="ml-4">
+                    <a className="ml-4">
                       <Link href="https://www.instagram.com/saucotec/" target='_blank' className="flex justify-center items-center text-white bg-gray-800 hover:text-gray-100 hover:bg-blue-600 rounded-full transition duration-150 ease-in-out" aria-label="Instagram">
                         <svg className="w-10 h-10 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="20.145" cy="11.892" r="1" />
