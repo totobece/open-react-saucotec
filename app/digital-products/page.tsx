@@ -26,7 +26,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('service-presentation');
+    const contactSection = document.getElementById('contact');
 
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
