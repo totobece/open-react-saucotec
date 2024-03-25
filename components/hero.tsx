@@ -39,26 +39,27 @@ export default function Hero() {
     <section className="relative">
       <div className={`max-w-full mx-4 sm:px-6 relative ${isMobile ? 'text-center place-content-center' : 'text-left'}`}>
       
-      <div className="max-w-full mx-auto px-4 lg:ml-16 pt-[140px] md:pt-32 lg:pt-64 flex z-10 relative">
+      <div className="max-w-full mx-auto px-4 lg:ml-16 pt-[100px] md:pt-32 lg:pt-64 flex z-10 relative">
         <div className="max-w-6xl container  flex flex-col lg:pb-8">
           <div className="md:flex md:flex-col ">
-            <h1 className={` text-3xl md:text-4xl lg:text-6xl  text-white `} data-aos="fade-up">
-            Tu transformación digital,
+            <h1 className={` text-4xl lg:text-6xl  text-white `} data-aos="fade-up">
+            Your digital transformation,
                 <br />
-                junto a nosotros
+                next to SaucoTec
             </h1>
-            <Link href="/digital-transformation">
-            <button  className='w-60 lg:w-80 btn p-[2px] md:mt-8 text-white duration-50 relative hover:-translate-x-[-12px] transition'>
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
-              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 ">
-                Digitalización de procesos</div>
-            </button>
-            </Link>
+            
             <Link href="/digital-products">
-            <button  className='w-60 lg:w-80 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
+            <button  className='w-60 lg:w-80 md:mt-4 btn p-[2px] relative hover:-translate-x-[-12px] transition duration-400'>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
               <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition font-[300]  h-12 mt-8  text-white ">
-                Desarrollar mi proyecto</div>
+                Develop my project</div>
+            </button>
+            </Link>
+            <Link href="/digital-transformation">
+            <button  className='w-60 lg:w-80 btn p-[2px]  text-white duration-50 relative hover:-translate-x-[-12px] transition'>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
+              <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12 mt-8 ">
+                Process digitalization</div>
             </button>
             </Link>
        

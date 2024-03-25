@@ -42,80 +42,80 @@ export default function Hero() {
           <div className="md:flex md:flex-col ">
           <blockquote className="text-sm lg:text-lg tracking-[0.3rem] font-[100] text-white text-center mx-auto mt-6 mb-6 grow " >TRANSFORMACIÓN DIGITAL</blockquote>
             <h1 className={` text-4xl md:text-7xl lg:text-8xl mt-6 text-white  `} data-aos="fade-up">
-                Enciende el potencial de <br />crecimiento de tu organización
+                Ignite your company's <br />growth potential.
             </h1>
 
             <p className="text-white pt-6 text-lg md:text-xl lg:text-2xl tracking-wide font-[100] mt-10" data-aos="fade-up">
-            Nos encargamos de mantener tu competitividad en el largo plazo. 
+            We take care of maintaining your competitiveness in the long term. 
             </p>
             <div className='relative'>
             <button onClick={scrollToContact}  className='w-60 lg:w-80 btn p-[2px] mt-14 lg:mt-26 text-white duration-50 relative hover:-translate-y-[12px] transition'>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full " />
               <div className="lg:w-80 w-60 leading-[1] text-lg btn  px-8 py-2  bg-[#000F39] rounded-full relative group transition duration-200 font-[300] h-12  ">
-                Dejanos un mensaje</div>
+                Leave us a message</div>
             </button>
 
-            <blockquote className="text-sm mt-20 lg:text-lg tracking-[0.3rem] font-[100] text-white text-center mx-auto  grow " >DE LA MANO DE SAUCOTEC</blockquote>
+            <blockquote className="text-sm mt-20 lg:text-lg tracking-[0.3rem] font-[100] text-white text-center mx-auto  grow " >NEXT TO SAUCOTEC</blockquote>
             
             <h1 className={` text-2xl mt-16 md:text-3xl lg:text-5xl  text-white  `} data-aos="fade-up">
-            Tu empresa,<br />en forma para lo que se viene.
+            Your company,<br />ready for the future.
             </h1>
 
-            <div className={`mt-20 flex-col place-content-center  `}>
-                <div className={` place-items-center ${isMobile ? 'flex flex-col' : 'grid grid-cols-2'}  gap-8`}>
+            <div className={`mt-20 flex-col justify-center `}>
+                <div className={`max-w-[1000px] mx-auto place-items-center ${isMobile ? 'flex flex-col' : 'grid grid-cols-2'}  gap-8`}>
                     
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                        Asesoramiento de procesos</div>
+                    Process advice</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                    Recolección de la información</div>
+                    Data collection</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                    Aplicaciones integradas</div>
+                    Integrated apps</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                    Análisis de datos</div>
+                    Data Analytics</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                        Seguridad de la información</div>
+                        Data Security</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                    Experiencia del cliente</div>
+                    Customer Experience</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                        Gestión remota</div>
+                        Remote Management</div>
                     </div>
 
                     <div   className='w-full max-w-[480px] btn p-[2px] text-white duration-50 relative '>
                     <div className="absolute  inset-0 bg-[#243871] rounded-2xl " />
                     <div className="w-full max-w-[480px] leading-[1] text-2xl btn  px-8 py-2  bg-[#060D21] rounded-2xl relative group transition duration-200 font-[400] h-20  ">
-                    Adaptabilidad al cambio</div>
+                    Adaptability to change</div>
                     </div>
                 </div>
 
                 </div>
                     <h1 className={` text-2xl mt-16 md:text-3xl lg:text-5xl  text-white  `} data-aos="fade-up">
-                        Descubrí nuestro portafolio...
+                        Discover our portfolio...
                     </h1>
             </div>
           </div>
@@ -125,10 +125,12 @@ export default function Hero() {
       <div className='mt-16'>
       <SeccionClientes/>
        <ContactForm/>
-       <Footer/>
+       
        </div>
+
+       
       </div>
-    
+      <Footer/>
 
     </section>
   );

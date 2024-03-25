@@ -59,18 +59,18 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-2 justify-between px-2 bg-white rounded-[40px] border-solid shadow-sm border-[0.81px] max-w-2xl h-16 ">
             <ul style={{transform:'translateY(-10px)'}} className="flex gap-1 text-2xl">
                 <Menu setActive={setActive}>
-                      <MenuItem setActive={setActive} active={active} item="Servicios">
+                      <MenuItem setActive={setActive} active={active} item="Services">
                   <div className="flex flex-col space-y-4 text-xl">
-                    <HoveredLink href="/digital-transformation">Transformación digital</HoveredLink>
-                    <HoveredLink href="/digital-products">Productos digitales</HoveredLink>
+                    <HoveredLink href="/digital-transformation">Digital Transformation</HoveredLink>
+                    <HoveredLink href="/digital-products">Digital Products</HoveredLink>
                   </div>
                 </MenuItem>
                   
                 <button onClick={scrollToNosotros} className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
-                    Nosotros
+                    About Us
                   </button>
                   <button onClick={scrollToClientes} className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
-                    Clientes
+                    Portfolio
                   </button>
                   
 
@@ -81,7 +81,7 @@ const Header = () => {
                     className=" text-xl inline-flex h-12  animate-shimmer items-center justify-center rounded-[40px]  bg-[linear-gradient(110deg,#1C32BB,45%,#A0ABEA,55%,#1C32BB)] bg-[length:200%_100%] px-2 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
                     onClick={scrollToContact}
                     >
-                      Contactanos
+                      Contact Us
                 </button>
           </nav>
         </div>

@@ -9,7 +9,6 @@ export const metadata = {
 import Hero from '@/components/hero'
 import Features from '@/components/features'
 // import {Newsletter} from '@/components/newsletter'
-import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
 import ContactForm from '@/components/newsletter'
 import CookieBanner from '@/components/CookieBanner'
@@ -26,6 +25,14 @@ export default function Home() {
       <ServicePresentation/>
       <QuotePresentation />
       <TestimonialsV2/>
+                    {/*<h1 className={` 
+                    text-2xl pt-32 pb-16 md:text-3xl lg:text-5xl text-white
+                    bg-[#07112B]
+                    text-center
+                    mx-auto
+                    `} data-aos="fade-up">
+                        Discover our portfolio...
+                    </h1>*/}
       <SeccionClientes />
       <ContactForm/>
       <CookieBanner/>

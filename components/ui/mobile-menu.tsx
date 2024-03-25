@@ -87,7 +87,7 @@ export default function MobileMenu() {
               className="flex items-center justify-between font-medium w-full text-white hover:text-gray-200 py-2"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              Servicios
+              Services
               <svg
                 className={`w-4 h-4 ml-2 transition-transform ${dropdownOpen ? 'transform rotate-180' : ''}`}
                 fill="none"
@@ -102,12 +102,12 @@ export default function MobileMenu() {
               <ul ref={dropdownMenu} className={`bg-none backdrop-filter px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
                 <li>
                   <Link href="/digital-transformation" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Transformación Digital
+                    Digital Transformation
                   </Link>
                 </li>
                 <li>
                   <Link href="/digital-products" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Productos Digitales
+                    Digital Products
                   </Link>
                 </li>
               </ul>
@@ -116,20 +116,20 @@ export default function MobileMenu() {
 
           <li className='py-4'>
             <Link href="/" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToNosotros(); }}>
-              Nosotros
+              About Us
             </Link>
           </li>
 
           <li>
             <button  className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToClientes(); }}>
-              Clientes
+              Portfolio
             </button>
           </li>
 
           <button onClick={scrollToContact} className='w-full btn p-[2px] relative '>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
             <div className="h-[50px] w-full leading-[1] text-xl btn  px-5 py-2  bg-[#000F39] rounded-full relative group transition font-[300] mt-8  text-white ">
-              Contactanos
+              Contact Us
             </div>
           </button>
         </ul>
