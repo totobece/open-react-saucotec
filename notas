@@ -1,0 +1,55 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login Dockerhub
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      
+    - name: Build the Docker image
+      run: sudo docker build -t  saucotec/open-react-saucotec .
+    - name: Push to Dockerhub
+      run: sudo docker push saucotec/open-react-saucotec:latest
+
+
+
+
+
+
+
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Pull Docker image
+      run: sudo docker pull saucotec/open-react-saucotec:latest
+    - name: Delete Old docker container
+      run: sudo docker rm -f open-react-saucotec-container || true
+    - name: Run Docker Container
+      run: sudo docker run -d -p 8080:8080 --name open-react-saucotec-container saucotec/open-react-saucotec
+
+
+
