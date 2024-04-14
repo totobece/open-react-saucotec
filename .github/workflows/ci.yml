@@ -21,4 +21,4 @@ jobs:
     - name: Build the Docker image
       run: sudo docker build -t  totobece/open-react-saucotec .
     - name: Push to Dockerhub
-      run: sudo docker push totobece/open-react-saucotec:latesthe resource is den
+      run: sudo docker push totobece/open-react-saucotec:latest
