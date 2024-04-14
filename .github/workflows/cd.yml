@@ -7,16 +7,15 @@ on:
       - completed
 
 jobs:
+
   build:
-    runs-on: ubuntu-latest
+
+    runs-on: self-hosted
+
     steps:
     - name: Pull Docker image
       run: sudo docker pull saucotec/open-react-saucotec:latest
     - name: Delete Old docker container
       run: sudo docker rm -f open-react-saucotec-container || true
     - name: Run Docker Container
-      run: |
-        CONTAINER_ID=$(sudo docker run -d -p 3002:3002 --name open-react-saucotec-container saucotec/open-react-saucotec)
-        CONTAINER_PORT=$(sudo docker port $CONTAINER_ID 3002/tcp | cut -d ':' -f 2)
-        echo "Container ID: $CONTAINER_ID"
-        echo "Container Port: $CONTAINER_PORT"
+      run: sudo docker run -d -p 3002:3002 --name open-react-saucotec-container saucotec/open-react-saucotec
