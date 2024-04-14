@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Pull Docker image
@@ -18,4 +18,4 @@ jobs:
     - name: Delete Old docker container
       run: sudo docker rm -f open-react-saucotec-container || true
     - name: Run Docker Container
-      run: sudo docker run -d -p 8080:3000 --name open-react-saucotec-container saucotec/open-react-saucotec
+      run: sudo docker run -d -p 8080:8080 --name open-react-saucotec-container saucotec/open-react-saucotec
