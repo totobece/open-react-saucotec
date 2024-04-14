@@ -13,9 +13,9 @@ jobs:
       env:
         DOCKER_USERNAME: "saucotec"
         DOCKER_PASSWORD: "Doeest822!"
-      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      run: sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t totobece/open-react-saucotec .
+      run: sudo docker build -t totobece/open-react-saucotec .
     - name: Push to Dockerhub
-      run: docker push totobece/open-react-saucotec:latest
+      run: sudo docker push totobece/open-react-saucotec:latest
