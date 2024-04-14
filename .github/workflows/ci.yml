@@ -16,6 +16,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t varsubham/cicd-pipeline .
+      run: docker build -t totobece/open-react-saucotec .
     - name: Push to Dockerhub
-      run: docker push varsubham/cicd-pipeline:latest
+      run: docker push totobece/open-react-saucotec:latest
