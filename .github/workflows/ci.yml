@@ -5,20 +5,17 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Login Dockerhub
       env:
-        DOCKER_USERNAME: "saucotec"
-        DOCKER_PASSWORD: "Doeest822!"
+        DOCKER_USERNAME: "tu_nombre_de_usuario"
+        DOCKER_PASSWORD: "tu_contraseña"
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t totobece/open-react-saucotec . 
+      run: docker build -t varsubham/cicd-pipeline .
     - name: Push to Dockerhub
-      run: docker push totobece/open-react-saucotec
+      run: docker push varsubham/cicd-pipeline:latest
