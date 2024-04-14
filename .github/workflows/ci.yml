@@ -11,8 +11,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Login Dockerhub
       env:
-        DOCKER_USERNAME: "tu_nombre_de_usuario"
-        DOCKER_PASSWORD: "tu_contraseña"
+        DOCKER_USERNAME: "saucotec"
+        DOCKER_PASSWORD: "Doeest822!"
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
