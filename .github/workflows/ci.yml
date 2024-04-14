@@ -5,17 +5,20 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v3
     - name: Login Dockerhub
       env:
-        DOCKER_USERNAME: "saucotec"
-        DOCKER_PASSWORD: "Doeest822!"
-      run: sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: sudo docker build -t open-react-saucotec .
+      run: docker build -t  open-react-saucotec.
     - name: Push to Dockerhub
-      run: docker push open-react-saucotec:latest
+      run: docker push totobece/open-react-saucotec:latest
