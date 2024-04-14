@@ -7,15 +7,12 @@ on:
       - completed
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Pull Docker image
       run: sudo docker pull saucotec/open-react-saucotec:latest
     - name: Delete Old docker container
       run: sudo docker rm -f open-react-saucotec-container || true
     - name: Run Docker Container
-      run: sudo docker run -d -p 3002:3002 --name open-react-saucotec-container saucotec/open-react-saucotec
+      run: sudo docker run -d -p 3002:3002 --name open-react-saucotec-container-${{ github.run_id }}-3002 saucotec/open-react-saucotec
