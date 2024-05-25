@@ -64,3 +64,20 @@
     text-transform: uppercase;
   }
 
+  @keyframes typing {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #ffd700; /* Ajusta el color según tu necesidad */
+    }
+  }
+  
+  .animate-typing {
+    border-right: 0.1em solid;
+    animation: typing 0.7s steps(1) infinite;
+  }
+  body {
+  min-height: 100vh; /* Ajusta el mínimo alto del cuerpo al 100% del alto de la ventana */
+}
+  

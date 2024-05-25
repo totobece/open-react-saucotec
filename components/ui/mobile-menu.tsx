@@ -10,13 +10,6 @@ export default function MobileMenu() {
   const mobileNav = useRef<HTMLDivElement>(null);
   const dropdownMenu = useRef<HTMLUListElement>(null);
   
-  const scrollToNosotros = () => {
-    const nosotrosSection = document.getElementById('nosotros');
-  
-    if (nosotrosSection) {
-      nosotrosSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const scrollToClientes = () => {
     const clientesSection = document.getElementById('clientes');
@@ -115,7 +108,7 @@ export default function MobileMenu() {
           </li>
 
           <li className='py-4'>
-            <Link href="/" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToNosotros(); }}>
+            <Link href="/about" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" >
               About Us
             </Link>
           </li>
