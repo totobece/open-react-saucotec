@@ -7,10 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Testimonials from '@/components/testimonials';
 // Importa las imágenes
-import AppleLogo from '@/public/images/640px-Apple-logo.png';
-import MicrosoftLogo from '@/public/images/Microsoft_logo_(2012).svg.png';
-import IBMLogo from '@/public/images/IBM_logo.svg.png';
-
 const ClientesPage = () => {
   // Ref para el componente Testimonials
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -59,41 +55,41 @@ const ClientesPage = () => {
   };
   return (
     <>
-     
+
       <div className="flex flex-col items-center justify-center h-screen">
         <div className='mb-8 text-left mr-80'>
           <h1 className='text-blue-888 text-4xl lg:text-8xl mb-2 mr-60' data-aos="fade-up">
             CLIENTES
           </h1>
           <h2 className='text-3xl text-gray-500 mt-8 mb-60 '>Texto más chico aquí pero más largo que el de arriba</h2>
-        </div>  
+        </div>
         <div className="flex justify-center items-center ">
           <Slider {...settings} className="w-full max-w-4xl mx-auto">
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-              <div>
-                <h3>6</h3>
-              </div>
-              
-        
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+
+
           </Slider>
         </div>
       </div>
       <div ref={testimonialsRef}>
-        <Testimonials /> 
+        <Testimonials />
       </div>
     </>
   );

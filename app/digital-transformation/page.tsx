@@ -1,11 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Desktop from '@/public/images/DESKTOP.svg';
-import Botones from '@/public/images/BOTONES.svg';
-import Mobile from '@/public/images/MOBILE.svg';
-import FotosMobile from '@/public/images/Group 51 (1).png';
-import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
+
 import Fondo from '@/public/images/Rectangle 22 (1).svg';
 import SeccionClientes from '@/components/SeccionClientes';
 import ContactForm from '@/components/newsletter';
@@ -127,10 +123,12 @@ export default function Hero() {
        <ContactForm/>
        
        </div>
+       
 
        
       </div>
       <Footer/>
+     
 
     </section>
   );
