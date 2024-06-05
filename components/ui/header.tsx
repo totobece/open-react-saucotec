@@ -27,13 +27,6 @@ const scrollToNosotros = () => {
     NosotrosSection.scrollIntoView({ behavior: 'smooth' });
   }
 };
-const scrollToClientes = () => {
-  const ClientesSection = document.getElementById('clientes');
-
-  if (ClientesSection) {
-    ClientesSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
 const Header = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -70,10 +63,11 @@ const Header = () => {
                     About Us
                   </button>
                 </Link> 
-                  <button onClick={scrollToClientes} className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
+                <Link href="/portfolio">
+                  <button className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
                     Portfolio
                   </button>
-                  
+                  </Link>
 
                 </Menu>
              
