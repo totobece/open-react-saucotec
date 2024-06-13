@@ -33,7 +33,7 @@ function JoinUsForm() {
   ];
 
   return (
-    <section id="contact" className="relative ">
+    <section id="join us" className="relative ">
       <div className="relative flex flex-col justify-center overflow-hidden pb-12 pt-12">
         <div className="w-full p-6 m-auto rounded-md lg:max-w-3xl">
           <TypewriterEffect words={words} />
