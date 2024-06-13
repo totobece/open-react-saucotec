@@ -328,13 +328,13 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className='h-[170vh] w-full relative flex justify-center' data-aos="fade-up">
+      <div className='relative flex justify-center' data-aos="fade-up">
         <Image
           src={Imagen4}
           alt="Imagen5"
           quality={100}
-          width={1550}
-          height={600}
+          width={1744}
+          height={1253}
           className='rounded-3xl'
         />
       </div>

@@ -16,10 +16,10 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Duorings",
+    title: "The Rings Method",
     description:
       "We design and develop the new Duorings comprehensive platform, combining technology with sport.",
-    link: "/portfolio/duorings",
+    link: "/portfolio/theringsmethod",
     logo: DUORINGS
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     logo: ERGONOMIA
   },
   {
-    title: "Polipat",
+    title: "Politap",
     description:
       "Texto politap",
   
