@@ -79,7 +79,7 @@ export default function About() {
         <button onClick={scrollToContact}  className='mt-28 hover:bg-white rounded-full btn p-[0.5px] lg:mt-30 text-white duration-50 relative  transition'>
             <div className="absolute inset-0  rounded-full " />
               <div className="relative  transition px-6 text-xl inline-flex h-12   items-center justify-center rounded-[40px]  bg-[#1C32BB] bg-[length:200%_100%] font-medium text-white  focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                We're expanding</div>
+                We're expanding!</div>
             </button>
             
       </div>
