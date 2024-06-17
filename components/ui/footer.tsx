@@ -5,6 +5,8 @@ import SaucotecLogo from "../../public/images/SaucotecLogo-white-svg.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useRouter } from "next/router";
+
 
 function HandleCall() {
   window.location.href = 'tel:+5491131500591';
@@ -17,7 +19,10 @@ const scrollToContact = () => {
   }
 };
 
+
 export default function Footer() {
+  
+  
   return (
     <footer className="relative">
       <div className="absolute inset-0 z-[-1]">
@@ -69,7 +74,7 @@ export default function Footer() {
               <div className="text-white font-semibold mb-4">Follow us</div>
               <div className="flex space-x-4 ">
                 <a
-                  href="https://api.whatsapp.com/send?phone=5491131500591&text=Hey!%20I%20would%20like%20to%20know%20more%20about%20SaucoTec%20services."
+                  href="https://api.whatsapp.com/send?phone=5491131500591&text=Hey!%20I%20would%20like%20to%20know%20more%20about%20Saucoec%20services."
                   target="_blank"
                   className="text-white transition duration-150 ease-in-out hover:text-blue-600"
                   aria-label="Whatsapp">

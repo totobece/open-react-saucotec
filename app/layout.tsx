@@ -16,8 +16,8 @@ const bebas_neue = Poppins({
 })
 
 export const metadata : Metadata = {
-  title: 'SaucoTec',
-  description: 'SaucoTec - Inicio',
+  title: 'Saucotec',
+  description: 'Saucotec - Inicio',
 }
 
 export default function RootLayout({

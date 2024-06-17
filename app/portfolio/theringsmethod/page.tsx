@@ -26,7 +26,7 @@ const Page = () => {
   return (
     <section className="bg-[#110202]">
       <div className="h-screen w-full relative">
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden ">
           <Image
             src={FondoDuorings}
             alt="FondoNort"
@@ -36,7 +36,7 @@ const Page = () => {
             className="shadow-xl"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          <div className="absolute top-48 left-32 flex flex-col items-start space-y-6" data-aos="fade-up">
+          <div className="absolute top-48 lg:left-32 left-20 items-start space-y-6 flex flex-col justify-center  " data-aos="fade-up">
             <h2 className="text-white text-2xl mb-4">Stories</h2>
             <div>
               <Image
@@ -48,7 +48,7 @@ const Page = () => {
               />
             </div>
             <div className="relative flex">
-              <h1 className="text-white text-5xl">
+              <h1 className="text-white text-2xl lg:text-5xl">
                   The #1 platform for <br />
                 <span className="font-bold text-white">
 
@@ -66,12 +66,13 @@ const Page = () => {
             transition={{ duration: 1, ease: 'easeOut' }}
           >
             <Image
-              src={CelularDuorings}
-              alt="CelularNort"
-              quality={100}
-              width={1300}
-              height={1600}
-            />
+                    src={CelularDuorings}
+                    alt="CelularNort"
+                    quality={100}
+                    className="w-full h-auto max-w-full lg:w-[1300px] lg:h-[700px]"
+                  />
+
+
           </motion.div>
         </div>
       </div>
@@ -88,7 +89,8 @@ const Page = () => {
             alt='Imagen1'
             quality={100}
             width={1600}
-            height={1500}     
+            height={1500}  
+            className=''   
           />
         </div>
     </div>
@@ -265,7 +267,7 @@ const Page = () => {
             <div className="flex">
               <h1 className="text-white text-4xl opacity-80">
                 "Centralizing and digitizing information transforms company operations. The <br />
-                system tailored to us by SaucoTec makes this possible." 
+                system tailored to us by Saucotec makes this possible." 
               </h1>
             </div>
           </div>

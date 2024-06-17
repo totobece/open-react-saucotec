@@ -25,7 +25,7 @@ export default function ServicePresentation() {
             <div className={`max-w-full mx-auto px-4 sm:px-6 relative ${isMobile ? 'text-center' : ''}`}>
                 <div className=' py-2 lg:py-2 md:flex md:flex-col items-center '>
                           <h1 className="max-w-5xl text-4xl lg:text-6xl  text-white text-center" data-aos="fade-up">
-                        SaucoTec is a company with a <span className='text-[#FF248D] font-bold ml-2 mr-2'>complete</span>digital service.
+                        Saucotec is a company with a <span className='text-[#FF248D] font-bold ml-2 mr-2'>complete</span>digital service.
                         <br/>
                         <br/>
                       

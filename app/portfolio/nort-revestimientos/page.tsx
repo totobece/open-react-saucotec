@@ -248,7 +248,7 @@ const Page = () => {
             <div className="flex">
               <h1 className="text-white text-4xl opacity-80">
                 "Centralizing and digitizing information transforms company operations. The <br />
-                system tailored to us by SaucoTec makes this possible." 
+                system tailored to us by Saucotec makes this possible." 
               </h1>
             </div>
           </div>

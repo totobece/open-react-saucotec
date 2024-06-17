@@ -40,6 +40,7 @@
     "media-query": "^1.0.0",
     "next": "^14.2.3",
     "next-i18next": "^15.2.0",
+    "next-router-mock": "^0.9.13",
     "next-translate": "^2.6.2",
     "ngrok": "^5.0.0-beta.2",
     "nodemailer": "^6.9.5",

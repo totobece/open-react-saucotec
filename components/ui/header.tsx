@@ -37,7 +37,7 @@ const Header = () => {
       <div className="max-w-8xl mx-auto sm:px-6 relative">
         <div className="flex items-center justify-between h-16 sm:h-36 md:h-34">
    
-          <div className="w-40 xl:w-64 sm:w-48 flex items-center shrink-0 ml-16 md:ml-8 lg:ml-16">
+          <div className="w-40 xl:w-64 sm:w-48 flex items-center shrink-0 ml-4 md:ml-8 lg:ml-16">
             <Link href="/" className="block" aria-label="Cruip">
               <Image priority src={SaucotecLogo} alt="saucotec-logo" />
             </Link>
