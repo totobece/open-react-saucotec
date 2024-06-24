@@ -25,7 +25,7 @@ export default function DefaultLayout({
 
   return (
     <>
-      <main className="grow">
+      <main className="grow ">
 
         <PageIllustration />
 
@@ -33,7 +33,7 @@ export default function DefaultLayout({
 
       </main>
 
-      <Footer />
+      <Footer  />
     </>
     
   )

@@ -64,7 +64,7 @@ export default function ServicePresentation() {
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div>
-                      <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto  grow">Centralizing and digitizing information transforms company operations. The system tailored to us by SaucoTec makes this possible.</blockquote>
+                      <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto  grow">Centralizing and digitizing information transforms company operations. The system tailored to us by Saucotec makes this possible.</blockquote>
                 
                   
                   <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-8">Cesar Cabrera</blockquote>
@@ -81,7 +81,7 @@ export default function ServicePresentation() {
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div >
-                   <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">At Politap we had a deficit in the accessibility and efficiency of the sales process. SaucoTec developed an integrated solution, streamlining our operations.</blockquote>
+                   <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">At Politap we had a deficit in the accessibility and efficiency of the sales process. Saucotec developed an integrated solution, streamlining our operations.</blockquote>
                   <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2 grow pt-8">Pedro A. Rossi</blockquote>
                   <blockquote className="leading-5 text-rgsf lg:text-2xl font-[100] text-white tracking-[0.05em] text-right mx-2  grow">Owner - Politap S.R.L.</blockquote>
                   
@@ -96,7 +96,7 @@ export default function ServicePresentation() {
                   <div>
                     <img src={Quotes.src} alt="quotes" className="w-24 left h-auto mb-8" />
                   </div>
-                    <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">Working with SaucoTec has resulted in excellent achievements for us. The customization of solutions and their proximity differentiate them.</blockquote>
+                    <blockquote className="tracking-normal leading-[1] text-[1.8rem] lg:text-[2rem] font-[200] text-white text-left mx-auto grow">Working with Saucotec has resulted in excellent achievements for us. The customization of solutions and their proximity differentiate them.</blockquote>
                  
                  <div className=''>
                   <blockquote className="leading-10 text-lg lg:text-2xl font-[500] text-white tracking-[0.05em] text-right mx-2  grow pt-8">Nicolás Albertoni</blockquote>

@@ -45,7 +45,7 @@ export default function Hero() {
             <h1 className={` text-4xl lg:text-6xl  text-white `} data-aos="fade-up">
             Your digital transformation,
                 <br />
-                next to SaucoTec
+                next to Saucotec
             </h1>
             
             <Link href="/digital-products">

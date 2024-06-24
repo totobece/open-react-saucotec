@@ -45,9 +45,9 @@ export default function CookieBanner() {
             <div className='text-center'>
               <Link href="#">
                 <p className='max-w-xl  text-white'>
-                  Utilizamos{''}
+                  We use{''}
                   <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
-                  {''}en nuestra pagina.
+                  {''}in our page.
                 </p>
               </Link>
             </div>
@@ -56,13 +56,13 @@ export default function CookieBanner() {
                 className='px-5 py-2 text-white rounded-md border-blue-888'
                 onClick={() => handleCookieAction(false)}
               >
-                Rechazar
+                Decline
               </button>
               <button
                 className='w-max bg-blue-600 px-5 py-2 text-white rounded-full'
                 onClick={() => handleCookieAction(true)}
               >
-                Permitir Cookies
+                Allow cookies
               </button>
             </div>
           </div>

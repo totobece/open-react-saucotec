@@ -30,7 +30,7 @@ export default function Testimonials() {
                   
                 </div>
               </div>
-                <blockquote className="text-lg text-gray-50 justify tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>Centralizar y digitalizar la información transforma las operaciones de la empresa. Estamos seguros de que toda la información está ahí y en ninguna otra parte. Stock, ventas, entregas, deudas, en el celular. <><br /></>El sistema hecho a nuestra medida por SaucoTec hace esto posible. <br /><br /></blockquote>
+                <blockquote className="text-lg text-gray-50 justify tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>Centralizar y digitalizar la información transforma las operaciones de la empresa. Estamos seguros de que toda la información está ahí y en ninguna otra parte. Stock, ventas, entregas, deudas, en el celular. <><br /></>El sistema hecho a nuestra medida por Saucotec hace esto posible. <br /><br /></blockquote>
                 <div className="flex justify-center items-center">
                 <Image className="rounded justify-center" src={Nort} width={300} height={300} alt="Testimonial 01" />
                 </div>
@@ -48,7 +48,7 @@ export default function Testimonials() {
                   
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-50 tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. Desde SaucoTec supieron cómo desarrollar una solución que se integre perfectamente a nuestro sistema logrando agilizar nuestras operaciones.<br /><br /></blockquote>
+              <blockquote className="text-lg text-gray-50 tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. Desde Saucotec supieron cómo desarrollar una solución que se integre perfectamente a nuestro sistema logrando agilizar nuestras operaciones.<br /><br /></blockquote>
               <div className="flex justify-center items-center">
                 <Image className="rounded justify-center" src={Politap} width={300} height={300} alt="Testimonial 01" />
                 </div>
@@ -65,7 +65,7 @@ export default function Testimonials() {
                   
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-50 tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>Energía Global es una empresa con una estructura compleja y extensa. Trabajar con SaucoTec ha resultado en excelentes logros para nosotros. La personalización de soluciones y su cercanía los diferencia, sabemos que siempre están dispuestos a ayudarnos ante cualquier requerimiento.<br /><br /></blockquote>
+              <blockquote className="text-lg text-gray-50 tracking-[0.05em] grow italic" style={{ fontFamily: 'helvetica, sans-serif' }}>Energía Global es una empresa con una estructura compleja y extensa. Trabajar con Saucotec ha resultado en excelentes logros para nosotros. La personalización de soluciones y su cercanía los diferencia, sabemos que siempre están dispuestos a ayudarnos ante cualquier requerimiento.<br /><br /></blockquote>
               <div className="flex justify-center items-center">
                 <Image className="rounded justify-center" src={Energia} width={300} height={300} alt="Testimonial 01" />
                 </div>

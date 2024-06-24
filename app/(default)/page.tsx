@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'SaucoTec',
-  description: 'SaucoTec - Inicio',
+  title: 'Saucotec',
+  description: 'Saucotec - Inicio',
   icons: {
     icon:['/favicon.ico?v=4']
   }
@@ -21,6 +21,7 @@ import SeccionClientes from '@/components/SeccionClientes'
 export default function Home() {
   return (
     <>
+    <div className='bg-[#07112B]'>
       <Hero />
       <ServicePresentation/>
       <QuotePresentation />
@@ -36,6 +37,7 @@ export default function Home() {
       <SeccionClientes />
       <ContactForm/>
       <CookieBanner/>
+      </div>
     </>
   )
 
