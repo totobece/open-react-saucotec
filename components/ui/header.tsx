@@ -20,13 +20,6 @@ const scrollToContact = () => {
     contactSection.scrollIntoView({ behavior: 'smooth' });
   }
 };
-const scrollToNosotros = () => {
-  const NosotrosSection = document.getElementById('nosotros');
-
-  if (NosotrosSection) {
-    NosotrosSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 const scrollToClientes = () => {
   const ClientesSection = document.getElementById('clientes');
 
@@ -65,14 +58,15 @@ const Header = () => {
                     <HoveredLink href="/digital-products">Digital Products</HoveredLink>
                   </div>
                 </MenuItem>
-                  
-                <button onClick={scrollToNosotros} className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
+                <Link href="/about">  
+                <button  className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
                     About Us
                   </button>
+                </Link> 
+                
                   <button onClick={scrollToClientes} className='flex text-[#07112B] hover:text-[#5373CE] text-xl'> 
                     Portfolio
                   </button>
-                  
 
                 </Menu>
              

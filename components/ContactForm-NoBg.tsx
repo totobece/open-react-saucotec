@@ -15,7 +15,7 @@ function HandleCall() {
 }
 
 
-function ContactForm() {
+function ContactFormNoBg() {
   const [state, handleSubmit] = useForm("myyqlkdn");
 
   if (state.succeeded) {
@@ -36,9 +36,9 @@ function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="relative bg-[#07112B]">
+    <section id="contact" className="relative ">
       <div className="relative flex flex-col justify-center  overflow-hidden pb-12 pt-12 ">
-        <div className="w-full bg-[#07112B] p-6 m-auto rounded-md  lg:max-w-xl">
+        <div className="w-full  p-6 m-auto rounded-md  lg:max-w-xl">
           <div>
         
       </div>
@@ -184,4 +184,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default ContactFormNoBg;

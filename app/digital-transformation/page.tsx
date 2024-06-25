@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="max-w-full mx-auto  pt-[120px] md:pt-[135px]  lg:pt-[150px] flex relative">
         <div className="max-w-full container flex flex-col lg:pb-8">
           <div className="md:flex md:flex-col ">
-          <blockquote className="text-sm lg:text-lg tracking-[0.3rem] font-[100] text-white text-center mx-auto mt-6 mb-6 grow " >TRANSFORMACIÓN DIGITAL</blockquote>
+          <blockquote className="text-sm lg:text-lg tracking-[0.3rem] font-[100] text-white text-center mx-auto mt-6 mb-6 grow " >DIGITAL TRANSFORMATION</blockquote>
             <h1 className={` text-4xl md:text-7xl lg:text-8xl mt-6 text-white  `} data-aos="fade-up">
                 Ignite your company's <br />growth potential.
             </h1>

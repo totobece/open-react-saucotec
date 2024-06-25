@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'SaucoTec',
-  description: 'SaucoTec - Inicio',
+  title: 'Saucotec',
+  description: 'Saucotec - Inicio',
   icons: {
     icon:['/favicon.ico?v=4']
   }
