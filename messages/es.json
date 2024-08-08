@@ -1,0 +1,178 @@
+{
+    "HomePage": {
+      "h1-1": "Tu transformacion digital",
+      "h1-2": "junto a saucotec",
+      "bt-1" : "Desarrollar mi proyecto",
+      "bt-2" : "Digitalización de procesos"
+      
+    },
+    "ServicePresentation": {
+      "h1-1" : "Desarrollo y transformación digital",
+      "h1-2" : "para empresas con objetivos ambiciosos",
+      "block1": "DIGITALIZACIÓN DE PROCESOS",
+      "block2" : "Tus operaciones",
+      "block3": "un sistema a tu medida.",
+      "br1": "Sencillez.",
+      "br2": "Alta accesibilidad.",
+      "br3": "Información centralizada.",
+      "br4": "Controlado remotamente",
+      "block4" : "DESARROLLO DE PRODUCTOS DIGITALES",
+      "block5" : "La visión de tu proyecto,",
+      "block6" : "del papel a la realidad.",
+      "br5" : "Aplicaciones web.",
+      "br6" : "Aplicaciones móviles.",
+      "br7" : "UX/UI. ",
+      "br8" : "Ciencia de datos e IA"
+
+
+    },
+    "QuotePresentation" : {
+      "h1" : "Saucotec es una empresa con un",
+      "span" : "completo",
+      "h1-1" : "servicio digital.",
+      "br1" : "Trabajamos para hacerte llegar",
+      "br2" : "a otro nivel."
+
+      
+
+    },
+    "Testimonials" : {
+      "block1" : "Centralizar y digitalizar la información transforma las operaciones de las empresas. El sistema diseñado por Saucotec lo hace posible.",
+      "block2" : "Dueño - Nort Revesimientos",
+      "block3" : "En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. Saucotec desarrolló una solución integrada, agilizando nuestras operaciones.",
+      "block4" : "Dueño - Politap S.R.L.",
+      "block5" : "Working with Saucotec has resulted in excellent achievements for us. The customization of solutions and their proximity differentiate them.",
+      "block6" : "Gerente de Desarrollo de Negocios - Energía Global"
+      
+
+    },
+    "ContactForm" : {
+      "p" : "Gracias por comunicarte!",
+      "br" : "Un asesor se pondrá en contacto con usted pronto.",
+      "span1" : "*Nombre Completo",
+      "span2" : "*Numero de telefono",
+      "span3" : "Su mensaje",
+      "button" : "Enviar"
+
+      
+
+    },
+    "CookieBanner" : {
+      "span1" : "We use",
+      "span2" : "in our page.",
+      "button1" : "Decline",
+      "button2" : "Allow Cookies" 
+
+      
+
+    },
+    "Footer" : {
+      "a1" : "Inicio",
+      "a2" : "Nosotros",
+      "a3" : "Clientes",
+      "copy" : "Reservados todos los derechos.",
+      "div" : "Seguinos"
+    },
+    "Navbar" : {
+      "MenuItem" : "Servicios",
+      "HoveredLink1" : "Transformación Digital",
+      "HoveredLink2" : "Productos digitales",
+      "button1" : "Nosotros",
+      "button2" : "Portafolio",
+      "button3" : "Contactanos"
+    },
+    "MobileMenu" : {
+      "Link1" : "Inicio",
+      "button1" : "Servicios",
+      "Link2" : "Transformación Digital",
+      "Link3" : "Productos digitales",
+      "Link4" : "Nosotros",
+      "Link5" : "Portafolio",
+      "Link6" : "Contactanos"
+
+    },
+    "DigitalTransformation" : {
+      "block1" : "TRANSFORMACIÓN DIGITAL",
+      "h1-1" : "Encienda el potencial de",
+      "h1-2" : "crecimiento de su empresa.",
+      "p" : "Nos encargamos de mantener tu competitividad a largo plazo.",
+      "div" : "Déjanos un mensaje",
+      "block2" : "AL LADO DE SAUCOTEC",
+      "h1-3" : "Tu empresa,",
+      "h1-4" : "lista para el futuro.",
+      "div2" : "Asesoramiento de procesos",
+      "div3" : "Recopilación de datos",
+      "div4" : "Aplicaciones integradas",
+      "div5" : "Análisis de datos",
+      "div6" : "Seguridad de datos",
+      "div7" : "Experiencia del cliente",
+      "div8" : "Gestión remota",
+      "div9" : "Adaptabilidad al cambio",
+      "h1-5" : "Descubra nuestro portafolio..."
+
+
+
+
+
+    },
+    "DigitalProducts" : {
+      "block1" : "DESARROLLO DE PRODUCTOS DIGITALES",
+      "h1-1" : "Ágil. Dentro del presupuesto.",
+      "h1-2" : "Listo para el lanzamiento.",
+      "p" : "Productos digitales seguros y de alta calidad. Siempre entregado a tiempo.",
+      "div" : "Déjanos un mensaje",
+      "block2" : "DESARROLLO DIGITAL SAUCOTEC",
+      "h1-3" : "Soluciones digitales que cumplen o",
+      "h1-4" : "exceden tu visión original.",
+      "div3" : "Desarrollo web",
+      "div4" : "Aplicaciones móviles",
+      "div5" : "Ciencia de Datos",
+      "div6" : "Desarrollo front-end",
+      "div7" : "Desarrollo back-end",
+      "div8" : "Arquitectura de datos",
+      "div9" : "Ciencia de Datos",
+      "h1-5" : "Descubra nuestro portafolio..."
+    },
+    "AboutUs" : {
+      "span" : "es para",
+      "button" : "Estamos expandiendo!",
+      "h2-1" : "Sobre Nosotros",
+      "h2-2" : "Un equipo apasionado por superar nuevas barreras.",
+      "h2-3" : "La tecnología, la ciencia y el diseño nos inspiran a buscar constantemente nuevas formas de agregar valor al mundo que nos rodea.",
+      "h2-4" : "Juntos, creamos un lugar donde la innovación y la excelencia son nuestros objetivos diarios.",
+      "h2-5" : "Inició en",
+      "h2-6" : "Situado en",
+      "h1-1" : "Conozca a nuestro equipo",
+      "h2-7" : "Fundador y Director. Con una visión transformadora y un compromiso por un futuro mejor. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
+      "h2-8" : "Cofundador y director de tecnología. Responsables de la excelencia de nuestras soluciones. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
+      "h2-9" : "Relaciones Internacionales y Consultoría. Un emprendedor comprometido con el éxito de nuestros clientes. Además, deportista profesional.",
+      "h2-10" : "Directora de Marketing y Comunicación, estudiante de psicología enfocada en conectar y comunicar de manera auténtica.",
+      "words1" : "innovadores",
+      "words2" : "lideres industriales",
+      "words3" : "emprendedores",
+      "words4" : "lideres de negocios"
+
+
+    },
+    "JoinUsForm" : {
+      "p1" : "¡Gracias por comunicarte!",
+      "p2" : "Un asesor se pondrá en contacto con usted pronto.",
+      "formword1": "Ven",
+      "formword2" : "a construir", 
+      "formword3" : "con",
+      "formword4" : "nosotros",
+      "span1" : "*Nombre",
+      "span2" : "*Apellido",
+      "label" : "Un asesor se pondrá en contacto con usted pronto.",
+      "span3" : "*Numero de Telefono",
+      "span4" : "Perfil de Linkedin (Opcional)",
+      "span5" : "Habilidades",
+      "option1" : "Selecciona una opcion",
+      "option2" : "Desarrollador Front-End",
+      "option3" : "Desarrollador Full Stack",
+      "option4" : "Ciencia de Datos",
+      "span6" : "*Su mensaje",
+      "button" : "Enviar"
+
+    }
+  }

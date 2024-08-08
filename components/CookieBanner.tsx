@@ -2,11 +2,15 @@
 import Link from 'next/link';
 import { getLocalStorage, setLocalStorage } from '@/lib/storageHelper';
 import { useState, useEffect } from 'react';
+import {useTranslations} from 'next-intl';
+
 
 type ConsentType = boolean | null;
 
 export default function CookieBanner() {
   const [cookieConsent, setCookieConsent] = useState<ConsentType>(null);
+  const t = useTranslations('CookieBanner');
+
 
   useEffect(() => {
     const storedCookieConsent = getLocalStorage("cookie_consent", null);
@@ -45,9 +49,9 @@ export default function CookieBanner() {
             <div className='text-center'>
               <Link href="#">
                 <p className='max-w-xl  text-white'>
-                  Utilizamos{''}
+                {t("span1")}{''}
                   <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
-                  {''}en nuestra pagina.
+                  {''}{t("span2")}
                 </p>
               </Link>
             </div>
@@ -56,13 +60,13 @@ export default function CookieBanner() {
                 className='px-5 py-2 text-white rounded-md border-blue-888'
                 onClick={() => handleCookieAction(false)}
               >
-                Rechazar
+                {t("button1")}
               </button>
               <button
                 className='w-max bg-blue-600 px-5 py-2 text-white rounded-full'
                 onClick={() => handleCookieAction(true)}
               >
-                Permitir Cookies
+                {t("button2")}
               </button>
             </div>
           </div>

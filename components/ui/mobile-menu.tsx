@@ -1,10 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+import {Link} from 'navigation';
 import { Button } from './moving-border';
+import {useTranslations} from 'next-intl';
+
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const t = useTranslations('MobileMenu');
+
 
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
@@ -45,6 +49,8 @@ export default function MobileMenu() {
     return () => document.removeEventListener('click', clickHandler);
   }, [mobileNavOpen]);
 
+
+
   return (
     <div className="md:hidden">
       <button
@@ -76,7 +82,7 @@ export default function MobileMenu() {
         <ul className="backdrop-filter backdrop-blur-md px-4 py-2 h-[700px] rounded-[20px] text-xl bg-opacity-50 bg-[#07112B] ">
           <li>
             <Link href="/" className="block font-medium text-white hover:text-gray-200 pt-12 justify-center" onClick={() => { setMobileNavOpen(false); scrollToContact(); }}>
-              Home
+            {t("Link1")}
             </Link>
           </li>
 
@@ -87,7 +93,7 @@ export default function MobileMenu() {
               className="flex items-center justify-between font-medium w-full text-white hover:text-gray-200 py-2"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              Services
+              {t("button1")}
               <svg
                 className={`w-4 h-4 ml-2 transition-transform ${dropdownOpen ? 'transform rotate-180' : ''}`}
                 fill="none"
@@ -102,12 +108,12 @@ export default function MobileMenu() {
               <ul ref={dropdownMenu} className={`bg-none backdrop-filter px-12 py-2 transition-opacity ${dropdownOpen ? 'opacity-100' : 'opacity-0'}`}>
                 <li>
                   <Link href="/digital-transformation" className="block font-medium text-white py-6 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Digital Transformation
+                  {t("Link2")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/digital-products" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                    Digital Products
+                  {t("Link3")}
                   </Link>
                 </li>
               </ul>
@@ -115,21 +121,21 @@ export default function MobileMenu() {
           </li>
 
           <li className='py-4'>
-            <Link href="/" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToNosotros(); }}>
-              About Us
+            <Link href="/about" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToNosotros(); }}>
+            {t("Link4")}
             </Link>
           </li>
 
           <li>
             <button  className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => { setMobileNavOpen(false); scrollToClientes(); }}>
-              Portfolio
+            {t("Link5")}
             </button>
           </li>
 
           <button onClick={scrollToContact} className='w-full btn p-[2px] relative '>
             <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-500 rounded-full mt-8" />
             <div className="h-[50px] w-full leading-[1] text-xl btn  px-5 py-2  bg-[#000F39] rounded-full relative group transition font-[300] mt-8  text-white ">
-              Contact Us
+            {t("Link6")}
             </div>
           </button>
         </ul>

@@ -1,10 +1,13 @@
+'use client'
 import React from 'react';
-import Link from 'next/link';
+import {Link} from 'navigation';
 import Image from 'next/image';
 import SaucotecLogo from "../../public/images/SaucotecLogo-white-svg.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {useTranslations} from 'next-intl';
+
 
 function HandleCall() {
   window.location.href = 'tel:+5491131500591';
@@ -17,7 +20,12 @@ const scrollToContact = () => {
   }
 };
 
-export default function Footer() {
+
+
+
+export default function Footer()
+{
+  const t = useTranslations('Footer');
   return (
     <footer className="relative bg-[#07112B]">
       <div className="absolute inset-0 z-[-1]">
@@ -41,32 +49,33 @@ export default function Footer() {
               </div>
             </div>
 
-        <div className='flex justify-center items-center '>
-          <div className='max-w-xl flex justify-center space-x-16'>
-            <a className='text-white text-3xl relative group ' href='/'>
-              Home
-              <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-24 w-0'></span>
-            </a>
-            <a className='text-white text-3xl relative group' href='/about'>
-              About us
-              <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full w-0'></span>
-            </a>
-            <a className='text-white text-3xl relative group' href='/portfolio'>
-              Work
-              <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-20 w-0'></span>
-            </a>
-          </div>
-        </div>
+            <div className='flex justify-center items-center '>
+                <div className='max-w-xl flex justify-center md:space-x-12 space-y-4 md:space-y-0 flex-col md:flex-row'>
+                  <a className='text-white text-3xl relative group ' href='/'>
+                    {t("a1")}
+                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-24 w-0'></span>
+                  </a>
+                  <a className='text-white text-3xl relative group' href='/about'>
+                    {t("a2")}
+                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full w-0'></span>
+                  </a>
+                  <a className='text-white text-3xl relative group' href='/portfolio'>
+                    {t("a3")}
+                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-20 w-0'></span>
+                  </a>
+                </div>
+            </div>
+
 
           </div>
 
           <div className="flex items-center md:justify-between flex-col md:flex-row ">
-            <div className="text-white font-[200] mr-2 md:mr-0  md:mb-0 md:order-1">
-              &copy; Saucotec.com. All rights reserved.
+            <div className="text-white font-[200] mr-2 md:mr-0  md:mb-0 md:order-1 text-center">
+              &copy; Saucotec.com. {t("copy")}
             </div>
 
             <div className="flex flex-col items-center md:order-2 py-8 ">
-              <div className="text-white font-semibold mb-4">Follow us</div>
+              <div className="text-white font-semibold mb-4">{t("div")} </div>
               <div className="flex space-x-4 ">
                 <a
                   href="https://api.whatsapp.com/send?phone=5491131500591&text=Hey!%20I%20would%20like%20to%20know%20more%20about%20Saucotec%20services."

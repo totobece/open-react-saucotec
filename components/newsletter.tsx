@@ -5,8 +5,9 @@ import React from 'react';
 import WPPlogo from '@/public/images/whatsapp.svg';
 import { useForm, ValidationError } from '@formspree/react';
 import { TypewriterEffect } from './typewriter-effect';
-import Link from 'next/link';
 import Image from 'next/image';
+import {useTranslations} from 'next-intl';
+
 
 function HandleCall() {
   window.location.href = 'tel:+5491131500591'
@@ -17,12 +18,14 @@ function HandleCall() {
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("myyqlkdn");
+  const t = useTranslations('ContactForm');
+
 
   if (state.succeeded) {
     return (
       <div className="flex items-center justify-center h-full">
         <p className="text-4xl font-semibold text-white">
-        Thank you for reaching out! <br />An advisor will contact you soon.
+        {t("p")} <br />{t("br")}
         </p>
       </div>
     );
@@ -46,7 +49,7 @@ function ContactForm() {
           <form className="mt-6 text-left p-4 lg:p-6" onSubmit={handleSubmit}>
             <div className="mb-2">
                     <label>
-                      <span className="text-white text-xl font-[500]">*Full Name</span>
+                      <span className="text-white text-xl font-[500]">{t("span1")}</span>
                       <input
                         type="text"
                         name="name"
@@ -101,7 +104,7 @@ function ContactForm() {
                   </div>
                   <div className="mb-2">
                     <label>
-                      <span className="text-white text-xl font-[500]" >*Phone number</span>
+                      <span className="text-white text-xl font-[500]" >{t("span2")}</span>
                       <input
                         name="Numero"
                         type="text"
@@ -129,7 +132,7 @@ function ContactForm() {
                   </div>
                     <div className="mb-2 ">
                       <label>
-                        <span className="text-white text-xl font-[500] " >Your message</span>
+                        <span className="text-white text-xl font-[500] " >{t("span3")}</span>
                         <textarea
                           name="message"
                 
@@ -163,7 +166,7 @@ function ContactForm() {
                 type='submit'
                 disabled={state.submitting}
                 >
-                  Send
+                  {t("button")}
                 </button>
                 
               

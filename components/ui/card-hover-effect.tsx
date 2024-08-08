@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
+import {Link} from "navigation";
 import Image from "next/image";
 import { useState } from "react";
 
