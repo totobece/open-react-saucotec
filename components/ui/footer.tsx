@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {useTranslations} from 'next-intl';
+import { useRouter } from 'navigation';
 
 
 function HandleCall() {
@@ -25,7 +26,20 @@ const scrollToContact = () => {
 
 export default function Footer()
 {
+  const router = useRouter();
   const t = useTranslations('Footer');
+
+  const scrollToClientes = async () => {
+    const ClientesSection = document.getElementById('clientes');
+    
+    if (ClientesSection) {
+      ClientesSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sessionStorage.setItem('scrollTarget', 'clientes');
+      router.push('/');
+    }
+  };
+
   return (
     <footer className="relative bg-[#07112B]">
       <div className="absolute inset-0 z-[-1]">
@@ -49,21 +63,24 @@ export default function Footer()
               </div>
             </div>
 
-            <div className='flex justify-center items-center '>
-                <div className='max-w-xl flex justify-center md:space-x-12 space-y-4 md:space-y-0 flex-col md:flex-row'>
-                  <a className='text-white text-3xl relative group ' href='/'>
-                    {t("a1")}
-                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-24 w-0'></span>
-                  </a>
-                  <a className='text-white text-3xl relative group' href='/about'>
-                    {t("a2")}
-                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full w-0'></span>
-                  </a>
-                  <a className='text-white text-3xl relative group' href='/portfolio'>
-                    {t("a3")}
-                    <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-20 w-0'></span>
-                  </a>
-                </div>
+            <div className='flex justify-center items-center'>
+              <div className='max-w-xl flex justify-center md:space-x-12 space-y-4 md:space-y-0 flex-col md:flex-row'>
+                <a className='text-white text-3xl relative group text-center md:text-left' href='/'>
+                {t("a1")}
+                <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-24 w-0 mx-auto md:mx-0'></span>
+                </a>
+                <a className='text-white text-3xl relative group text-center md:text-left' href='/about'>
+                {t("a2")}
+                <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full w-0 mx-auto md:mx-0'></span>
+                </a>
+                <button 
+                  onClick={scrollToClientes}
+                  className='text-white text-3xl relative group text-center md:text-left'
+                >
+                  {t("a3")}
+                  <span className='block h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-20 w-0 mx-auto md:mx-0'></span>
+                </button>
+              </div>
             </div>
 
 
@@ -71,7 +88,7 @@ export default function Footer()
 
           <div className="flex items-center md:justify-between flex-col md:flex-row ">
             <div className="text-white font-[200] mr-2 md:mr-0  md:mb-0 md:order-1 text-center">
-              &copy; Saucotec.com. {t("copy")}
+              &copy; 2025 Saucotec. {t("copy")}
             </div>
 
             <div className="flex flex-col items-center md:order-2 py-8 ">

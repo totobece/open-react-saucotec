@@ -37,7 +37,7 @@ export default function Zigzag() {
         translateX: 0,
       },
       {
-        translateX: isMobile ? "-300vw" : "-200vw", // Ajustar el tamaño de la transición según el dispositivo
+        translateX: isMobile ? "-600vw" : "-200vw", // Ajustar el tamaño de la transición según el dispositivo
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -55,83 +55,128 @@ export default function Zigzag() {
   }, [isMobile]); // Asegúrate de que se actualice cuando cambie la variable isMobile
 
   return (
-    <section id='clientes' className="scroll-section-outer bg-[#07112B] md:pb-20">  
-      <div className={`max-w-full mx-auto px-2 relative ${isMobile ? 'text-center' : ''}`}></div>
-      <div ref={triggerRef} className='max-w-full'>
-        <div ref={sectionRef} className="scroll-section-inner ml-4">
+    <section id='clientes' className="max-w-full scroll-section-outer bg-[#07112B] pl-2 md:pl-0 md:pb-20 overflow-hidden">  
+  <div ref={triggerRef} className='w-full'>
+    <div ref={sectionRef} className="w-full scroll-section-inner flex">
+      {!isMobile && (
+        <>
+          <div className="scroll-section w-screen flex flex-row justify-center px-0 gap-24">
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={DuoRings} 
+                alt="duorings" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={Nort} 
+                alt="nort grande" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+          </div>
 
-          {/* Si no es mobile */}
-          {!isMobile && (
-            <>
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={DuoRings} alt="duorings" className="w-[658px] left h-auto" />
-                </motion.div>
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Nort} alt="nort grande" className=" w-[658px] left h-auto" />
-                </motion.div>
-              </div>
+          <div className="scroll-section w-screen flex flex-row justify-center px-0 gap-24">
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={Metalux} 
+                alt="duorings" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={Ergonomia} 
+                alt="nort grande" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+          </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Metalux} alt="duorings" className="w-[658px] left h-auto" />
-                </motion.div>
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Ergonomia} alt="nortcliente" className=" w-[658px] left h-auto" />
-                </motion.div>
-              </div>
-
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={EG} alt="duorings" className="w-[658px] left h-auto" />
-                </motion.div>
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Politap} alt="nortcliente" className=" w-[658px] left h-auto" />
-                </motion.div>
-              </div>
+          <div className="scroll-section w-screen flex flex-row justify-center px-0 gap-24">
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={EG} 
+                alt="duorings" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+            <motion.div className="cursor-pointer w-[40%]" whileHover={{ y: -10 }}>
+              <Image 
+                src={Politap} 
+                alt="nort grande" 
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+          </div>
             </>
           )}
 
           {/* Si es mobile */}
           {isMobile && (
-            <>
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={DuoRings} alt="duorings" className="w-[200%] left h-auto" />
-                </motion.div>
-              </div>
+  <>
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={DuoRings} 
+          alt="duorings" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Nort} alt="nort grande" className=" w-[200%] left h-auto" />
-                </motion.div>
-              </div>
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={Nort} 
+          alt="nort" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Metalux} alt="duorings" className="w-[200%] left h-auto" />
-                </motion.div>
-              </div>
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={Metalux} 
+          alt="metalux" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Ergonomia} alt="nortcliente" className=" w-[200%] left h-auto" />
-                </motion.div>
-              </div>
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={Ergonomia} 
+          alt="ergonomia" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={EG} alt="duorings" className="w-[200%] left h-auto" />
-                </motion.div>
-              </div>
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={EG} 
+          alt="eg" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
 
-              <div className="scroll-section">
-                <motion.div className="cursor-pointer" whileHover={{ y: -10 }}>
-                  <Image src={Politap} alt="nortcliente" className=" w-[200%] left h-auto" />
-                </motion.div>
-              </div>
-            </>
-          )}
+    <div className="scroll-section min-w-[100vw] h-screen flex items-center justify-center px-0">
+      <motion.div className="cursor-pointer w-[150vw]" whileHover={{ y: -10 }}>
+        <Image 
+          src={Politap} 
+          alt="politap" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
+  </>
+)}
 
         </div>
       </div>

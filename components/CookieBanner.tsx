@@ -43,27 +43,27 @@ export default function CookieBanner() {
             className={` my-10 w-5/6 mx-auto max-w-6xl md:max-w-screen-sm
                         fixed bottom-0 left-0 right-0 
                         ${cookieConsent !== null ? "hidden" : "flex"} 
-                        px-3 md:px-6 py-3 justify-between items-center flex-col sm:flex-row gap-3  
-                        bg-blue-888 rounded-full shadow py- z-50 transition-opacity duration-500 ease-in-out`}
+                        px-2 md:px-6 py-2 md:py-3 justify-between items-center flex-col sm:flex-row gap-2 md:gap-3  
+                        bg-blue-888 rounded-full shadow z-50 transition-opacity duration-500 ease-in-out`}
           >
             <div className='text-center'>
               <Link href="#">
-                <p className='max-w-xl  text-white'>
-                {t("span1")}{''}
-                  <span className='text-blue-600 font-bold ml-2 mr-2'>cookies</span>
+                <p className='max-w-xl text-sm md:text-base text-white'>
+                  {t("span1")}{''}
+                  <span className='text-blue-600 font-bold ml-1 md:ml-2 mr-1 md:mr-2'>cookies</span>
                   {''}{t("span2")}
                 </p>
               </Link>
             </div>
-            <div className='flex gap-2'>
+            <div className='flex gap-1 md:gap-2'>
               <button
-                className='px-5 py-2 text-white rounded-md border-blue-888'
+                className='px-3 md:px-5 py-1 md:py-2 text-sm md:text-base text-white rounded-md border-blue-888'
                 onClick={() => handleCookieAction(false)}
               >
                 {t("button1")}
               </button>
               <button
-                className='w-max bg-blue-600 px-5 py-2 text-white rounded-full'
+                className='w-max bg-blue-600 px-3 md:px-5 py-1 md:py-2 text-sm md:text-base text-white rounded-full'
                 onClick={() => handleCookieAction(true)}
               >
                 {t("button2")}

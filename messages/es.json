@@ -1,16 +1,16 @@
 {
     "HomePage": {
-      "h1-1": "Tu transformacion digital",
-      "h1-2": "junto a saucotec",
+      "h1-1": "Tu transformación digital,",
+      "h1-2": "junto a Saucotec",
       "bt-1" : "Desarrollar mi proyecto",
-      "bt-2" : "Digitalización de procesos"
+      "bt-2" : "Digitalizar mis procesos"
       
     },
     "ServicePresentation": {
-      "h1-1" : "Desarrollo y transformación digital",
+      "h1-1" : "Desarrollo y transformación digital,",
       "h1-2" : "para empresas con objetivos ambiciosos",
       "block1": "DIGITALIZACIÓN DE PROCESOS",
-      "block2" : "Tus operaciones",
+      "block2" : "Tus operaciones,",
       "block3": "un sistema a tu medida.",
       "br1": "Sencillez.",
       "br2": "Alta accesibilidad.",
@@ -30,38 +30,38 @@
       "h1" : "Saucotec es una empresa con un",
       "span" : "completo",
       "h1-1" : "servicio digital.",
-      "br1" : "Trabajamos para hacerte llegar",
-      "br2" : "a otro nivel."
+      "br1" : "Trabajamos para hacerte alcanzar",
+      "br2" : "otro nivel."
 
       
 
     },
     "Testimonials" : {
-      "block1" : "Centralizar y digitalizar la información transforma las operaciones de las empresas. El sistema diseñado por Saucotec lo hace posible.",
+      "block1" : "Centralizar y digitalizar la información transforma las operaciones de nuestra empresa. El sistema diseñado por Saucotec lo hace posible.",
       "block2" : "Dueño - Nort Revesimientos",
       "block3" : "En Politap teníamos un déficit en la accesibilidad y eficiencia del proceso de venta. Saucotec desarrolló una solución integrada, agilizando nuestras operaciones.",
       "block4" : "Dueño - Politap S.R.L.",
-      "block5" : "Working with Saucotec has resulted in excellent achievements for us. The customization of solutions and their proximity differentiate them.",
-      "block6" : "Gerente de Desarrollo de Negocios - Energía Global"
+      "block5" : "Trabajar con Saucotec nos ha traído excelentes resultados. La personalización de las soluciones y su cercanía los diferencian.",
+      "block6" : "Gerente Comercial - Energía Global"
       
 
     },
     "ContactForm" : {
       "p" : "Gracias por comunicarte!",
-      "br" : "Un asesor se pondrá en contacto con usted pronto.",
+      "br" : "Un asesor se pondrá en contacto pronto.",
       "span1" : "*Nombre Completo",
-      "span2" : "*Numero de telefono",
-      "span3" : "Su mensaje",
+      "span2" : "*Número de teléfono",
+      "span3" : "Mensaje",
       "button" : "Enviar"
 
       
 
     },
     "CookieBanner" : {
-      "span1" : "We use",
-      "span2" : "in our page.",
-      "button1" : "Decline",
-      "button2" : "Allow Cookies" 
+      "span1" : "Usamos",
+      "span2" : "en nuestra página.",
+      "button1" : "Declinar",
+      "button2" : "Permitir Cookies" 
 
       
 
@@ -70,7 +70,7 @@
       "a1" : "Inicio",
       "a2" : "Nosotros",
       "a3" : "Clientes",
-      "copy" : "Reservados todos los derechos.",
+      "copy" : "Todos los derechos reservados.",
       "div" : "Seguinos"
     },
     "Navbar" : {
@@ -93,11 +93,11 @@
     },
     "DigitalTransformation" : {
       "block1" : "TRANSFORMACIÓN DIGITAL",
-      "h1-1" : "Encienda el potencial de",
-      "h1-2" : "crecimiento de su empresa.",
+      "h1-1" : "Despliegue el potencial de crecimiento",
+      "h1-2" : "de su empresa.",
       "p" : "Nos encargamos de mantener tu competitividad a largo plazo.",
-      "div" : "Déjanos un mensaje",
-      "block2" : "AL LADO DE SAUCOTEC",
+      "div" : "Dejanos un mensaje",
+      "block2" : "SAUCOTEC A TU LADO",
       "h1-3" : "Tu empresa,",
       "h1-4" : "lista para el futuro.",
       "div2" : "Asesoramiento de procesos",
@@ -110,17 +110,13 @@
       "div9" : "Adaptabilidad al cambio",
       "h1-5" : "Descubra nuestro portafolio..."
 
-
-
-
-
     },
     "DigitalProducts" : {
       "block1" : "DESARROLLO DE PRODUCTOS DIGITALES",
-      "h1-1" : "Ágil. Dentro del presupuesto.",
-      "h1-2" : "Listo para el lanzamiento.",
+      "h1-1" : "Ágil. Económico.",
+      "h1-2" : "Llave en mano.",
       "p" : "Productos digitales seguros y de alta calidad. Siempre entregado a tiempo.",
-      "div" : "Déjanos un mensaje",
+      "div" : "Dejanos un mensaje",
       "block2" : "DESARROLLO DIGITAL SAUCOTEC",
       "h1-3" : "Soluciones digitales que cumplen o",
       "h1-4" : "exceden tu visión original.",
@@ -135,44 +131,43 @@
     },
     "AboutUs" : {
       "span" : "es para",
-      "button" : "Estamos expandiendo!",
-      "h2-1" : "Sobre Nosotros",
+      "button" : "Nos estamos expandiendo!",
+      "h2-1" : "Sobre nosotros",
       "h2-2" : "Un equipo apasionado por superar nuevas barreras.",
       "h2-3" : "La tecnología, la ciencia y el diseño nos inspiran a buscar constantemente nuevas formas de agregar valor al mundo que nos rodea.",
       "h2-4" : "Juntos, creamos un lugar donde la innovación y la excelencia son nuestros objetivos diarios.",
-      "h2-5" : "Inició en",
-      "h2-6" : "Situado en",
-      "h1-1" : "Conozca a nuestro equipo",
-      "h2-7" : "Fundador y Director. Con una visión transformadora y un compromiso por un futuro mejor. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
-      "h2-8" : "Cofundador y director de tecnología. Responsables de la excelencia de nuestras soluciones. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
-      "h2-9" : "Relaciones Internacionales y Consultoría. Un emprendedor comprometido con el éxito de nuestros clientes. Además, deportista profesional.",
+      "h2-5" : "Desde",
+      "h2-6" : "Ubicados en",
+      "h1-1" : "Conocé a nuestro equipo",
+      "h2-7" : "Fundador y Director. Con una visión transformadora y un compromiso con un futuro mejor. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
+      "h2-8" : "Cofundador y director de tecnología. Responsable de la excelencia de nuestras soluciones. Especializado en ciencia de datos en la Universidad de Buenos Aires.",
+      "h2-9" : "Relaciones Internacionales y Consultoría. Un emprendedor comprometido con el éxito de nuestros clientes. Deportista profesional.",
       "h2-10" : "Directora de Marketing y Comunicación, estudiante de psicología enfocada en conectar y comunicar de manera auténtica.",
       "words1" : "innovadores",
-      "words2" : "lideres industriales",
+      "words2" : "líderes de industria",
       "words3" : "emprendedores",
-      "words4" : "lideres de negocios"
+      "words4" : "líderes de negocios"
 
 
     },
     "JoinUsForm" : {
-      "p1" : "¡Gracias por comunicarte!",
-      "p2" : "Un asesor se pondrá en contacto con usted pronto.",
-      "formword1": "Ven",
-      "formword2" : "a construir", 
-      "formword3" : "con",
-      "formword4" : "nosotros",
+      "p1" : "Gracias por comunicarte!",
+      "p2" : "Un asesor se pondrá en contacto pronto.",
+      "formword1": "Construyamos",
+      "formword2" : "el", 
+      "formword3" : "futuro",
+      "formword4" : "juntos",
       "span1" : "*Nombre",
       "span2" : "*Apellido",
-      "label" : "Un asesor se pondrá en contacto con usted pronto.",
-      "span3" : "*Numero de Telefono",
+      "label" : "Un asesor se pondrá en contacto pronto.",
+      "span3" : "*Número de Teléfono",
       "span4" : "Perfil de Linkedin (Opcional)",
       "span5" : "Habilidades",
-      "option1" : "Selecciona una opcion",
+      "option1" : "Seleccioná una opcion",
       "option2" : "Desarrollador Front-End",
       "option3" : "Desarrollador Full Stack",
       "option4" : "Ciencia de Datos",
       "span6" : "*Su mensaje",
       "button" : "Enviar"
-
     }
   }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Desktop from '@/public/images/DESKTOP.svg';
 import Botones from '@/public/images/BOTONES.svg';
 import Mobile from '@/public/images/MOBILE.svg';
-import FotosMobile from '@/public/images/Group 51 (1).png';
+import FotosMobile from '@/public/images/interfaces para mobile.png';
 import { CardBody, CardContainer, CardItem } from './ui/3d-card';
 import Fondo from '@/public/images/Rectangle 22 (1).svg';
 import {Link} from 'navigation';
@@ -36,8 +36,22 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative">
-      <div className={`max-w-full mx-4 sm:px-6 relative ${isMobile ? 'text-center place-content-center' : 'text-left'}`}>
+    <section className="relative bg-[#07112B] h-screen w-full overflow-hidden">
+      {/* Background container - moved to top */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <Image 
+          src={Fondo} 
+          alt="Fondo" 
+          layout="fill" 
+          objectFit="cover" 
+          quality={100} 
+          priority
+        />
+        <div className="absolute bottom-0 left-0 right-0 h-[10%] bg-gradient-to-t from-[#07112B] to-transparent" />
+      </div>
+
+      {/* Main content - increased z-index */}
+      <div className={`relative z-10 max-w-full mx-4 sm:px-6 ${isMobile ? 'text-center place-content-center' : 'text-left'}`}>
         <div className="max-w-full mx-auto px-4 lg:ml-16 pt-[100px] md:pt-32 lg:pt-64 flex z-10 relative">
           <div className="max-w-6xl container flex flex-col lg:pb-8">
             <div className="md:flex md:flex-col ">
@@ -66,7 +80,7 @@ export default function Hero() {
           </div>
 
           {!isMobile && (
-            <div className="max-w-full mx-20 px-4 sm:px-6 relative z-0">
+            <div className="max-w-full mx-20 px-4 sm:px-6 relative z-20">
               <CardContainer className="inter-var">
                 <CardBody className="w-auto sm:w-[30rem] h-auto rounded-xl p-6">
                   <CardItem translateZ="160">
@@ -108,11 +122,10 @@ export default function Hero() {
       </div>
 
       {isMobile && (
-        <div className="flex justify-center items-center z-0 pb-16 mt-10">
+        <div className="flex justify-center items-center z-20 pb-16 mt-10 relative">
           <Image src={FotosMobile} alt="thumbnail" height={300} width={300} />
         </div>
       )}
-      <Image src={Fondo} alt="Fondo" layout="fill" objectFit="cover" quality={100} className="z-[-1] fixed" />
     </section>
   );
 }

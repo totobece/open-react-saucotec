@@ -89,7 +89,7 @@ export default function About() {
         </button>
       </div>
 
-      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-50" />
+      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-0 md:opacity-50" />
 
       <div className="relative w-full my-8 flex justify-center">
         <div className="flex flex-col items-center w-full max-w-screen-lg">
@@ -120,11 +120,11 @@ export default function About() {
         </div>
       </div>
 
-      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-50 mt-16" />
+      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-0 md:opacity-50 mt-16" />
 
       <div className='py-16'>
         <div className='relative justify-center w-full flex my-10'>
-          <h1 className='text-white text-4xl font-[400]'>{t("h1-1")}</h1>
+            <h1 className='text-white text-4xl font-[400] text-center'>{t("h1-1")}</h1>
         </div>
 
         <div className='flex space-y-12 mt-6 flex-col'>
@@ -228,7 +228,7 @@ export default function About() {
         </div>
       </div>
 
-      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-50 mt-16" />
+      <hr className="relative left-1/2 transform -translate-x-1/2 w-[100vh] border-t-2 border-white opacity-0 md:opacity-50 mt-16" />
       <JoinUsForm />
       <Footer />
     </section>

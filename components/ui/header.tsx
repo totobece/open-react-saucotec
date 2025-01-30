@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'navigation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -17,22 +17,6 @@ import { MdLanguage } from 'react-icons/md'; // Menú de Idiomas
 // Definimos un tipo para los idiomas permitidos
 type Locale = "en" | "es";
 
-const scrollToContact = () => {
-  const contactSection = document.getElementById('contact');
-
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-const scrollToClientes = () => {
-  const ClientesSection = document.getElementById('clientes');
-
-  if (ClientesSection) {
-    ClientesSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
 const Header = () => {
   const [active, setActive] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Estado para abrir/cerrar el dropdown
@@ -41,10 +25,52 @@ const Header = () => {
   const router = useRouter(); 
   const pathname = usePathname();
 
-  const handleLanguageChange = (locale: Locale) => {
-    router.push(pathname, { locale });
-    setSelectedLanguage(locale);
-    setIsDropdownOpen(false); // Cerrar el dropdown al seleccionar un idioma
+  const scrollToContact = async () => {
+    const contactSection = document.getElementById('contact');
+    
+    if (contactSection) {
+      // If section exists on current page, scroll to it
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If section doesn't exist, navigate to home and set scroll target
+      sessionStorage.setItem('scrollTarget', 'contact');
+      router.push('/');
+    }
+  };
+
+  const scrollToClientes = async () => {
+    const ClientesSection = document.getElementById('clientes');
+    
+    if (ClientesSection) {
+      // If section exists on current page, scroll to it
+      ClientesSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If section doesn't exist, navigate to home and set scroll target
+      sessionStorage.setItem('scrollTarget', 'clientes');
+      router.push('/');
+    }
+  };
+
+  useEffect(() => {
+    // Check if we need to scroll after navigation
+    const scrollTarget = sessionStorage.getItem('scrollTarget');
+    if (scrollTarget && pathname === '/') {
+      // Clear the stored target
+      sessionStorage.removeItem('scrollTarget');
+      
+      // Add a small delay to ensure the elements are mounted
+      setTimeout(() => {
+        const element = document.getElementById(scrollTarget);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [pathname]);
+
+  const handleLanguageChange = (newLocale: Locale) => {
+    router.replace(pathname, { locale: newLocale });
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -83,34 +109,34 @@ const Header = () => {
             </ul>
             <div className="relative flex items-center">
             <button 
-  className="text-4xl pr-8 rounded-full p-2 bg-white  flex items-center justify-center"
-  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
->
-  <MdLanguage className="text-black" />
-</button>
+              className="text-4xl pr-8 rounded-full p-2 bg-white  flex items-center justify-center"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
+              <MdLanguage className="text-black" />
+            </button>
 
-              {isDropdownOpen && (
-                <div className="absolute right-0 bg-white shadow-lg rounded-lg mt-2 z-20">
+                {isDropdownOpen && (
+                <div className="absolute right-0 bg-white shadow-lg rounded-lg mt-2 z-20 overflow-hidden">
                   <ul className="flex flex-col">
-                    <li>
-                      <button
-                        onClick={() => handleLanguageChange('en')}
-                        className="block px-4 py-2 text-[#07112B] hover:bg-gray-200"
-                      >
-                        EN
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => handleLanguageChange('es')}
-                        className="block px-4 py-2 text-[#07112B] hover:bg-gray-200"
-                      >
-                        ES
-                      </button>
-                    </li>
+                  <li className="w-full">
+                    <button
+                    onClick={() => handleLanguageChange('en')}
+                    className="w-full px-4 py-2 text-[#07112B] hover:bg-gray-200 transition-colors"
+                    >
+                    EN
+                    </button>
+                  </li>
+                  <li className="w-full">
+                    <button
+                    onClick={() => handleLanguageChange('es')}
+                    className="w-full px-4 py-2 text-[#07112B] hover:bg-gray-200 transition-colors"
+                    >
+                    ES
+                    </button>
+                  </li>
                   </ul>
                 </div>
-              )}
+                )}
             </div>
             <button 
               className="text-xl inline-flex h-12 animate-shimmer items-center justify-center rounded-[40px] bg-[linear-gradient(110deg,#1C32BB,45%,#A0ABEA,55%,#1C32BB)] bg-[length:200%_100%] px-2 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"

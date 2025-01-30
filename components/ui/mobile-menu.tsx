@@ -1,41 +1,62 @@
 import { useState, useRef, useEffect } from 'react';
-import {Link} from 'navigation';
+import {Link, usePathname, useRouter} from 'navigation';
 import { Button } from './moving-border';
-import {useTranslations} from 'next-intl';
-
+import {useTranslations, useLocale} from 'next-intl';
+import { MdLanguage } from 'react-icons/md';
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const t = useTranslations('MobileMenu');
-
+  const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
 
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
   const dropdownMenu = useRef<HTMLUListElement>(null);
   
-  const scrollToNosotros = () => {
+  const scrollToNosotros = async () => {
+    setMobileNavOpen(false);
     const nosotrosSection = document.getElementById('nosotros');
-  
+    
     if (nosotrosSection) {
       nosotrosSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sessionStorage.setItem('scrollTarget', 'nosotros');
+      router.push('/');
     }
   };
 
-  const scrollToClientes = () => {
-    const clientesSection = document.getElementById('clientes');
-  
-    if (clientesSection) {
-      clientesSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToClientes = async () => {
+    setMobileNavOpen(false);
+    const ClientesSection = document.getElementById('clientes');
+    
+    if (ClientesSection) {
+      ClientesSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sessionStorage.setItem('scrollTarget', 'clientes');
+      router.push('/');
     }
   };
 
-  const scrollToContact = () => {
+  const scrollToContact = async () => {
+    setMobileNavOpen(false);
     const contactSection = document.getElementById('contact');
-  
+    
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sessionStorage.setItem('scrollTarget', 'contact');
+      router.push('/');
     }
+  };
+
+  const handleLanguageChange = (newLocale: 'en' | 'es') => {
+    router.replace(pathname, { locale: newLocale });
+    setIsLangDropdownOpen(false);
+    setMobileNavOpen(false);
   };
 
   useEffect(() => {
@@ -49,7 +70,19 @@ export default function MobileMenu() {
     return () => document.removeEventListener('click', clickHandler);
   }, [mobileNavOpen]);
 
-
+  useEffect(() => {
+    // Check if we need to scroll after navigation
+    const scrollTarget = sessionStorage.getItem('scrollTarget');
+    if (scrollTarget && pathname === '/') {
+      sessionStorage.removeItem('scrollTarget');
+      setTimeout(() => {
+        const element = document.getElementById(scrollTarget);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [pathname]);
 
   return (
     <div className="md:hidden">
@@ -138,6 +171,40 @@ export default function MobileMenu() {
             {t("Link6")}
             </div>
           </button>
+
+          {/* Replace the old language button with this new one */}
+          <div className="relative mt-8">
+            <button 
+              onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+              className="w-full flex items-center justify-center gap-2 text-white p-3 border border-white/20 rounded-full"
+            >
+              <MdLanguage className="text-2xl" />
+              <span>{locale.toUpperCase()}</span>
+            </button>
+
+            {isLangDropdownOpen && (
+              <div className="absolute bottom-full left-0 right-0 mb-2 bg-white shadow-lg rounded-lg overflow-hidden">
+                <ul className="flex flex-col">
+                  <li>
+                    <button
+                      onClick={() => handleLanguageChange('en')}
+                      className="w-full px-4 py-2 text-[#07112B] hover:bg-gray-200 transition-colors"
+                    >
+                      EN
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => handleLanguageChange('es')}
+                      className="w-full px-4 py-2 text-[#07112B] hover:bg-gray-200 transition-colors"
+                    >
+                      ES
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </ul>
       </nav>
     </div>

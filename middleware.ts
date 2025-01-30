@@ -1,14 +1,28 @@
 import createMiddleware from 'next-intl/middleware';
- 
+import {locales, defaultLocale} from './i18n';
+
+function getPreferredLocale(acceptLanguageHeader: string | null) {
+  try {
+    if (!acceptLanguageHeader) return defaultLocale;
+    
+    const languages = acceptLanguageHeader
+      .split(',')
+      .map(lang => lang.split(';')[0].trim().toLowerCase().slice(0, 2))
+      .filter(Boolean);
+    
+    return languages.find(lang => locales.includes(lang)) || defaultLocale;
+  } catch (error) {
+    return defaultLocale;
+  }
+}
+
 export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'es'],
- 
-  // Used when no locale matches
-  defaultLocale: 'es'
+  locales,
+  defaultLocale,
+  localeDetection: true,
+  localePrefix: 'always'
 });
- 
+
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(es|en)/:path*']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/']
 };
