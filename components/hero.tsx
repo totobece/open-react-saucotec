@@ -36,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-[#07112B] h-screen w-full overflow-hidden">
+    <section className="relative bg-[#07112B] h-[110vh] w-full overflow-hidden">
       {/* Background container - moved to top */}
       <div className="absolute top-0 left-0 w-full h-full">
         <Image 
@@ -122,7 +122,7 @@ export default function Hero() {
       </div>
 
       {isMobile && (
-        <div className="flex justify-center items-center z-20 pb-16 mt-10 relative">
+        <div className="flex justify-center items-center z-20  mt-10 relative">
           <Image src={FotosMobile} alt="thumbnail" height={300} width={300} />
         </div>
       )}
