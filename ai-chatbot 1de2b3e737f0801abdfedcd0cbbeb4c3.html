@@ -1,0 +1,697 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>/ai-chatbot</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1de2b3e7-37f0-801a-bdfe-dcd0cbbeb4c3" class="page sans"><header><h1 class="page-title">/ai-chatbot</h1><p class="page-description"></p></header><div class="page-body"><p id="1de2b3e7-37f0-8078-a389-d40403867ea8" class="">
+</p><p id="1de2b3e7-37f0-8048-a55b-e674621563dd" class=""><strong>Chatbot IA para WhatsApp:</strong></p><p id="1de2b3e7-37f0-80a2-8736-f98ef3c47c26" class="">Automatiza respuestas y califica leads para mejorar la eficiencia operativa.</p><p id="1de2b3e7-37f0-80fc-9635-d8397da73d0c" class="">
+</p><p id="1de2b3e7-37f0-8053-ae41-c1d5c82c988c" class="">Chatsell, chatea menos, vende más</p><h1 id="1de2b3e7-37f0-80a2-bea7-f0224d0276f1" class=""><strong>Chatsell tu asistente de ventas automatizado en WhatsApp, Instagram y Facebook.</strong></h1><p id="1de2b3e7-37f0-8095-91cd-db84a938ad34" class=""><strong>Conoce Chatsell, el chatbot revolucionario que te permite vender automáticamente, aumentar tus ingresos y mejorar la satisfacción de tus clientes sin esfuerzo.</strong></p><p id="1de2b3e7-37f0-80d5-b9ea-c7b7caa21c1e" class=""><a href="http://app.chatsell.net/">Registrate Gratis</a></p><p id="1de2b3e7-37f0-8026-aa90-ca774778b383" class=""><a href="https://youtu.be/JlyGAH0uros?si=QnZqcsZMGvSQCM4K">Como comenzar</a></p><p id="1de2b3e7-37f0-8042-ba93-fa04d472644a" class=""><a href="https://www.youtube.com/watch?v=RhNKt4tBba4">Video Institucional</a></p><figure id="1de2b3e7-37f0-801c-a871-eec72a67cc4b" class="image"><a href="https://chatsell.net/wp-content/uploads/2023/08/lines.svg"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2023/08/lines.svg"/></a></figure><figure id="1de2b3e7-37f0-80c8-a4c6-e55bf077c6dd" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/11/Captura-de-pantalla-2024-11-06-a-las-12.00.32%E2%80%AFp.-m.-de-tamano-grande.jpeg"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/11/Captura-de-pantalla-2024-11-06-a-las-12.00.32%E2%80%AFp.-m.-de-tamano-grande.jpeg"/></a></figure><p id="1de2b3e7-37f0-80eb-a6ed-fbc3c57e7a20" class=""><strong>vende en automatico</strong></p><h1 id="1de2b3e7-37f0-80d4-97b4-e950a9d18a5d" class=""><strong>Chatbot con Inteligencia Artificial</strong></h1><p id="1de2b3e7-37f0-800b-9a37-d08e72b99f09" class="">¿Sobrepasado por la cantidad de mensajes sin responder en tu negocio? ¡Tenemos la solución! Desarrollamos un Chatbot con Inteligencia Artificial que asesora a tus clientes a través de WhatsApp, Instagram y Facebook, escucha audios, lee los mensajes y los contesta, de esta forma te aseguras que tu empresa tenga una excelente atención al cliente y no pierdas ventas por no responder los mensajes a tiempo. Chatsell vende los productos y servicios de tu empresa automáticamente.</p><p id="1de2b3e7-37f0-8002-8720-c5176c624650" class=""><a href="http://chatsell.net/#reunion">Agendar Reunión</a></p><h1 id="1de2b3e7-37f0-80a9-a82c-ee8a8ec9de64" class=""></h1><h3 id="1de2b3e7-37f0-80a6-9ccd-e4f240d6ac1d" class=""><strong>CRM</strong></h3><p id="1de2b3e7-37f0-8064-987c-c7b79d04d17a" class="">Todo en un solo lugar</p><h1 id="1de2b3e7-37f0-8088-9d5e-fcf76dc24c59" class=""></h1><h3 id="1de2b3e7-37f0-809f-a549-d13c7236adc1" class=""><strong>Chatbot</strong></h3><p id="1de2b3e7-37f0-8050-9ab4-e2e177305632" class="">Entrenado a medida</p><h1 id="1de2b3e7-37f0-808e-ac82-e06761f34a70" class=""></h1><h3 id="1de2b3e7-37f0-80e5-82d0-e9ad835691e1" class=""><strong>Ventas</strong></h3><p id="1de2b3e7-37f0-803e-8bba-c5a23b96da15" class="">Vende tus productos</p><h1 id="1de2b3e7-37f0-80ab-83d6-e08799a1e130" class=""></h1><h3 id="1de2b3e7-37f0-806d-9062-cfda6f85ebcd" class=""><strong>Analíticas</strong></h3><p id="1de2b3e7-37f0-8046-9ff5-d3d4e481b6df" class="">Mide las conversiones</p><h1 id="1de2b3e7-37f0-8085-956a-c9072970fed0" class=""></h1><h3 id="1de2b3e7-37f0-806d-8fd9-edabc8385646" class=""><strong>Seguridad</strong></h3><p id="1de2b3e7-37f0-805b-96c8-d0eae9b6d962" class="">Todos tus datos seguros</p><h1 id="1de2b3e7-37f0-80e9-97ac-e174be464f74" class=""></h1><h3 id="1de2b3e7-37f0-80d1-ae50-eb58736db974" class=""><strong>Soporte</strong></h3><p id="1de2b3e7-37f0-80e0-8dc4-f3f728108d55" class="">Te ayudamos 24/7</p><p id="1de2b3e7-37f0-8013-bc44-c46f111a6130" class="">
+</p><p id="1de2b3e7-37f0-8039-b305-fc799b93f67f" class=""><strong>Carrousell con integraciones:</strong><div class="indented"><p id="1de2b3e7-37f0-80e4-9927-c54a0ef6e9bb" class="">Mercado Pago</p><p id="1de2b3e7-37f0-803a-9c46-facfa9855d64" class="">Whatsapp API</p><p id="1de2b3e7-37f0-8050-8267-fe51088d4a64" class="">open ai</p><p id="1de2b3e7-37f0-80d2-8696-fbc6704a3547" class="">meta</p><p id="1de2b3e7-37f0-80c4-a192-ed9ba4e6a8f5" class="">python</p><p id="1de2b3e7-37f0-80af-ad68-f5d1a71d9088" class="">Microsoft</p><p id="1de2b3e7-37f0-8032-a7ba-fc68d7d69e2a" class="">Woocommerce</p><p id="1de2b3e7-37f0-802c-84af-e906e76bdce3" class="">Google Calendar</p><p id="1de2b3e7-37f0-8063-a772-fbd91abf4d14" class="">STRIPE</p><p id="1de2b3e7-37f0-8073-86b6-f4501713ce50" class="">Mercado Pago</p><p id="1de2b3e7-37f0-80a7-9624-dc928e2e8d9c" class="">Whatsapp API</p><p id="1de2b3e7-37f0-8092-9e00-d14d933bacc6" class="">open ai</p><p id="1de2b3e7-37f0-802c-8080-e13cbe78e492" class="">meta</p><p id="1de2b3e7-37f0-80ef-8ac5-d3b90f24c027" class="">python</p><p id="1de2b3e7-37f0-8038-a5d9-d722ef54d5e2" class="">Microsoft</p><p id="1de2b3e7-37f0-8009-a15f-da178851b160" class="">Woocommerce</p><p id="1de2b3e7-37f0-801d-b612-dbd79a7827ee" class="">Google Calendar</p><p id="1de2b3e7-37f0-80e5-9b73-f4d5afc6bdf8" class="">STRIPE</p></div></p><figure id="1de2b3e7-37f0-803e-90a2-e81aea17af8c" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/04/Presentacion-Inteligencia-Artificial-Tecnologico-Lila-1.png"><img style="width:595.9989013671875px" src="https://chatsell.net/wp-content/uploads/2024/04/Presentacion-Inteligencia-Artificial-Tecnologico-Lila-1.png"/></a></figure><p id="1de2b3e7-37f0-8066-ba01-c9a345c1ee36" class=""><strong>Informacion sobre chatsell</strong></p><h1 id="1de2b3e7-37f0-8015-ae7a-d6f65c960a44" class=""><strong>Chatsell ¿Qué es?</strong></h1><p id="1de2b3e7-37f0-80a1-9790-c54283339271" class="">Chatsell es un chatbot que se capacita en los detalles de tu empresa, desde información básica hasta los servicios y productos que ofreces. Está diseñado para aprender y asesorar eficazmente a tus clientes.</p><p id="1de2b3e7-37f0-8075-8a67-f3e1c8cdcf45" class=""><strong>Asesora y envía links de cobro</strong></p><p id="1de2b3e7-37f0-80b9-8b85-f9e58422b484" class=""><strong>Vende Productos de tu Negocio</strong></p><p id="1de2b3e7-37f0-8066-a7de-f2d9e4cde4b2" class=""><strong>Agenda Citas o Eventos en tu Calendario</strong></p><p id="1de2b3e7-37f0-801a-b13b-db1aebfc8a7d" class=""><strong>Escucha Audios</strong></p><p id="1de2b3e7-37f0-80a0-8ea8-cf7c0f651d49" class=""><strong>Aprende Automáticamente</strong></p><p id="1de2b3e7-37f0-8055-9fa9-d8a9bc340c39" class=""><strong>Interpreta imágenes</strong></p><p id="1de2b3e7-37f0-8067-b336-de0c3a6150c8" class=""><strong>Seguimiento Automático</strong></p><p id="1de2b3e7-37f0-8016-b4fb-c680b31abc8f" class=""><strong>Activo las 24Hs</strong></p><p id="1de2b3e7-37f0-80ca-8444-df137383e40a" class="">
+</p><p id="1de2b3e7-37f0-80e8-9175-f49c3dd8dff6" class=""><strong>Uso de chatsell</strong></p><h1 id="1de2b3e7-37f0-80b0-8ae9-e4faf4d17009" class=""><strong>¿Qué puede hacer Chatsell?</strong></h1><p id="1de2b3e7-37f0-80ef-b4f1-df861ce019df" class="">ChatSell se adapta y aprende continuamente sobre tu negocio, gestionando desde preguntas frecuentes hasta el seguimiento automático a tus clientes, la programación de citas y eventos. Responde las consultas de tu WhatsApp, Instagram y Facebook, escucha audios, gestiona la atención al cliente, también promueve tus productos, envía links de pago y asesora de manera precisa, asegurando que ningún mensaje quede sin respuesta en tu WhatsApp. A Chatsell lo puedes entrenar para que responda de la forma que más te guste, ya que es 100% personalizado.</p><p id="1de2b3e7-37f0-80c1-9f08-cda6191025ca" class=""><a href="http://app.chatsell.net/">COMENZAR</a></p><h1 id="1de2b3e7-37f0-8001-aa71-e1e05dd41d82" class=""><strong>¿Cómo respondenotros bots?</strong></h1><figure id="1de2b3e7-37f0-8027-9e8f-cecb395aa1f6" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/06/Green-Minimalist-QA-Phone-Chatting-Instagram-Story-2-723x1024.png"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/06/Green-Minimalist-QA-Phone-Chatting-Instagram-Story-2-723x1024.png"/></a></figure><h1 id="1de2b3e7-37f0-8058-9697-c671db77d209" class=""><strong>¿Cómo respondeChatsell?</strong></h1><figure id="1de2b3e7-37f0-801a-ac04-f046a1b72c2d" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/06/Green-Minimalist-QA-Phone-Chatting-Instagram-Story-6-794x1024.png"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/06/Green-Minimalist-QA-Phone-Chatting-Instagram-Story-6-794x1024.png"/></a></figure><h1 id="1de2b3e7-37f0-8015-91d8-d232f6519492" class=""><strong>Procedimiento Chatsell</strong></h1><p id="1de2b3e7-37f0-801c-8966-f8155fcffcfa" class="">1</p><h3 id="1de2b3e7-37f0-8024-bc64-d3af7bf07ab7" class=""><strong>Ingresa a la plataforma</strong></h3><p id="1de2b3e7-37f0-80a4-b6a0-eed4051269ae" class="">Regístrate y accede al CRM, si tienes dudas no dudes en consultarle a nuestro Whatsapp</p><p id="1de2b3e7-37f0-8085-a49e-ef27bfaa1ac6" class="">2</p><h3 id="1de2b3e7-37f0-8077-bdc2-c71de591fe10" class=""><strong>Configura y Entrena</strong></h3><p id="1de2b3e7-37f0-807f-8f75-dff6fe6f9701" class="">Completa el Panel de Control de Chatsell con información sobre tu negocio, integra plataformas de pago y sistemas de gestión de stock.</p><p id="1de2b3e7-37f0-80a5-878a-e7ae31f64284" class="">3</p><h3 id="1de2b3e7-37f0-801d-8963-e5fa8ea804a0" class=""><strong>Automatizá tus Ventas</strong></h3><p id="1de2b3e7-37f0-809d-a482-fa38e1065ceb" class="">Empieza a vender y responder automáticamente sin la necesidad de esforzarte.</p><p id="1de2b3e7-37f0-8061-89cf-e4a32163f37a" class=""><a href="http://app.chatsell.net/">Accede a la Plataforma</a></p><figure id="1de2b3e7-37f0-8041-8740-d79f9e89aedc" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/05/Captura-de-pantalla-2024-05-19-a-las-22.27.14-de-tamano-grande.jpeg"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/05/Captura-de-pantalla-2024-05-19-a-las-22.27.14-de-tamano-grande.jpeg"/></a></figure><p id="1de2b3e7-37f0-8079-b0e1-edfc5d6b3b34" class=""><strong>Toma el control</strong></p><p id="1de2b3e7-37f0-8055-96c5-d1d804970f33" class=""><strong>Información CRM</strong></p><h1 id="1de2b3e7-37f0-80f8-84ed-fcff567b4df9" class=""><strong>Contactos y Analíticas</strong></h1><p id="1de2b3e7-37f0-80ae-8ca8-c8c00603f454" class="">Las personas que se comuniquen con tu negocio a través de WhatsApp, Instagram o Facebook, se guardarán automáticamente en la Lista de Contactos del CRM y se registrarán todas las analíticas filtrables para que puedas conocer y evaluar métricas de tu empresa.</p><figure id="1de2b3e7-37f0-80fe-9c99-cd12de5e26f9" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.42.26%E2%80%AFp.-m.png"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.42.26%E2%80%AFp.-m.png"/></a></figure><figure id="1de2b3e7-37f0-809a-abf7-c796c3758526" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.52.29%E2%80%AFp.-m.-de-tamano-grande.jpeg"><img style="width:700px" src="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.52.29%E2%80%AFp.-m.-de-tamano-grande.jpeg"/></a></figure><p id="1de2b3e7-37f0-8092-af4e-e6054b7e3369" class="">
+</p><p id="1de2b3e7-37f0-8049-991d-cc3822cb462c" class=""><strong>BENEFICIOS de CHATBOTS con ia</strong></p><h1 id="1de2b3e7-37f0-8030-b12a-f19015904619" class=""><strong>¿Qué beneficios tiene nuestro chatbot con inteligencia artificial?</strong></h1><h3 id="1de2b3e7-37f0-8070-b800-e040d9304237" class=""><strong>Automatización de Ventas</strong></h3><h3 id="1de2b3e7-37f0-80c3-9be0-cc7b29d6b15e" class=""><strong>Gestión de Inventario</strong></h3><h3 id="1de2b3e7-37f0-80fe-ab56-d9e62ad468e7" class=""><strong>Mejora de Reputación</strong></h3><h3 id="1de2b3e7-37f0-8039-bcdb-d38deb3147b9" class=""><strong>Reduce Cargas de Trabajo</strong></h3><h3 id="1de2b3e7-37f0-80d8-b2cd-cab09c489841" class=""><strong>Reduce Personal</strong></h3><h3 id="1de2b3e7-37f0-80f0-9f2c-ca272102e448" class=""><strong>Comunicación Efectiva</strong></h3><h3 id="1de2b3e7-37f0-80d5-88f7-e87cda564495" class=""><strong>Análisis y Estadísticas</strong></h3><h3 id="1de2b3e7-37f0-80a2-af73-de94205f7982" class=""><strong>Escucha Audios</strong></h3><h3 id="1de2b3e7-37f0-80b3-8469-e5168441a4aa" class=""><strong>Responde las 24Hs</strong></h3><h3 id="1de2b3e7-37f0-80df-ada6-e6c66b592c62" class=""><strong>Responde como Humano</strong></h3><p id="1de2b3e7-37f0-80b5-b702-c56f0886f8ec" class=""><strong>Reuniones Chatsell</strong></p><h1 id="1de2b3e7-37f0-80e8-927b-f56edcdcb8d7" class=""><strong>Agenda una reunión con nosotros</strong></h1><h1 id="1de2b3e7-37f0-80c8-b7a9-d4050df1f154" class=""><strong>¿Qué beneficios tiene nuestro chatbot con inteligencia artificial?</strong></h1><h3 id="1de2b3e7-37f0-80d1-9c64-dfc5d16a4629" class=""><strong>Automatizá tus procesos de ventas</strong></h3><p id="1de2b3e7-37f0-80cf-9a5c-d8126e8a7460" class="">Utiliza las instrucciones que vos le ingreses para gestionar las conversaciones, como lo harías vos.</p><h3 id="1de2b3e7-37f0-807e-960c-fe07fc1ae4c9" class=""><strong>Reduce cargas de trabajo y personal</strong></h3><p id="1de2b3e7-37f0-80d5-9c6e-efbf16f8fd34" class="">Ya no necesitas dedicarle cientos de horas a responder consultas, nuestro chatbot se ocupa de todo.</p><h3 id="1de2b3e7-37f0-80c1-a93f-f0ae5562db69" class=""><strong>Atención personalizada 24/7 a tus clientes</strong></h3><p id="1de2b3e7-37f0-8032-8ce7-ed7120b856bb" class="">Personalizá la conversación según el cliente, y responde en todo momento, al instante.</p><h3 id="1de2b3e7-37f0-8081-8661-eeab4a21ab50" class=""><strong>Genera analisis y reportes estadisticos de los chats</strong></h3><p id="1de2b3e7-37f0-809d-9ebd-f6fdf0e51f93" class="">Podes hacer un seguimiento periódico a las conversaciones y resultados de nuestro chatbot.</p><p id="1de2b3e7-37f0-80c3-ba55-c65a7d98f455" class="">
+</p><p id="1de2b3e7-37f0-806e-a212-ddfb72fdab9d" class="">
+</p><h3 id="1de2b3e7-37f0-80df-b523-f996ecc5c792" class="">Roadmap</h3><p id="1de2b3e7-37f0-80cf-a657-f0550f0922c1" class=""><strong>01</strong></p><p id="1de2b3e7-37f0-8002-b080-c018fabe27bb" class=""><strong>Configuración e integración con WhatsApp Business y CRM</strong></p><p id="1de2b3e7-37f0-8075-89df-fa8b2e0e78ce" class=""><strong>02</strong></p><p id="1de2b3e7-37f0-80a3-baaf-ec79874022d2" class=""><strong>Entrenamiento con documentación propia</strong></p><p id="1de2b3e7-37f0-800d-a90c-f36c214753da" class=""><strong>03</strong></p><p id="1de2b3e7-37f0-80a8-8af0-c7f73ea0bcbb" class=""><strong>Pruebas y optimización</strong></p><p id="1de2b3e7-37f0-8095-8b4b-ee024a31f6f0" class=""><strong>04</strong></p><p id="1de2b3e7-37f0-80a5-a21d-c56e6b96edcb" class=""><strong>Lanzamiento y soporte continuo</strong></p><p id="1de2b3e7-37f0-8049-a2a9-d066efd76b60" class="">
+</p><h3 id="1de2b3e7-37f0-802d-a826-f0b32f154490" class="">Planes</h3><ul id="1de2b3e7-37f0-80bd-9d0e-fbf6ccd6c4ae" class="toggle"><li><details open=""><summary><strong>Copiar esto de Chatsell para Saucotec AI</strong></summary><p id="1de2b3e7-37f0-80e4-893b-fb00b1017ef0" class="">Chatsell ofrece diversos planes diseñados para maximizar tu comunicación y ventas, adaptándose a cada necesidad empresarial. ¿Cuál es ideal para ti?</p><h1 id="1de2b3e7-37f0-8026-962c-d6c487b96a43" class=""><strong>Mejora la Comunicación de tu Empresa con Chatsell: Explora Nuestros Planes de AI Chatbot</strong></h1><p id="1de2b3e7-37f0-8092-bd6e-caa6d71a6cc2" class="">En la era digital de hoy, donde la eficiencia y la rápida respuesta son claves en las interacciones de negocio, los chatbots con inteligencia artificial (IA) se han convertido en herramientas esenciales. Chatsell lidera este campo con soluciones innovadoras diseñadas para transformar la manera en que las empresas interactúan con sus clientes. Este artículo discute en detalle los diferentes planes que Chatsell ofrece y por qué un AI chatbot puede ser la opción más acertada para llevar tu negocio al siguiente nivel.</p><h1 id="1de2b3e7-37f0-8045-90f6-d848208a2397" class=""><strong>¿Por Qué Elegir un AI Chatbot de Chatsell?</strong></h1><p id="1de2b3e7-37f0-8056-ae11-fc6bfbf459b0" class="">Antes de sumergirnos en los diferentes planes que ofrecemos, es crucial entender el valor añadido que un AI chatbot de Chatsell puede aportar a tu empresa. Los chatbots de Chatsell no solo están programados para responder preguntas básicas sino que también aprenden y se adaptan a las necesidades de tus clientes gracias a la inteligencia artificial avanzada. Esto resulta en una mejora notable en la satisfacción del cliente y en la eficiencia operativa. Si deseas conocer más sobre cómo los chatbots pueden transformar tu empresa, te invito a leer <a href="https://chatsell.net/chatbots-con-inteligencia-artificial-para-whatsapp/">Artículo sobre chatbots de WhatsApp</a>.</p><h1 id="1de2b3e7-37f0-800d-bcc2-d0dbd796c307" class=""><strong>Planes de AI Chatbot que Ofrecemos</strong></h1><p id="1de2b3e7-37f0-80a8-9100-e7465a1446bf" class="">En Chatsell, comprendemos que cada negocio es único. Por eso, ofrecemos una variedad de planes que se adaptan a diferentes tamaños y necesidades empresariales. A continuación, se presentan nuestros planes más solicitados:</p><h1 id="1de2b3e7-37f0-808c-bc3d-da76f98f9389" class=""><strong>Plan Básico</strong></h1><p id="1de2b3e7-37f0-80b7-95df-cc88d650e06d" class="">Ideal para pequeñas empresas o startups que están comenzando a explorar el poder de los chatbots. Este plan incluye:</p><p id="1de2b3e7-37f0-8071-a96c-cd2e21298685" class="">– Hasta 1,000 interacciones mensuales</p><p id="1de2b3e7-37f0-809f-bea0-ed0585743057" class="">– Integración básica con plataformas de mensajería popular</p><p id="1de2b3e7-37f0-802b-98bd-e18241633e11" class="">– Acceso a plantillas de conversación estandarizadas</p><p id="1de2b3e7-37f0-8024-b9fa-fe681aea5d83" class="">– Soporte técnico básico</p><p id="1de2b3e7-37f0-80f8-8498-c00e97149bcf" class="">– Informes mensuales de rendimiento</p><h1 id="1de2b3e7-37f0-8083-91e0-c64679edc410" class=""><strong>Plan Pro</strong></h1><p id="1de2b3e7-37f0-80ec-bf25-e1f54a889e7e" class="">Diseñado para empresas que necesitan un poco más de robustez en su interactuación con clientes. Incluye todo lo del Plan Básico más:</p><p id="1de2b3e7-37f0-8077-917b-e15a25710413" class="">– Hasta 5,000 interacciones mensuales</p><p id="1de2b3e7-37f0-803a-9f96-ef72cb341589" class="">– Integración con CRM</p><p id="1de2b3e7-37f0-805a-8a6f-fbbf233ff0c9" class="">– Acceso a análisis avanzados y personalización de diálogos</p><p id="1de2b3e7-37f0-80be-923e-e4a41826fe60" class="">– Capacitación de personal para uso optimizado del chatbot</p><p id="1de2b3e7-37f0-8007-b5a5-d59effc30b4a" class="">– Soporte técnico prioritario</p><h1 id="1de2b3e7-37f0-80fe-bdce-ff26583c7273" class=""><strong>Plan Empresarial</strong></h1><p id="1de2b3e7-37f0-8072-a159-f3865f1daea1" class="">Es nuestro plan más completo, perfecto para organizaciones que buscan una solución integral y maximizada. Incluye todas las características del Plan Pro y además:</p><p id="1de2b3e7-37f0-8090-9ea7-c255f829f920" class="">– Interacciones ilimitadas</p><p id="1de2b3e7-37f0-80b8-a3e2-cec845858cc0" class="">– Gestión completa de campañas a través del chatbot</p><p id="1de2b3e7-37f0-8024-9a20-fec9b544dcc7" class="">– Integración avanzada con sistemas empresariales (ERP, POS)</p><p id="1de2b3e7-37f0-80c9-9459-c1db0140fc32" class="">– Desarrollo de características personalizadas según las necesidades del negocio</p><p id="1de2b3e7-37f0-8034-b1e3-c14e6a8f7e80" class="">– Soporte técnico dedicado 24/7</p><h1 id="1de2b3e7-37f0-809c-b783-f41a916b2db1" class=""><strong>¿Listo para Transformar tu Interacción con los Clientes?</strong></h1><p id="1de2b3e7-37f0-809c-a26d-e6423f3d7285" class="">Elegir un plan de AI chatbot adecuado es esencial para maximizar los beneficios que esta tecnología puede aportar a tu negocio. En Chatsell, estamos aquí para ayudarte a seleccionar el mejor plan que se ajuste a tus necesidades y garantizar una implementación exitosa.</p><p id="1de2b3e7-37f0-803b-be84-ed6bf79e76df" class="">Si estás listo para experimentar la transformación digital en tu atención al cliente y mejorar tus operaciones comerciales, no dudes en contactarnos hoy mismo. Visita nuestra página de [Contacto](#) para más información o para programar una demostración gratuita de nuestros chatbots.</p><p id="1de2b3e7-37f0-809e-b325-ee38999158bd" class="">Súbete al carro de la innovación y deja que Chatsell te guíe hacia un futuro más conectado y eficiente. ¡Tu éxito es nuestro compromiso!</p><hr id="1de2b3e7-37f0-80ba-a5d6-c60769b8671e"/><p id="1de2b3e7-37f0-808b-85d7-c91073b32592" class="">¡Esperamos poder ayudarte a lograr tus objetivos de negocio con nuestros avanzados AI chatbots!</p></details></li></ul><p id="1de2b3e7-37f0-80e0-8557-d8db58150aaa" class="">
+</p><p id="1de2b3e7-37f0-8059-818e-c0f440cda4ea" class="">
+</p><h3 id="1de2b3e7-37f0-8055-b3e4-fac6f1118ac4" class="">Preguntas frecuentes</h3><ul id="1de2b3e7-37f0-8073-a8e7-e548b5e4a34b" class="toggle"><li><details open=""><summary><strong>Copiar de Chatsell para Saucotec AI</strong></summary><h1 id="1de2b3e7-37f0-8022-b582-cad24707866d" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Es legal utilizar un chatbot como ChatSell para ventas y consultas?</a></strong></h1><p id="1de2b3e7-37f0-80de-b30f-e6b09cad3d3d" class="">Sí, es completamente legal. ChatSell cumple con las normativas vigentes sobre uso de tecnologías digitales y comunicación automatizada, siempre que se respeten las políticas de privacidad y consentimiento de los usuarios.</p><h1 id="1de2b3e7-37f0-8044-a3c9-c3469804618c" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿El chatbot puede escuchar audios e interpretar imágenes?</a></strong></h1><p id="1de2b3e7-37f0-808b-a271-fb2c404adac4" class="">Sí, totalmente, entendemos que hoy en día, las personas se comunican mucho mediante audios debido a la gran cantidad de tareas que realizan en su rutina, por eso es fundamental que el chatbot tenga la capacidad de poder interpretarlos y responderlos. A las imágenes también las interpreta sin problemas.</p><h1 id="1de2b3e7-37f0-8090-a043-fc38228f5799" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Cómo protege ChatSell la información personal de mis clientes?</a></strong></h1><p id="1de2b3e7-37f0-80c8-8fed-fd470139685d" class="">ChatSell utiliza encriptación avanzada y sigue estrictas políticas de protección de datos para asegurar que toda la información personal se maneje de manera segura y confidencial.</p><h1 id="1de2b3e7-37f0-803d-9489-f79578534d0a" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Puedo personalizar el chatbot para que se adapte a la identidad de mi marca?</a></strong></h1><p id="1de2b3e7-37f0-80a8-9a10-dbc4c84d525d" class="">Absolutamente. ChatSell permite personalizar respuestas, tono y flujo de interacción para que responda igual a un humano que no comete errores y se adapta a la forma de comunicar de tu marca.</p><h1 id="1de2b3e7-37f0-8020-ab2c-c0ce084cad8b" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Qué sucede si excedo el límite de mensajes incluido en mi plan?</a></strong></h1><p id="1de2b3e7-37f0-8078-952e-cb598c8a1c64" class="">Si excedes el límite de mensajes de tu plan, puedes optar por actualizar a un plan superior o adquirir conversaciones adicionales a un costo mínimo.</p><h1 id="1de2b3e7-37f0-80af-aef6-f2d5ed63cace" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿ChatSell puede integrarse con otros sistemas que ya estoy utilizando?</a></strong></h1><p id="1de2b3e7-37f0-8062-9b1a-d498dac8d738" class="">Sí, ChatSell ofrece integraciones flexibles con una variedad de plataformas, incluyendo sistemas de CRM, bases de datos de productos, sistemas de gestión interno y más.</p><h1 id="1de2b3e7-37f0-8042-9798-ec9651562b3e" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Qué tipo de soporte técnico ofrece ChatSell?</a></strong></h1><p id="1de2b3e7-37f0-804e-bcc3-fe91e80fee10" class="">Ofrecemos soporte técnico 24/7 a través de chat en vivo, correo electrónico y WhatsApp para garantizar que cualquier problema que enfrentes sea resuelto rápidamente.</p><h1 id="1de2b3e7-37f0-80da-a9f3-dba92eb431b7" class=""><strong><a href="https://chatsell.net/#lqd-accordion-747a0f0-content">¿Puedo cancelar mi suscripción en cualquier momento?</a></strong></h1><p id="1de2b3e7-37f0-8073-b28e-cfde2b27b335" class="">Sí, puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Creemos en la flexibilidad y queremos que te sientas cómodo con nuestro servicio.</p><p id="1de2b3e7-37f0-8033-b3c2-c26503773512" class=""><a href="mailto:%20info@chatsell.net">¿Alguna otra consulta? Contáctanos</a></p></details></li></ul><p id="1de2b3e7-37f0-804e-aae8-ff446f040745" class="">
+</p><p id="1de2b3e7-37f0-8015-9edc-c7dab36ecd62" class="">
+</p><p id="1de2b3e7-37f0-8065-81da-e57195378106" class="">
+</p><ul id="1de2b3e7-37f0-8090-b1d9-f068365dbb57" class="toggle"><li><details open=""><summary>DISCARDED CONTENT</summary><p id="1de2b3e7-37f0-808d-9b2d-fef8b00868d4" class=""><strong>Eficiencia</strong></p><p id="1de2b3e7-37f0-80b9-ad0a-f2d837c3cd3a" class="">Reducción de consultas y tareas repetitivas</p><p id="1de2b3e7-37f0-8035-b420-cf651e2b1156" class=""><strong>Simple Uso</strong></p><p id="1de2b3e7-37f0-809f-96b7-f05818ccc479" class="">Diseño intuitivo para minimizar la fricción</p><p id="1de2b3e7-37f0-80ae-94ab-d8da1552b21a" class=""><strong>A medida</strong></p><p id="1de2b3e7-37f0-805c-bf39-edc5446960d2" class="">Adaptado a sus procesos y necesidades específicas</p><p id="1de2b3e7-37f0-80ce-aeb7-d52dd5090fba" class=""><strong>Soporte Cercano</strong></p><p id="1de2b3e7-37f0-808b-8d3b-f34ac000deab" class="">Un único integrante de saucotec responsable de tu éxito</p><h3 id="1de2b3e7-37f0-8020-8d29-e14dc07dd1cb" class="">Funcionalidades Clave</h3><p id="1de2b3e7-37f0-8043-ad03-fadad6cf304b" class=""><strong>Atención 24/7: </strong>Responde consultas básicas y recurrentes.</p><p id="1de2b3e7-37f0-80ef-b89d-eb65a22973c2" class=""><strong>Integración con CRM: </strong>Accede a datos de propiedades y clientes.</p><p id="1de2b3e7-37f0-804b-94db-f87ed505fb59" class=""><strong>Interfaz de Gestión:</strong> Redirección automática a equipo humano cuando sea necesario.</p><p id="1de2b3e7-37f0-8023-be06-f09a7f26f6c8" class=""><strong>Tiempo de respuesta menor a 30s: </strong>Responde hasta 200 consultas por hora</p><p id="1de2b3e7-37f0-802d-997b-f3f0ad80965a" class=""><em>Con 20 consultas diarias, es posible liberar hasta 3hs por día en el equipo de ventas, 15hs semanales.</em></p><h1 id="1de2b3e7-37f0-80d7-9515-d7229c4094a1" class=""><strong>Gestiona tu propio Chatbot</strong></h1><p id="1de2b3e7-37f0-800a-abc9-e15219c36711" class="">Por si no sabías, Chatsell es totalmente autogestionable, puedes configurar la personalidad del bot, la información, las instrucciones que debe seguir, funcionalidades de agentes y distintas funciones útiles.</p><figure id="1de2b3e7-37f0-8022-b7d1-e9e8541c578f" class="image"><a href="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.47.19%E2%80%AFp.-m.-de-tamano-mediano.jpeg"><img style="width:640px" src="https://chatsell.net/wp-content/uploads/2024/06/Captura-de-pantalla-2024-06-17-a-las-3.47.19%E2%80%AFp.-m.-de-tamano-mediano.jpeg"/></a></figure></details></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

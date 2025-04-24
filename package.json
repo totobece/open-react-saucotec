@@ -52,6 +52,7 @@
     "scrolltrigger": "^1.0.1",
     "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.6",
     "tailwind-merge": "^2.2.1",
     "typescript": "^5.0.4"
   },

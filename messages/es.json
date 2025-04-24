@@ -47,6 +47,7 @@
 
     },
     "ContactForm" : {
+      "h1" : "Contacto",
       "p" : "Gracias por comunicarte!",
       "br" : "Un asesor se pondrá en contacto pronto.",
       "span1" : "*Nombre Completo",

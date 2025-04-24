@@ -94,6 +94,7 @@ const Header = () => {
                   <div className="flex flex-col space-y-4 text-xl">
                     <HoveredLink href="/digital-transformation">{t("HoveredLink1")}</HoveredLink>
                     <HoveredLink href="/digital-products">{t("HoveredLink2")}</HoveredLink>
+                    <HoveredLink href="/ai-chatbot">{"Chatbot AI"}</HoveredLink>
                   </div>
                 </MenuItem>
                 <Link href="/about">  

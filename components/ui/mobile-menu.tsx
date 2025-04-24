@@ -149,6 +149,13 @@ export default function MobileMenu() {
                   {t("Link3")}
                   </Link>
                 </li>
+                <li>
+                  <Link href="/ai-chatbot" className="block font-medium text-white hover:text-gray-200 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                  {"Chatbot AI"}
+                  </Link>
+                </li>
+
+
               </ul>
             )}
           </li>

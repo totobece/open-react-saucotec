@@ -39,6 +39,7 @@
     "block6": "Business Development Manager - Energía Global"
   },
   "ContactForm": {
+    "h1": "Contact",
     "p": "Thank you for getting in touch!",
     "br": "A consultant will contact you soon.",
     "span1": "*Full Name",

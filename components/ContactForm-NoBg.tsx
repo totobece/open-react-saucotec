@@ -32,7 +32,7 @@ function ContactFormNoBg() {
   }
   const words = [
     {
-      text: "Contact",
+      text: t("h1"),
       className: "text-white text-4xl lg:text-6xl",
     },
    
