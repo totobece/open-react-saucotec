@@ -49,7 +49,7 @@ export default function AIChatbotPage() {
                     <div className="mb-4 sm:mb-0 sm:mr-4">
                       {/* Secondary button style - medium prominence */}
                       <a className="text-lg inline-flex h-12  items-center justify-center rounded-lg bg-[linear-gradient(110deg,#2A3A5A,45%,#4A5A7A,55%,#2A3A5A)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" 
-                      href="#0"> 
+                      href="https://calendly.com/ignacioacasalbritos/30min" target="_blank" rel="noopener noreferrer"> 
                         Ver Demo
                       </a>
                     </div>
@@ -99,7 +99,7 @@ export default function AIChatbotPage() {
              <div className="mt-5">
                {/* Primary button style */}
                <a className="text-lg inline-flex h-12 animate-shimmer items-center justify-center rounded-lg bg-[linear-gradient(110deg,#1C32BB,45%,#A0ABEA,55%,#1C32BB)] bg-[length:200%_100%] px-2 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" 
-               href="/contact"> 
+               href="https://calendly.com/ignacioacasalbritos/30min" target="_blank" rel="noopener noreferrer"> 
                  Agendar Reunión
                </a>
              </div>
